@@ -16,5 +16,5 @@ function draw() {
   // rotateY(frameCount * 0.01);
   background(0);//warna
   orbitControl(5,5);//control orbit()
-  box(500,500,100);//box([width], [Height], [depth], [detailX], [detailY])
+  box(150,50,100);//box([width], [Height], [depth], [detailX], [detailY])
 }
