@@ -18,7 +18,7 @@ function draw() {
   // rotateX(frameCount * 0.01);
   // rotateY(frameCount * 0.01);
   background(0);//warna createCanvas
-  //warna box
+  // warna box
   // noStroke();
   // fill(0,0,255);
   orbitControl(5,5);//control orbit()
