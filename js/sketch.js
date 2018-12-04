@@ -3,7 +3,7 @@ function setup() {
   // put setup code here
   createCanvas(500, 500, WEBGL);
   // text = text('word');//text(str, x, y, [x2], [y2])
-  img = loadImage("asset/bobby.jpg");
+  img = loadImage("../asset/bobby.jpg");
 }
 
 function draw() {
