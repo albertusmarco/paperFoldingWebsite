@@ -1,2 +1,0 @@
-# paperFoldingWebsite
-Website Project
