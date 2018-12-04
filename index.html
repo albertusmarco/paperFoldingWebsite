@@ -42,6 +42,22 @@
           camera.updateProjectionMatrix();
       });
 
+      // //import an object file(json)
+      // var loader = new THREE.ObjectLoader();
+      //
+      // loader.load(
+      //   'file.json',
+      //
+      //   function(object)
+      //   {
+      //     scene.add(object);
+      //   }
+      // );
+
+      // //lighting
+      // var ambientLight = new THREE.AmbientLight(0xFFFFFF,0.8);
+      // scene.add(ambientLight);
+
       //control orbit
       var controls = new THREE.OrbitControls(camera,renderer.domElement);
 
