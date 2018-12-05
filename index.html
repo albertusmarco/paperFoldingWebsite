@@ -100,9 +100,9 @@
       //
   		// }
 
-      // //import an object file(json)
-      // var loader = new THREE.ObjectLoader();
-      //
+      //import an object file(json)
+      var loader = new THREE.ObjectLoader();
+
       // loader.load(
       //   'file.json',
       //
@@ -189,6 +189,10 @@
       };
 
       GameLoop();
+
+      // export object 3D to JSON
+      // var json = scene.toJSON();
+      // console.log(json);
 
     </script>
   </body>
