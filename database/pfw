@@ -94,27 +94,6 @@ INSERT INTO `login` (`email`,`password`) VALUES
 
 
 --
--- Definition of table `material`
---
-
-DROP TABLE IF EXISTS `material`;
-CREATE TABLE `material` (
-  `id_material` varchar(50) NOT NULL DEFAULT '',
-  `name` varchar(50) NOT NULL,
-  PRIMARY KEY (`id_material`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `material`
---
-
-/*!40000 ALTER TABLE `material` DISABLE KEYS */;
-INSERT INTO `material` (`id_material`,`name`) VALUES 
- ('M1','paper');
-/*!40000 ALTER TABLE `material` ENABLE KEYS */;
-
-
---
 -- Definition of table `order`
 --
 
@@ -123,7 +102,7 @@ CREATE TABLE `order` (
   `id_order` varchar(50) NOT NULL DEFAULT '',
   `id_customer` varchar(50) NOT NULL,
   `id_invoice` varchar(50) NOT NULL,
-  `id_status` int(10) unsigned NOT NULL,
+  `status` varchar(50) NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_order`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -167,7 +146,7 @@ DROP TABLE IF EXISTS `portfolio`;
 CREATE TABLE `portfolio` (
   `id_ptf` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `path_ptf` varchar(50) NOT NULL,
-  `id_status` varchar(50) NOT NULL,
+  `status` varchar(50) NOT NULL,
   PRIMARY KEY (`id_ptf`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -190,7 +169,7 @@ CREATE TABLE `product` (
   `path_product` varchar(50) NOT NULL,
   `price` int(10) unsigned NOT NULL,
   `min_order` int(10) unsigned NOT NULL,
-  `id_status` int(10) unsigned NOT NULL,
+  `status` varchar(50) NOT NULL,
   PRIMARY KEY (`id_product`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -199,10 +178,10 @@ CREATE TABLE `product` (
 --
 
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` (`id_product`,`name`,`path_product`,`price`,`min_order`,`id_status`) VALUES 
- ('P1','Hard Box','product/product1.json',15000,100,1),
- ('P2','Paper Cup','product/product2.json',25000,100,1),
- ('P3','Paper Standing Pouch','product/product3.json',10000,100,1);
+INSERT INTO `product` (`id_product`,`name`,`path_product`,`price`,`min_order`,`status`) VALUES 
+ ('P1','Hard Box','product/product1.json',15000,100,'1'),
+ ('P2','Paper Cup','product/product2.json',25000,100,'1'),
+ ('P3','Paper Standing Pouch','product/product3.json',10000,100,'1');
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 
 
@@ -226,29 +205,6 @@ INSERT INTO `role` (`id_role`,`name`) VALUES
  (1,'admin'),
  (2,'user');
 /*!40000 ALTER TABLE `role` ENABLE KEYS */;
-
-
---
--- Definition of table `status`
---
-
-DROP TABLE IF EXISTS `status`;
-CREATE TABLE `status` (
-  `id_status` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `description` varchar(50) NOT NULL,
-  PRIMARY KEY (`id_status`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `status`
---
-
-/*!40000 ALTER TABLE `status` DISABLE KEYS */;
-INSERT INTO `status` (`id_status`,`description`) VALUES 
- (1,'active'),
- (2,'non active'),
- (3,'done');
-/*!40000 ALTER TABLE `status` ENABLE KEYS */;
 
 
 
