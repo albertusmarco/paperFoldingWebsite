@@ -42,7 +42,7 @@ CREATE TABLE `customer` (
 
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
 INSERT INTO `customer` (`id_customer`,`name`,`email`,`phone`,`address`,`postal_code`) VALUES 
- ('C1','Fania Cecillia','fcecillia@studet.ciputra.ac.id','087856933365','Wiyung',60228),
+ ('C1','Fania Cecillia','fcecillia@student.ciputra.ac.id','087856933365','Wiyung',60228),
  ('C2','Albertus Marco','amarco@student.ciputra.ac.id','088966548595','Pakuwon',60112),
  ('C3','Dewi Salma Salsabila','dsalma@student.ciputra.ac.id','081265996325','Pakuwon',60112),
  ('C4','Dhienalight','dhienalight@student.ciputra.ac.id','081256692145','Sepanjang',61257);
@@ -76,6 +76,7 @@ DROP TABLE IF EXISTS `login`;
 CREATE TABLE `login` (
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
+  `role` int(10) unsigned NOT NULL,
   PRIMARY KEY (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -84,12 +85,12 @@ CREATE TABLE `login` (
 --
 
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` (`email`,`password`) VALUES 
- ('admin','admin'),
- ('amarco@student.ciputra.ac.id','ampass'),
- ('dhienalight@student.ciputra.ac.id','dpass'),
- ('dsalma@student.ciputra.ac.id','dsspass'),
- ('fcecillia@student.ciputra.ac.id','fcpass');
+INSERT INTO `login` (`email`,`password`,`role`) VALUES 
+ ('admin','admin',1),
+ ('amarco@student.ciputra.ac.id','ampass',2),
+ ('dhienalight@student.ciputra.ac.id','dpass',2),
+ ('dsalma@student.ciputra.ac.id','dsspass',2),
+ ('fcecillia@student.ciputra.ac.id','fcpass',2);
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 
 
@@ -183,28 +184,6 @@ INSERT INTO `product` (`id_product`,`name`,`path_product`,`price`,`min_order`,`s
  ('P2','Paper Cup','product/product2.json',25000,100,'1'),
  ('P3','Paper Standing Pouch','product/product3.json',10000,100,'1');
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
-
-
---
--- Definition of table `role`
---
-
-DROP TABLE IF EXISTS `role`;
-CREATE TABLE `role` (
-  `id_role` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  PRIMARY KEY (`id_role`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `role`
---
-
-/*!40000 ALTER TABLE `role` DISABLE KEYS */;
-INSERT INTO `role` (`id_role`,`name`) VALUES 
- (1,'admin'),
- (2,'user');
-/*!40000 ALTER TABLE `role` ENABLE KEYS */;
 
 
 
