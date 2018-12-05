@@ -50,25 +50,22 @@ INSERT INTO `customer` (`id_customer`,`name`,`email`,`phone`,`address`,`postal_c
 
 
 --
--- Definition of table `detail_order`
+-- Definition of table `design`
 --
 
-DROP TABLE IF EXISTS `detail_order`;
-CREATE TABLE `detail_order` (
-  `id_order` varchar(50) NOT NULL,
-  `id_product` varchar(50) NOT NULL,
-  `color_code` varchar(50) NOT NULL,
-  `qty` int(10) unsigned NOT NULL,
-  `price` int(10) unsigned NOT NULL,
-  `path_design` varchar(50) NOT NULL
+DROP TABLE IF EXISTS `design`;
+CREATE TABLE `design` (
+  `id_design` varchar(50) NOT NULL,
+  `path_design` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_design`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `detail_order`
+-- Dumping data for table `design`
 --
 
-/*!40000 ALTER TABLE `detail_order` DISABLE KEYS */;
-/*!40000 ALTER TABLE `detail_order` ENABLE KEYS */;
+/*!40000 ALTER TABLE `design` DISABLE KEYS */;
+/*!40000 ALTER TABLE `design` ENABLE KEYS */;
 
 
 --
@@ -97,6 +94,27 @@ INSERT INTO `login` (`email`,`password`) VALUES
 
 
 --
+-- Definition of table `material`
+--
+
+DROP TABLE IF EXISTS `material`;
+CREATE TABLE `material` (
+  `id_material` varchar(50) NOT NULL DEFAULT '',
+  `name` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_material`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `material`
+--
+
+/*!40000 ALTER TABLE `material` DISABLE KEYS */;
+INSERT INTO `material` (`id_material`,`name`) VALUES 
+ ('M1','paper');
+/*!40000 ALTER TABLE `material` ENABLE KEYS */;
+
+
+--
 -- Definition of table `order`
 --
 
@@ -104,9 +122,8 @@ DROP TABLE IF EXISTS `order`;
 CREATE TABLE `order` (
   `id_order` varchar(50) NOT NULL DEFAULT '',
   `id_customer` varchar(50) NOT NULL,
-  `id_product` varchar(50) NOT NULL,
   `id_invoice` varchar(50) NOT NULL,
-  `status` int(10) unsigned NOT NULL,
+  `id_status` int(10) unsigned NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_order`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -120,6 +137,29 @@ CREATE TABLE `order` (
 
 
 --
+-- Definition of table `order_detail`
+--
+
+DROP TABLE IF EXISTS `order_detail`;
+CREATE TABLE `order_detail` (
+  `id_order` varchar(50) NOT NULL,
+  `id_product` varchar(50) NOT NULL,
+  `id_design` varchar(50) NOT NULL,
+  `qty` int(10) unsigned NOT NULL,
+  `price` int(10) unsigned NOT NULL,
+  `path_design` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_order`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `order_detail`
+--
+
+/*!40000 ALTER TABLE `order_detail` DISABLE KEYS */;
+/*!40000 ALTER TABLE `order_detail` ENABLE KEYS */;
+
+
+--
 -- Definition of table `portfolio`
 --
 
@@ -127,7 +167,7 @@ DROP TABLE IF EXISTS `portfolio`;
 CREATE TABLE `portfolio` (
   `id_ptf` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `path_ptf` varchar(50) NOT NULL,
-  `status` varchar(50) NOT NULL,
+  `id_status` varchar(50) NOT NULL,
   PRIMARY KEY (`id_ptf`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -148,10 +188,9 @@ CREATE TABLE `product` (
   `id_product` varchar(50) NOT NULL DEFAULT '',
   `name` varchar(50) NOT NULL,
   `path_product` varchar(50) NOT NULL,
-  `material` varchar(50) NOT NULL,
   `price` int(10) unsigned NOT NULL,
   `min_order` int(10) unsigned NOT NULL,
-  `status` int(10) unsigned NOT NULL,
+  `id_status` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id_product`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -160,6 +199,10 @@ CREATE TABLE `product` (
 --
 
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
+INSERT INTO `product` (`id_product`,`name`,`path_product`,`price`,`min_order`,`id_status`) VALUES 
+ ('P1','Hard Box','product/product1.json',15000,100,1),
+ ('P2','Paper Cup','product/product2.json',25000,100,1),
+ ('P3','Paper Standing Pouch','product/product3.json',10000,100,1);
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 
 
@@ -170,7 +213,7 @@ CREATE TABLE `product` (
 DROP TABLE IF EXISTS `role`;
 CREATE TABLE `role` (
   `id_role` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `description` varchar(50) NOT NULL,
+  `name` varchar(50) NOT NULL,
   PRIMARY KEY (`id_role`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
@@ -179,7 +222,7 @@ CREATE TABLE `role` (
 --
 
 /*!40000 ALTER TABLE `role` DISABLE KEYS */;
-INSERT INTO `role` (`id_role`,`description`) VALUES 
+INSERT INTO `role` (`id_role`,`name`) VALUES 
  (1,'admin'),
  (2,'user');
 /*!40000 ALTER TABLE `role` ENABLE KEYS */;
