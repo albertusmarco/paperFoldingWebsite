@@ -49,7 +49,7 @@ include "menu.php";
                 <div class="card-wrapper ">
                     <div class="card-img">
                         <div class="mbr-overlay"></div>
-                        <div class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">Learn More</a></div>
+                        <div class="mbr-section-btn text-center"><a href="hardbox.php" class="btn btn-primary display-4">Learn More</a></div>
                         <img src="assets/images/hard-box-300x300.png" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
@@ -77,7 +77,7 @@ include "menu.php";
                 <div class="card-wrapper">
                     <div class="card-img">
                         <div class="mbr-overlay"></div>
-                        <div class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">Learn More</a></div>
+                        <div class="mbr-section-btn text-center"><a href="paperstandingpouch.php" class="btn btn-primary display-4">Learn More</a></div>
                         <img src="assets/images/pling-fix-1-300x300.png" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
