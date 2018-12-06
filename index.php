@@ -247,7 +247,7 @@ include "menu.php";
     <div class="container">
         <div class="media-container-row title">
             <div class="col-12 col-md-8">
-                <div class="mbr-section-btn align-center"><a class="btn btn-primary display-4" href="https://mobirise.co">OK, I'm Ready!</a></div>
+                <div class="mbr-section-btn align-center"><a class="btn btn-primary display-4" href="noshop.php">OK, I'm Ready!</a></div>
             </div>
         </div>
     </div>
