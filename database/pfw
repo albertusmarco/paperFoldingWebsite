@@ -22,6 +22,38 @@ CREATE DATABASE IF NOT EXISTS pfw;
 USE pfw;
 
 --
+-- Definition of table `cust_shelf`
+--
+
+DROP TABLE IF EXISTS `cust_shelf`;
+CREATE TABLE `cust_shelf` (
+  `id_design` varchar(50) NOT NULL,
+  `id_customer` varchar(50) NOT NULL,
+  `id_product` varchar(50) NOT NULL,
+  `path_design` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_design`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cust_shelf`
+--
+
+/*!40000 ALTER TABLE `cust_shelf` DISABLE KEYS */;
+INSERT INTO `cust_shelf` (`id_design`,`id_customer`,`id_product`,`path_design`) VALUES 
+ ('D1','C1','P1','foto'),
+ ('D10','C2','P1','foto'),
+ ('D2','C1','P1','foto'),
+ ('D3','C3','P3','foto'),
+ ('D4','C1','P2','foto'),
+ ('D5','C2','P3','foto'),
+ ('D6','C4','P3','foto'),
+ ('D7','C4','P2','foto'),
+ ('D8','C2','P3','foto'),
+ ('D9','C2','P2','foto');
+/*!40000 ALTER TABLE `cust_shelf` ENABLE KEYS */;
+
+
+--
 -- Definition of table `customer`
 --
 
@@ -50,22 +82,34 @@ INSERT INTO `customer` (`id_customer`,`name`,`email`,`phone`,`address`,`postal_c
 
 
 --
--- Definition of table `design`
+-- Definition of table `design_detail`
 --
 
-DROP TABLE IF EXISTS `design`;
-CREATE TABLE `design` (
+DROP TABLE IF EXISTS `design_detail`;
+CREATE TABLE `design_detail` (
   `id_design` varchar(50) NOT NULL,
-  `path_icon` varchar(50) NOT NULL,
-  PRIMARY KEY (`id_design`)
+  `path_detail` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `design`
+-- Dumping data for table `design_detail`
 --
 
-/*!40000 ALTER TABLE `design` DISABLE KEYS */;
-/*!40000 ALTER TABLE `design` ENABLE KEYS */;
+/*!40000 ALTER TABLE `design_detail` DISABLE KEYS */;
+INSERT INTO `design_detail` (`id_design`,`path_detail`) VALUES 
+ ('D1','foto logo'),
+ ('D4','foto logo'),
+ ('D4','foto tambahan'),
+ ('D4','foto tambahan'),
+ ('D5','foto logo'),
+ ('D6','foto logo'),
+ ('D6','foto tambahan'),
+ ('D7','foto logo'),
+ ('D7','foto tambahan'),
+ ('D8','foto logo'),
+ ('D8','foto tambahan'),
+ ('D8','foto tambahan');
+/*!40000 ALTER TABLE `design_detail` ENABLE KEYS */;
 
 
 --
@@ -113,6 +157,11 @@ CREATE TABLE `order` (
 --
 
 /*!40000 ALTER TABLE `order` DISABLE KEYS */;
+INSERT INTO `order` (`id_order`,`id_customer`,`id_invoice`,`status`,`time`) VALUES 
+ ('O1','C1','I1-2018','Complete','2018-12-06 14:49:51'),
+ ('O2','C4','I2-2018','In Progress','2018-12-06 14:51:26'),
+ ('O3','C3','I3-2018','Cancel','2018-12-06 14:51:40'),
+ ('O4','C2','I4-2018','-','2018-12-06 14:51:53');
 /*!40000 ALTER TABLE `order` ENABLE KEYS */;
 
 
@@ -123,12 +172,9 @@ CREATE TABLE `order` (
 DROP TABLE IF EXISTS `order_detail`;
 CREATE TABLE `order_detail` (
   `id_order` varchar(50) NOT NULL,
-  `id_product` varchar(50) NOT NULL,
   `id_design` varchar(50) NOT NULL,
   `qty` int(10) unsigned NOT NULL,
-  `price` int(10) unsigned NOT NULL,
-  `path_design` varchar(50) NOT NULL,
-  PRIMARY KEY (`id_order`)
+  `price_qty` int(10) unsigned NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -136,27 +182,16 @@ CREATE TABLE `order_detail` (
 --
 
 /*!40000 ALTER TABLE `order_detail` DISABLE KEYS */;
+INSERT INTO `order_detail` (`id_order`,`id_design`,`qty`,`price_qty`) VALUES 
+ ('O1','D1',100,20000),
+ ('O1','D2',100,15000),
+ ('O1','D4',50,30000),
+ ('O2','D6',100,20000),
+ ('O2','D7',100,30000),
+ ('O3','D3',100,20000),
+ ('O4','D5',50,20000),
+ ('O4','D8',75,25000);
 /*!40000 ALTER TABLE `order_detail` ENABLE KEYS */;
-
-
---
--- Definition of table `portfolio`
---
-
-DROP TABLE IF EXISTS `portfolio`;
-CREATE TABLE `portfolio` (
-  `id_ptf` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `path_ptf` varchar(50) NOT NULL,
-  `status` varchar(50) NOT NULL,
-  PRIMARY KEY (`id_ptf`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `portfolio`
---
-
-/*!40000 ALTER TABLE `portfolio` DISABLE KEYS */;
-/*!40000 ALTER TABLE `portfolio` ENABLE KEYS */;
 
 
 --
@@ -180,9 +215,9 @@ CREATE TABLE `product` (
 
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
 INSERT INTO `product` (`id_product`,`name`,`path_product`,`price`,`min_order`,`status`) VALUES 
- ('P1','Hard Box','product/product1.json',15000,100,'1'),
- ('P2','Paper Cup','product/product2.json',25000,100,'1'),
- ('P3','Paper Standing Pouch','product/product3.json',10000,100,'1');
+ ('P1','Hard Box','product/product1.json',15000,100,'active'),
+ ('P2','Paper Cup','product/product2.json',25000,100,'active'),
+ ('P3','Paper Standing Pouch','product/product3.json',10000,100,'active');
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 
 
