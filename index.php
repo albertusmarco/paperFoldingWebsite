@@ -4,15 +4,15 @@ include "menu.php";
 <!DOCTYPE html>
 <html >
 <head>
-  
-  
-  
-  
+
+
+
+
 </head>
 <body>
   <section class="menu cid-rbkgwRuNyn" once="menu" id="menu2-1">
 
-    
+
 
     <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +25,7 @@ include "menu.php";
         </button>
         <div class="menu-logo">
             <div class="navbar-brand">
-                
+
                 <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-5" href="https://mobirise.co">SENDWISH</a></span>
             </div>
         </div>
@@ -35,26 +35,26 @@ include "menu.php";
                         Home</a>
                 </li><li class="nav-item"><a class="nav-link link text-black display-4" href="index.html#features15-9">
                         Portfolio</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="index.html#testimonials-slider1-b">
-                        About</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="https://mobirise.co">
+                        About</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="boxCustom.html">
                         Shop</a></li>
                 <li class="nav-item">
                     <a class="nav-link link text-black display-4" href="https://mobirise.co">
                         Sign In</a>
                 </li></ul>
-            
+
         </div>
     </nav>
 </section>
 
 <section class="engine"><a href="https://mobirise.info/u">bootstrap html templates</a></section><section class="header10 cid-rbkq4YRq2S mbr-fullscreen mbr-parallax-background" id="header10-3">
 
-    
 
-    
+
+
 
     <div class="container">
         <div class="media-container-column mbr-white col-lg-8 col-md-10 ml-auto">
-            
+
             <h3 class="mbr-section-subtitle align-right mbr-light pb-3 mbr-fonts-style display-2"><em>Easier Way to Make
 </em><div><em>Packaging!</em></div></h3>
             <p class="mbr-text align-right pb-3 mbr-fonts-style display-5">
@@ -65,14 +65,14 @@ include "menu.php";
         </div>
     </div>
 
-    
+
 </section>
 
 <section class="features18 popup-btn-cards cid-rbljldAFZH" id="features18-k">
 
-    
 
-    
+
+
     <div class="container">
         <h2 class="mbr-section-title pb-3 align-center mbr-fonts-style display-2">
             Step by Step Tutorial</h2>
@@ -89,7 +89,7 @@ include "menu.php";
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">
                             Hard Box</h4>
-                        
+
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@ include "menu.php";
                     </div>
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">Paper Cup</h4>
-                        
+
                     </div>
                 </div>
             </div>
@@ -117,19 +117,19 @@ include "menu.php";
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">
                             Paper Standing Pouch</h4>
-                        
+
                     </div>
                 </div>
             </div>
 
-            
+
         </div>
     </div>
 </section>
 
 <section class="mbr-section article content1 cid-rblls8eMxl" id="content1-m">
-    
-     
+
+
 
     <div class="container">
         <div class="media-container-row">
@@ -139,10 +139,10 @@ include "menu.php";
 </section>
 
 <section class="features17 cid-rbllkHg4zM" id="features17-l">
-    
-    
 
-    
+
+
+
     <div class="container-fluid">
         <div class="media-container-row">
             <div class="card p-3 col-12 col-md-6 col-lg-3">
@@ -200,17 +200,17 @@ include "menu.php";
                     </div>
                 </div>
             </div>
-            
-            
+
+
         </div>
     </div>
 </section>
 
 <section class="features3 cid-rbltC75YZE" id="features3-q">
 
-    
 
-    
+
+
     <div class="container">
         <div class="media-container-row">
             <div class="card p-3 col-12 col-md-6 col-lg-4">
@@ -224,7 +224,7 @@ include "menu.php";
                         <p class="mbr-text mbr-fonts-style display-7">
                             Available in&nbsp; 230gr, 250gr, 270gr 300gr, 350gr, and 400gr</p>
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -239,7 +239,7 @@ include "menu.php";
                         <p class="mbr-text mbr-fonts-style display-7">
                             Available in&nbsp;70 gr 80 gr, 150 gr, and 220 gr</p>
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -254,18 +254,18 @@ include "menu.php";
                         <p class="mbr-text mbr-fonts-style display-7">
                             Available in&nbsp;150 gr, and 250 gr</p>
                     </div>
-                    
+
                 </div>
             </div>
 
-            
+
         </div>
     </div>
 </section>
 
 <section class="mbr-section article content1 cid-rblmrLHJ4T" id="content1-o">
-    
-     
+
+
 
     <div class="container">
         <div class="media-container-row">
@@ -276,7 +276,7 @@ include "menu.php";
 
 <section class="mbr-section content8 cid-rblmBcSF3C" id="content8-p">
 
-    
+
 
     <div class="container">
         <div class="media-container-row title">
@@ -289,12 +289,12 @@ include "menu.php";
 
 <section class="features15 cid-rbksZer75u" id="features15-9">
 
-    
 
-    
+
+
     <div class="container">
         <h2 class="mbr-section-title pb-3 align-center mbr-fonts-style display-2">Our Recent Projects</h2>
-        
+
 
         <div class="media-container-row container pt-5 mt-2">
 
@@ -315,7 +315,7 @@ include "menu.php";
             </div>
 
             <div class="col-12 col-md-6 mb-4 col-lg-3">
-                
+
                 <div class="card flip-card p-5 align-center">
                     <div class="card-front card_cont">
                         <img src="assets/images/template-porto-03-4.18.33-pm-526x366.jpg" alt="Mobirise" title="">
@@ -327,7 +327,7 @@ include "menu.php";
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-12 col-md-6 mb-4 col-lg-3">
                 <div class="card flip-card p-5 align-center">
                     <div class="card-front card_cont">
@@ -339,7 +339,7 @@ include "menu.php";
                             <br>Coffee Lab Packaging &amp; Brand Design
                         </p>
                     </div>
-                </div> 
+                </div>
             </div>
 
             <div class="col-12 col-md-6 mb-4 col-lg-3">
@@ -353,24 +353,24 @@ include "menu.php";
                             <br>Kantong Tea Packaging &amp; Brand Design
                         </p>
                     </div>
-                </div> 
+                </div>
             </div>
         </div>
 </div></section>
 
 <section class="carousel slide testimonials-slider cid-rbkx64htco" id="testimonials-slider1-b">
-    
-    
 
-    
+
+
+
 
     <div class="container text-center">
         <h2 class="pb-5 mbr-fonts-style display-2">MEET OUR TEAM</h2>
 
         <div class="carousel slide" data-ride="carousel" role="listbox">
             <div class="carousel-inner">
-                
-                
+
+
             <div class="carousel-item">
                     <div class="user col-md-8">
                         <div class="user_image">
@@ -402,7 +402,7 @@ include "menu.php";
                   <span aria-hidden="true" class="mbri-arrow-prev mbr-iconfont"></span>
                   <span class="sr-only">Previous</span>
                 </a>
-                
+
                 <a class="carousel-control-next" role="button" data-slide="next">
                   <span aria-hidden="true" class="mbri-arrow-next mbr-iconfont"></span>
                   <span class="sr-only">Next</span>
@@ -415,9 +415,9 @@ include "menu.php";
 
 <section once="" class="cid-rblxeb4aPl" id="footer6-r">
 
-    
 
-    
+
+
 
     <div class="container">
         <div class="media-container-row align-center mbr-white">
@@ -430,21 +430,21 @@ include "menu.php";
 </section>
 <section once="" class="cid-rbkA1DU2DQ mbr-reveal" id="footer7-f">
 
-    
 
-    
+
+
 
     <div class="container">
         <div class="media-container-row align-center mbr-white">
-            
+
             <div class="row social-row">
                 <div class="social-list align-right pb-2">
-                    
-                    
-                    
-                    
-                    
-                    
+
+
+
+
+
+
                 <div class="soc-item">
                         <a href="https://twitter.com/mobirise" target="_blank">
                             <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
@@ -481,7 +481,7 @@ include "menu.php";
   <script src="assets/mbr-testimonials-slider/mbr-testimonials-slider.js"></script>
   <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
   <script src="assets/theme/js/script.js"></script>
-  
-  
+
+
 </body>
 </html>
