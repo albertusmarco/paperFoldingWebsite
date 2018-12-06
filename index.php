@@ -27,7 +27,7 @@ include "menu.php";
                We are a group of passionate designers and developers who really love creating awesome food and beverage packaging
             </p>
             <div class="mbr-section-btn align-right"><a class="btn btn-md btn-primary-outline display-4" href="index.php#features18-k">TUTORIAL</a>
-                <a class="btn btn-md btn-primary display-4" href="https://mobirise.co">GO TO SHOP</a></div>
+                <a class="btn btn-md btn-primary display-4" href="noshop.php">GO TO SHOP</a></div>
         </div>
     </div>
 
