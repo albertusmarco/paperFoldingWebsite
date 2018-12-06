@@ -2764,16 +2764,116 @@ body {
 .cid-rbqKP746zY .mbr-section-text {
   color: #232323;
 }
-.cid-rblS0kksEy {
+.cid-rbrpEje08H {
   padding-top: 0px;
-  padding-bottom: 60px;
-  background-color: #f7f6f6;
+  padding-bottom: 0px;
+  background-color: #f9f9f9;
 }
-.cid-rblS0kksEy .mbr-text {
+.cid-rbrpEje08H .card-box {
+  background-color: #f9f9f9;
+  padding: 2rem;
+}
+.cid-rbrpEje08H h4 {
+  font-weight: 500;
+  margin-bottom: 0;
+  text-align: left;
+}
+.cid-rbrpEje08H p {
+  color: #767676;
+  text-align: left;
+}
+.cid-rbrpEje08H .card-wrapper {
+  position: relative;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  transition: box-shadow 0.3s;
+}
+.cid-rbrpEje08H .card-wrapper:hover {
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s;
+}
+.cid-rbrpEje08H .card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.cid-rbrpEje08H P {
+  color: #232323;
+}
+.cid-rbrrxQgUNy {
+  padding-top: 0px;
+  padding-bottom: 45px;
+  background-color: #f9f9f9;
+}
+.cid-rbrrxQgUNy h2 {
+  text-align: center;
+}
+.cid-rbrrxQgUNy h3 {
+  text-align: center;
+  font-weight: 300;
+}
+.cid-rbrrxQgUNy p {
   color: #767676;
 }
-.cid-rblS0kksEy .mbr-text P {
-  text-align: center;
+.cid-rbrrxQgUNy .block-content {
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-basis: 100%;
+  -webkit-flex-basis: 100%;
+}
+.cid-rbrrxQgUNy .mbr-figure {
+  align-self: flex-start;
+  -webkit-align-self: flex-start;
+  flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+}
+.cid-rbrrxQgUNy .media-container-row {
+  word-wrap: break-word;
+  word-break: break-word;
+}
+.cid-rbrrxQgUNy .mbr-section-subtitle {
+  color: #232323;
+}
+.cid-rbrrxQgUNy .card-title {
+  font-weight: 500;
+}
+.cid-rbrrxQgUNy .card-img {
+  text-align: inherit;
+}
+.cid-rbrrxQgUNy .card-img span {
+  font-size: 48px;
+  color: #707070;
+}
+@media (min-width: 992px) {
+  .cid-rbrrxQgUNy .mbr-figure {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+@media (max-width: 991px) {
+  .cid-rbrrxQgUNy .mbr-figure {
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .cid-rbrrxQgUNy .mbr-figure {
+    padding-right: 0;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  .cid-rbrrxQgUNy .block-content {
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    text-align: center;
+  }
+  .cid-rbrrxQgUNy .block-content .card {
+    flex-basis: 100%;
+    -webkit-flex-basis: 100%;
+  }
+}
+.cid-rbrrxQgUNy .mbr-section-text {
   color: #232323;
 }
 .cid-rbkA1DU2DQ {
