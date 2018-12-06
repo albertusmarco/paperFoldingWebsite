@@ -1,5 +1,5 @@
 <?php
-include "koneksi.php";
+include "menu.php";
 session_start();
 ?>
 <!DOCTYPE html>
@@ -27,38 +27,6 @@ session_start();
 
 </head>
 <body>
-  <section class="menu cid-rbkgwRuNyn" once="menu" id="menu2-1">
-    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </button>
-        <div class="menu-logo">
-            <div class="navbar-brand">
-
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-5" href="https://mobirise.co">SENDWISH</a></span>
-            </div>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item">
-                    <a class="nav-link link text-black display-4" href="index.html#header10-3">
-                        Home</a>
-                </li><li class="nav-item"><a class="nav-link link text-black display-4" href="index.html#features15-9">
-                        Portfolio</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="index.html#testimonials-slider1-b">
-                        About</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="boxCustom.html">
-                        Shop</a></li>
-                <li class="nav-item">
-                    <a class="nav-link link text-black display-4" href="https://mobirise.co">
-                        Sign In</a>
-                </li></ul>
-        </div>
-    </nav>
-</section>
-
 <section class="engine"><a href="https://mobirise.info/w">free html5 templates</a></section><section class="header10 cid-rbkq4YRq2S mbr-fullscreen mbr-parallax-background" id="header10-3">
 
     <div class="mbr-overlay" style="opacity: 0; background-color: rgb(225, 225, 225);"></div>
@@ -102,7 +70,7 @@ session_start();
 
 <?php
 
-if(isset($_POST["login"]))
+if(isset($_POST["signin"]))
 {
 		$email = $_POST["temail"];
 		$pass = $_POST["tpassword"];
@@ -122,11 +90,10 @@ if(isset($_POST["login"]))
 			$sql = "select role from login where email = '$email';";
 		$hasil = viewData($sql);
 		$role = mysqli_fetch_row($hasil);
-		if ($role[0] == 0)	{
+		if ($role[0] == 1)	{
 				$_SESSION['username'] = "Admin";
 				$_SESSION['namauser'] = "Admin";
-				echo("berhasil - admin");
-				//'<meta http-equiv="refresh" content="1; URL=tambahpenjualan.php" />';
+				echo'<meta http-equiv="refresh" content="1; URL=admin.php" />';
 				}
 		else {
 
@@ -135,8 +102,7 @@ if(isset($_POST["login"]))
 		$session = mysqli_fetch_row($hasil);
 			$_SESSION['username'] = "$email";
 			$_SESSION['namauser'] = "$session[0]";
-			echo("berhasil - $email");
-			//'<meta http-equiv="refresh" content="1; URL=tambahpenjualan.php" />';
+			echo'<meta http-equiv="refresh" content="1; URL=index.php" />';
 			}
 
 			}
@@ -155,18 +121,15 @@ if(isset($_POST["login"]))
 ?>
                 <div align="center"><span class="input-group-btn">
                  <br/>
-                   <input class="btn btn-form btn-primary display-4" type="submit" name="login" id="login" value="Log In" />
+                   <input class="btn btn-form btn-primary display-4" type="submit" name="signin" id="signin" value="Sign In" />
                   </span>
                 </div>
             <br/>
             <br/>
-             <p><div align="center">
-<h6 class="mbr-text mbr-light">Don't have any account?</h6>
-<span class="input-group-btn">
-<input class="btn btn-form btn-primary display-4" type="submit" name="signup" id="signup" value="Sign Up" />
-                  </span>
-                </div></p>
-
+<?php
+echo("<h6 class='mbr-text mbr-light'>Don't have any account?</h6>");
+echo '<a href="signup.php">Sign Up</a>';
+?>
            </form>
 
     </div>
