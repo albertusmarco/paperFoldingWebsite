@@ -148,7 +148,9 @@ CREATE TABLE `order` (
   `id_customer` varchar(50) NOT NULL,
   `id_invoice` varchar(50) NOT NULL,
   `status` varchar(50) NOT NULL,
-  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `path_dp` varchar(50) NOT NULL,
+  `path_paid` varchar(50) NOT NULL,
   PRIMARY KEY (`id_order`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -157,11 +159,11 @@ CREATE TABLE `order` (
 --
 
 /*!40000 ALTER TABLE `order` DISABLE KEYS */;
-INSERT INTO `order` (`id_order`,`id_customer`,`id_invoice`,`status`,`time`) VALUES 
- ('O1','C1','I1-2018','Complete','2018-12-06 14:49:51'),
- ('O2','C4','I2-2018','In Progress','2018-12-06 14:51:26'),
- ('O3','C3','I3-2018','Cancel','2018-12-06 14:51:40'),
- ('O4','C2','I4-2018','-','2018-12-06 14:51:53');
+INSERT INTO `order` (`id_order`,`id_customer`,`id_invoice`,`status`,`time`,`path_dp`,`path_paid`) VALUES 
+ ('O1','C1','I1-2018','Complete','2018-12-06 16:20:48','foto bukti dp','foto bukti pelunasan'),
+ ('O2','C4','I2-2018','In Progress','2018-12-06 16:21:56','foto bukti dp',''),
+ ('O3','C3','I3-2018','Cancel','2018-12-06 16:21:41','',''),
+ ('O4','C2','I4-2018','--','2018-12-06 18:32:36','','');
 /*!40000 ALTER TABLE `order` ENABLE KEYS */;
 
 
