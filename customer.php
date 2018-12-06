@@ -61,9 +61,9 @@
   <section class="features18 popup-btn-cards cid-rbljldAFZH" id="features18-k">
     <form id="formAdmin" name="form1" method="post" action="">
       <p>&nbsp;</p>
-      <table align="center" width="30%" border="0">
+      <table align="center" width="80%" border="0">
         <tr align="left">
-          <td>Customer ID</td>
+          <td height="50">Customer ID</td>
           <td>:
             <?php
               echo $custID;

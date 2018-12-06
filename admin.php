@@ -71,7 +71,7 @@
         </tr>
         <?php
           $no = 0;
-          $sql = "SELECT `order`.order_time, `order`.id_order, `order`.id_customer, `order_detail`.path_design, `order`.status FROM `order`, `order_detail` WHERE `order`.id_order = `order_detail`.id_order AND `order`.status != 'Cancel';";
+          $sql = "SELECT `order`.order_time, `order`.id_order, `order`.id_customer, `order_detail`.id_design, `order`.status FROM `order`, `order_detail` WHERE `order`.id_order = `order_detail`.id_order AND `order`.status != 'Cancel';";
           $data = viewData($sql);
           while ($row = mysqli_fetch_row($data))
           {
