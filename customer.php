@@ -61,7 +61,7 @@
   <section class="features18 popup-btn-cards cid-rbljldAFZH" id="features18-k">
     <form id="formAdmin" name="form1" method="post" action="">
       <p>&nbsp;</p>
-      <table align="center" width="20%" border="0">
+      <table align="center" width="30%" border="0">
         <tr align="left">
           <td>Customer ID</td>
           <td>:
@@ -71,10 +71,10 @@
           </td>
         </tr>
         <tr align="left">
-          <td>Name:</td>
-          <td>
+          <td height="50">Name</td>
+          <td>:
             <?php
-              $sql = "SELECT `customer`.name from `customer` WHERE `id_customer`='$custID';"
+              $sql = "SELECT `customer`.name from `customer` WHERE `id_customer`='$custID';";
               $data = viewData($sql);
               $row = mysqli_fetch_row($data);
               echo $row[0];
@@ -82,16 +82,10 @@
           </td>
         </tr>
         <tr align="left">
-          <td>Address</td>
-          <td>:
-
-          </td>
-        </tr>
-        <tr align="left">
-          <td>Email</td>
+          <td height="50">Address</td>
           <td>:
             <?php
-              $sql = "SELECT `customer`.email from `customer` WHERE `id_customer`='$custID';"
+              $sql = "SELECT `customer`.address from `customer` WHERE `id_customer`='$custID';";
               $data = viewData($sql);
               $row = mysqli_fetch_row($data);
               echo $row[0];
@@ -99,10 +93,10 @@
           </td>
         </tr>
         <tr align="left">
-          <td>Phone</td>
+          <td height="50">Email</td>
           <td>:
             <?php
-              $sql = "SELECT `customer`.phone from `customer` WHERE `id_customer`='$custID';"
+              $sql = "SELECT `customer`.email from `customer` WHERE `id_customer`='$custID';";
               $data = viewData($sql);
               $row = mysqli_fetch_row($data);
               echo $row[0];
@@ -110,10 +104,21 @@
           </td>
         </tr>
         <tr align="left">
-          <td>Postal Code</td>
+          <td height="50">Phone</td>
           <td>:
             <?php
-              $sql = "SELECT `customer`.postal_code from `customer` WHERE `id_customer`='$custID';"
+              $sql = "SELECT `customer`.phone from `customer` WHERE `id_customer`='$custID';";
+              $data = viewData($sql);
+              $row = mysqli_fetch_row($data);
+              echo $row[0];
+            ?>
+          </td>
+        </tr>
+        <tr align="left">
+          <td height="50">Postal Code</td>
+          <td>:
+            <?php
+              $sql = "SELECT `customer`.postal_code from `customer` WHERE `id_customer`='$custID';";
               $data = viewData($sql);
               $row = mysqli_fetch_row($data);
               echo $row[0];
