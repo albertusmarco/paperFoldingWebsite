@@ -11,6 +11,7 @@ include "koneksi.php";
   <meta name="generator" content="Mobirise v4.8.4, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <!-- <link rel="shortcut icon" href="assets/images/logo2.png" type="image/x-icon"> -->
+ 
   <meta name="description" content="">
   <title>sendwish</title>
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
@@ -43,10 +44,10 @@ include "koneksi.php";
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item">
-                    <a class="nav-link link text-black display-4" href="index.html#header10-3">
+                    <a class="nav-link link text-black display-4" href="index.php#header10-3">
                         Home</a>
-                </li><li class="nav-item"><a class="nav-link link text-black display-4" href="index.html#features15-9">
-                        Portfolio</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="index.html#testimonials-slider1-b">
+                </li><li class="nav-item"><a class="nav-link link text-black display-4" href="index.php#features15-9">
+                        Portfolio</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="index.php#testimonials-slider1-b">
                         About</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="https://mobirise.co">
                         Shop</a></li>
                 <li class="nav-item">
