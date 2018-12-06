@@ -49,7 +49,7 @@ session_start();
                         Home</a>
                 </li><li class="nav-item"><a class="nav-link link text-black display-4" href="index.html#features15-9">
                         Portfolio</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="index.html#testimonials-slider1-b">
-                        About</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="custom.html">
+                        About</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="boxCustom.html">
                         Shop</a></li>
                 <li class="nav-item">
                     <a class="nav-link link text-black display-4" href="https://mobirise.co">
@@ -62,7 +62,7 @@ session_start();
 <section class="engine"><a href="https://mobirise.info/w">free html5 templates</a></section><section class="header10 cid-rbkq4YRq2S mbr-fullscreen mbr-parallax-background" id="header10-3">
 
     <div class="mbr-overlay" style="opacity: 0; background-color: rgb(225, 225, 225);"></div>
-    
+
   <div class="container align-center">
 <div class="row">
     <div class="mbr-white col-lg-4 col-md-7 content-container">
@@ -70,14 +70,14 @@ session_start();
     <br/>
     <br/>
     <br/>
-       
+
         <p class="mbr-text pb-3 mbr-fonts-style display-5"></p>
     </div>
     <div class="col-lg-4 col-md-5">
     <div class="form-container">
         <div class="media-container-column" data-form-type="formoid">
-        
- 
+
+
 <form class="mbr-form" action="" method="post" data-form-title="Mobirise Form">
              <div align="center">
               <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style">SENDWISH</h1>
@@ -99,24 +99,24 @@ session_start();
                         </div>
                     </div>
                 </div>
-				
+
 <?php
-				
+
 if(isset($_POST["login"]))
 {
 		$email = $_POST["temail"];
 		$pass = $_POST["tpassword"];
-				
+
 		$sql = "select email from login where email = '$email';";
 		$hasil = viewData($sql);
 		$emaill = mysqli_fetch_row($hasil);
-		
+
 		if ($email == $emaill[0])
 		{
 		$sql = "select password from login where email = '$email';";
 		$hasil = viewData($sql);
-		$password = mysqli_fetch_row($hasil);	
-		
+		$password = mysqli_fetch_row($hasil);
+
 			if ($pass == $password[0])
 			{
 			$sql = "select role from login where email = '$email';";
@@ -129,7 +129,7 @@ if(isset($_POST["login"]))
 				//'<meta http-equiv="refresh" content="1; URL=tambahpenjualan.php" />';
 				}
 		else {
-			
+
 			$sql = "select name from customer where email = '$email';";
 		$hasil = viewData($sql);
 		$session = mysqli_fetch_row($hasil);
@@ -137,24 +137,24 @@ if(isset($_POST["login"]))
 			$_SESSION['namauser'] = "$session[0]";
 			echo("berhasil - $email");
 			//'<meta http-equiv="refresh" content="1; URL=tambahpenjualan.php" />';
-			}	
-			
+			}
+
 			}
 			else
 			{
 				echo ("<h6 class='mbr-text mbr-light'><font color='red'>Password is incorrect. Please try again.</font></h6>");
 			}
-			
+
 		}
 		else
 		{
 			echo ("<h6 class='mbr-text mbr-light'><font color='red'>Sorry, we can't find an account with that email</font></h6>");
 		}
-	
+
 	}
-?> 
+?>
                 <div align="center"><span class="input-group-btn">
-                 <br/> 
+                 <br/>
                    <input class="btn btn-form btn-primary display-4" type="submit" name="login" id="login" value="Log In" />
                   </span>
                 </div>
@@ -166,9 +166,9 @@ if(isset($_POST["login"]))
 <input class="btn btn-form btn-primary display-4" type="submit" name="signup" id="signup" value="Sign Up" />
                   </span>
                 </div></p>
-                
+
            </form>
-           
+
     </div>
 	</div>
 
