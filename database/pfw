@@ -56,7 +56,7 @@ INSERT INTO `customer` (`id_customer`,`name`,`email`,`phone`,`address`,`postal_c
 DROP TABLE IF EXISTS `design`;
 CREATE TABLE `design` (
   `id_design` varchar(50) NOT NULL,
-  `path_design` varchar(50) NOT NULL,
+  `path_icon` varchar(50) NOT NULL,
   PRIMARY KEY (`id_design`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
