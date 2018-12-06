@@ -48,7 +48,7 @@ include "koneksi.php";
                         Home</a>
                 </li><li class="nav-item"><a class="nav-link link text-black display-4" href="index.php#features15-9">
                         Portfolio</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="index.php#testimonials-slider1-b">
-                        About</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="https://mobirise.co">
+                        About</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="noshop.php">
                         Shop</a></li>
                 <li class="nav-item">
                     <a class="nav-link link text-black display-4" href="https://mobirise.co">
