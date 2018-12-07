@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="assets/socicon/css/styles.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
 
 
 
@@ -58,20 +60,26 @@
   <section class="features18 popup-btn-cards cid-rbljldAFZH" id="features18-k">
     <form id="formAdmin" name="form1" method="post" action="">
       <p>&nbsp;</p>
-      <table align="left" width="80%" border="0">
+      <table class="noBorder" align="center" width="80%">
         <tr align="center">
-          <td>USERNAME ID</td>
-          <td>
-            <?php
+          <td class="noBorder">USERNAME ID: </td>
+          <?php
               // echo USERNAME AND EMAIL
-            ?>
+          ?>
+        </tr>
+        <tr>
+          <td class="noBorder">EMAIL: </td>
+          <?php
+              // echo USERNAME AND EMAIL
+          ?>
           </td>
         </tr>
       </table>
       <p>&nbsp;</p>
-      <table align="center" width="80%" border="2">
+      <table class="noBorder" align="center" width="80%">
         <tr align="center">
-          <td height="10">No.</td>
+          <hr>
+          <td>No.</td>
           <td>Order Date</td>
           <td>Order ID</td>
           <td>Packaging</td>
@@ -97,14 +105,20 @@
 
 
   <!-- footer -->
-  <section once="" class="cid-rbkA1DU2DQ mbr-reveal" id="footer7-f">
+  <section once="" class="cid-rblxeb4aPl" id="footer6-1e">
+    <div class="container">
+      <div class="media-container-row align-center mbr-white">
+        <div class="col-12">
+          <p class="mbr-text mb-0 mbr-fonts-style display-7">
+            Find us on :</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section once="" class="cid-rbkA1DU2DQ mbr-reveal" id="footer7-1f">
     <div class="container">
       <div class="media-container-row align-center mbr-white">
         <div class="row social-row">
-          <div class="col-12">
-            <p class="mbr-text mb-0 mbr-fonts-style display-7">
-            Find us on :</p>
-          </div>
           <div class="social-list align-right pb-2">
             <div class="soc-item">
               <a href="https://twitter.com/mobirise" target="_blank">
@@ -118,8 +132,7 @@
               <a href="https://twitter.com/mobirise" target="_blank">
                 <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
               </a>
-            </div>
-          </div>
+            </div></div>
         </div>
         <div class="row row-copirayt">
           <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7"></p>
@@ -132,14 +145,10 @@
   <script src="assets/popper/popper.min.js"></script>
   <script src="assets/tether/tether.min.js"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/smoothscroll/smooth-scroll.js"></script>
   <script src="assets/dropdown/js/script.min.js"></script>
-  <script src="assets/parallax/jarallax.min.js"></script>
-  <script src="assets/mbr-popup-btns/mbr-popup-btns.js"></script>
-  <script src="assets/mbr-flip-card/mbr-flip-card.js"></script>
-  <script src="assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js"></script>
-  <script src="assets/mbr-testimonials-slider/mbr-testimonials-slider.js"></script>
   <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+  <script src="assets/parallax/jarallax.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
   <script src="assets/theme/js/script.js"></script>
 
 

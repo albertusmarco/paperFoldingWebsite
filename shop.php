@@ -1,7 +1,7 @@
 <?php
-  include "menu.php";
-  session_start();
+include "menu.php";
 ?>
+
 <!DOCTYPE html>
 <html >
 <head>
@@ -11,132 +11,32 @@
   <meta name="generator" content="Mobirise v4.8.4, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/logo2.png" type="image/x-icon">
-  <meta name="description" content="">
-  <title>Home</title>
+  <meta name="description" content="Web Maker Description">
+  <title>noshop</title>
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
   <link rel="stylesheet" href="assets/tether/tether.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
   <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-
-
-
+  
 </head>
 <body>
-  <style>
-    .button {
-      background-color: #4CAF50; /* Green */
-      border: none;
-      color: white;
-      padding: 16px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      -webkit-transition-duration: 0.4s; /* Safari */
-      transition-duration: 0.4s;
-      cursor: pointer;
-    }
-    .button2 {
-        background-color: white; 
-        color: black; 
-        border: 2px solid #008CBA;
-    }
-    .button2:hover {
-        background-color: #008CBA;
-        color: white;
-    }
-    .noBorder{
-      border: 0;
-    }
-  </style>
-  <?php
-    $custID = $_GET['custID'];
-  ?>
+
+  <section class="header10 cid-rbkq4YRq2S mbr-fullscreen mbr-parallax-background" id="header10-3">
   <section class="features18 popup-btn-cards cid-rbljldAFZH" id="features18-k">
-    <form id="formAdmin" name="form1" method="post" action="">
-      <p>&nbsp;</p>
-      <table align="center" width="80%" border="0">
-        <tr align="left">
-          <td height="50">Customer ID</td>
-          <td>:
-            <?php
-              echo $custID;
-            ?>
-          </td>
-        </tr>
-        <tr align="left">
-          <td height="50">Name</td>
-          <td>:
-            <?php
-              $sql = "SELECT `customer`.name from `customer` WHERE `id_customer`='$custID';";
-              $data = viewData($sql);
-              $row = mysqli_fetch_row($data);
-              echo $row[0];
-            ?>
-          </td>
-        </tr>
-        <tr align="left">
-          <td height="50">Address</td>
-          <td>:
-            <?php
-              $sql = "SELECT `customer`.address from `customer` WHERE `id_customer`='$custID';";
-              $data = viewData($sql);
-              $row = mysqli_fetch_row($data);
-              echo $row[0];
-            ?>
-          </td>
-        </tr>
-        <tr align="left">
-          <td height="50">Email</td>
-          <td>:
-            <?php
-              $sql = "SELECT `customer`.email from `customer` WHERE `id_customer`='$custID';";
-              $data = viewData($sql);
-              $row = mysqli_fetch_row($data);
-              echo $row[0];
-            ?>
-          </td>
-        </tr>
-        <tr align="left">
-          <td height="50">Phone</td>
-          <td>:
-            <?php
-              $sql = "SELECT `customer`.phone from `customer` WHERE `id_customer`='$custID';";
-              $data = viewData($sql);
-              $row = mysqli_fetch_row($data);
-              echo $row[0];
-            ?>
-          </td>
-        </tr>
-        <tr align="left">
-          <td height="50">Postal Code</td>
-          <td>:
-            <?php
-              $sql = "SELECT `customer`.postal_code from `customer` WHERE `id_customer`='$custID';";
-              $data = viewData($sql);
-              $row = mysqli_fetch_row($data);
-              echo $row[0];
-            ?>
-          </td>
-        </tr>
-      </table>
-      <p>&nbsp;</p>
-    </form>
-    
+    <div class="container">
+      <p>o(╥﹏╥)o ... ??</p>
+      <h3 class="mbr-section-subtitle display-5 align-center mbr-fonts-style mbr-light">Choose your packaging type</h3>
+      <h3 class="mbr-section-subtitle display-5 align-center mbr-fonts-style mbr-light">Choose the material</h3>
+    </div>  
+  </section>
   </section>
 
-
-
-
-
-
-  <!-- footer -->
+<!-- footer -->
   <section once="" class="cid-rblxeb4aPl" id="footer6-1e">
     <div class="container">
       <div class="media-container-row align-center mbr-white">
@@ -182,6 +82,7 @@
   <script src="assets/parallax/jarallax.min.js"></script>
   <script src="assets/smoothscroll/smooth-scroll.js"></script>
   <script src="assets/theme/js/script.js"></script>
-
+  
+  
 </body>
 </html>
