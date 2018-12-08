@@ -182,7 +182,7 @@
         </nav>
     </section>
 
-    <section>
+    <section style="background-color:#7DBDC1;">
       <br/><br/><br/><br/>
         <span style="float:left;">
           <a class="navbar-caption text-black display-5">SIZE</a>
@@ -211,7 +211,7 @@
             <script>
               var slider2 = document.getElementById("boxHeight");
               var output2 = document.getElementById("demo2");
-              output2.innerHTML = slider.value;
+              output2.innerHTML = slider2.value;
 
               slider2.oninput = function() {
                 output2.innerHTML = this.value;
@@ -226,7 +226,7 @@
             <script>
               var slider3 = document.getElementById("boxDepth");
               var output3 = document.getElementById("demo3");
-              output3.innerHTML = slider.value;
+              output3.innerHTML = slider3.value;
 
               slider3.oninput = function() {
                 output3.innerHTML = this.value;
@@ -245,14 +245,28 @@
             <!-- three.js library -->
             <script src = "js/three.js"></script>
             <script src = "js/OrbitControls.js"></script>
-            <script src= "js/softBox.js"></script>
+            <script src= "js/box.js"></script>
           </span>
 
-          <span id = "custom" style="float:right;">
-            test akajkanajksadqwdqwddasaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br/>
-            sadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          <span style="float:right;">
+            <a class="navbar-caption text-black display-5">ORDER DETAIL</a> <br/>
+            _____________________________________________________________________ <br/>
+            Packaging Type : ___ <br/>
+            Material : ___ <br/>
+            Minimum Order : 50 <br/>
+            Order : ___ <br/>
+            Width : <span id="demo"></span> cm <br/>
+            Height : <span id="demo2"></span> cm <br/>
+            Depth : <span id="demo3"></span> cm <br/>
+            Quantity : ___ <br/>
+            _____________________________________________________________________ <br/>
+            <br/>
+            INSTRUCTIONS : <br/>
+            1. Orbit Control : Hold Left-Click Mouse <br/>
+            2. Zoom-in & Zoom-out : Scroll Mouse
           </span>
-      </div>
+
+          <span style="clear:both;"></span>
     </section>
 
     <section once="" class="cid-rblxeb4aPl" id="footer6-r">
