@@ -35,19 +35,14 @@ session_start();
   <div class="container align-center">
 <div class="row">
     <div class="mbr-white col-lg-4 col-md-7 content-container">
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-       
         <p class="mbr-text pb-3 mbr-fonts-style display-5"></p>
     </div>
     <div class="col-lg-4 col-md-5">
     <div class="form-container">
         <div class="media-container-column" data-form-type="formoid">
         
+ <form class="mbr-form" action="" method="post" data-form-title="Mobirise Form">
  
-<form class="mbr-form" action="" method="post" data-form-title="Mobirise Form">
              <div align="center">
              <br/>
              <br/>
@@ -55,7 +50,7 @@ session_start();
               <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style">WELCOME</h1>
               <br/>
              </div>
-              <div data-for="name">
+    	  <div data-for="name">
                     <div class="form-group">
                         <div align="center">
                           <input type="text" class="form-control px-3" name="tname" data-form-field="Name" placeholder="Name" required id="tname">
@@ -66,7 +61,7 @@ session_start();
                  <div class="form-group">
                      <div align="center">
                          <p>
-                           <input type="text" class="form-control px-3" name="tphone" data-form-field="Phone" placeholder="Phone" required id="tphone">
+                           <input type="text" class="form-control px-3" name="tphone" data-form-field="Phone" placeholder="Phone" required id="tphone" onkeypress="return isNumber(event);">
                          </p>
                    </div>
                  </div>
@@ -84,11 +79,18 @@ session_start();
                  <div class="form-group">
                      <div align="center">
                          <p>
-                           <input type="text" class="form-control px-3" name="tpcode" data-form-field="Postal Code" placeholder="Postal Code" required id="tpcode">
+                           <input type="text" class="form-control px-3" name="tpcode" data-form-field="Postal Code" placeholder="Postal Code" required id="tpcode" onkeypress="return isNumber(event);">
                          </p>
                    </div>
                  </div>
                </div>
+<script>           
+function isNumber(e){
+e = e || window.event;
+var charCode = e.which ? e.which : e.keyCode;
+return /\d/.test(String.fromCharCode(charCode));}
+</script>	          
+               
                  <div data-for="email">
                  <div class="form-group">
                      <div align="center">
