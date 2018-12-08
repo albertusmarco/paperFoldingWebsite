@@ -138,7 +138,7 @@
 
           <span style="float:right;">
             <a class="navbar-caption text-black display-5">ORDER DETAIL</a> <br/>
-            _____________________________________________________________________ <br/>
+            _________________________________________________________________________ <br/>
             Packaging Type : ___ <br/>
             Material : ___ <br/>
             Minimum Order : 50 <br/>
@@ -147,11 +147,13 @@
             Height : <span id="demo2"></span> cm <br/>
             Depth : <span id="demo3"></span> cm <br/>
             Quantity : ___ <br/>
-            _____________________________________________________________________ <br/>
+            _________________________________________________________________________ <br/>
             <br/>
-            INSTRUCTIONS : <br/>
+            <a class="navbar-caption text-black display-5"> INSTRUCTIONS : </a><br/>
             1. Orbit Control : Hold Left-Click Mouse <br/>
-            2. Zoom-in & Zoom-out : Scroll Mouse
+            2. Zoom-in & Zoom-out : Scroll Mouse <br/>
+            3. Make sure all order detail already desire <br/>
+            <a class="btn btn-md btn-primary display-4" href="">SUBMIT</a>
           </span>
 
           <span style="clear:both;"></span>
