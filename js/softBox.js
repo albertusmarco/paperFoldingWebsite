@@ -1,17 +1,17 @@
   var scene = new THREE.Scene();
-  var camera = new THREE.PerspectiveCamera(45,500 / 500,1,1000);
+  var camera = new THREE.PerspectiveCamera(45,500 / 600,1,1000);
 
   var renderer = new THREE.WebGLRenderer({canvas: document.getElementById('myCanvas'),antialias: true});
   renderer.setClearColor(074666);
   renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(500,500);
+  renderer.setSize(500,600);
   document.getElementById("custom").appendChild(renderer.domElement);
 
   //update viewport
   window.addEventListener('resize',function()
   {
       var width = 500;
-      var height = 500;
+      var height = 600;
       renderer.setSize(width,height);
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
@@ -49,7 +49,13 @@
   //control orbit
   var controls = new THREE.OrbitControls(camera,renderer.domElement);
 
-  var geometry = new THREE.BoxGeometry(15,15,15);
+  //get ID from file php
+  var boxWidth = document.getElementById("boxWidth");
+  var boxHeight = document.getElementById("boxHeight");
+  var boxDepth = document.getElementById("boxDepth");
+
+  var geometry = new THREE.BoxGeometry(boxWidth.value,boxHeight.value,boxDepth.value);
+
   //create the shape
   //create the material, color, or image textures
   var cubeMaterials =
@@ -65,10 +71,6 @@
   var material = new THREE.MeshFaceMaterial(cubeMaterials);
   var cube = new THREE.Mesh(geometry,material);
   scene.add(cube);
-
-  var boxWidth = document.getElementById("boxWidth");
-  var boxHeight = document.getElementById("boxHeight");
-  var boxDepth = document.getElementById("boxDepth");
 
   boxWidth.addEventListener('input', sliderChange);
   boxHeight.addEventListener('input', sliderChange);
@@ -95,13 +97,14 @@
     var cube = new THREE.Mesh(geometry,material);
     scene.add(cube);
   }
-  camera.position.z=50;
+
+  camera.position.z=200;
 
   //game logic
   var update = function()
   {
-    // cube.rotation.x += 0.01;
-    // cube.rotation.y += 0.005;
+    //cube.rotation.x = 1;
+    //cube.rotation.y = 1;
   };
 
   //draw Scene
