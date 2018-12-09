@@ -75,6 +75,7 @@ include "menu.php";
 
         <span style="clear:both;"></span>
         <span style="float:right;">
+          <!-- silahkan code disini DHIENA!! -->
           <a class="navbar-caption text-black display-5">INFORMATION DETAIL</a> <br/>
           ________________________________________________________________________________________________________________________<br/>
           Packaging Type : ___ <br/>
