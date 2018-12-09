@@ -1,8 +1,9 @@
   var scene = new THREE.Scene();
+  // scene.background = new THREE.Color(0F2126);
   var camera = new THREE.PerspectiveCamera(45,500 / 600,1,1000);
 
-  var renderer = new THREE.WebGLRenderer({canvas: document.getElementById('myCanvas'),antialias: true});
-  renderer.setClearColor(074666);
+  var renderer = new THREE.WebGLRenderer({canvas: document.getElementById('myCanvas'),antialias: true,alpha: true});
+  renderer.setClearColor(0xFFFFFF,0);
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(500,600);
   document.getElementById("custom").appendChild(renderer.domElement);
