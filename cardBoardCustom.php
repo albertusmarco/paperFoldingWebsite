@@ -10,9 +10,22 @@
     }
     canvas
     {
-      border: 1px solid black;
-      background: grey;
+      /* border: 1px solid black; */
+      /* width:1000px;
+      height:1000px; */
     }
+    /* canvas {
+    padding: 10;
+    margin: auto;
+    display: block;
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 10;
+    bottom: 10;
+    left: 10;
+    right: 10;
+    } */
     </style>
 
     <!-- mobirise template -->
@@ -32,6 +45,10 @@
     <link rel="stylesheet" href="assets/theme/css/style.css">
     <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
 
+    <!-- p5.js library -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+    <script src="js/sketch.js"></script> -->
+
 
     <link rel="stylesheet" type="text/css" href="css/sizeSlider.css">
     <link rel="stylesheet" type="text/css" href="css/color.css">
@@ -50,7 +67,7 @@
             <div class="menu-logo">
                 <div class="navbar-brand">
 
-                    <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-5">SENDWISH : CARDBOARD CUSTOMIZE</a></span>
+                    <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-5">SENDWISH : SOFTBOX CUSTOMIZE</a></span>
                 </div>
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -70,12 +87,16 @@
         </nav>
     </section>
 
-    <section style="background-color:#7DBDC1;">
+    <section style="background-color:#F5F5F5;">
       <br/><br/><br/><br/>
-        <span style="float:left;">
-          <a class="navbar-caption text-black display-5">SIZE</a>
-          <div class="slidecontainer" style="float:left;">
-              Width :
+        <span style="float:left;margin-left:80px;margin-top:35px;background-color:#FFFFFF;">
+          <br/>
+          <a class="navbar-caption text-black display-5" style="margin:0.8cm;">SIZE</a>
+
+            <div class="slidecontainer">
+              <!-- &nbsp;&nbsp; -->
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Width &nbsp;&nbsp;:
               <input type="range" min="1" max="100" value="60" id="boxWidth">
               <span id="demo"></span> cm
               <!-- <p>Custom range slider:</p>
@@ -90,11 +111,14 @@
                 output.innerHTML = this.value;
               }
             </script>
-            <br/>
-            <div class="slidecontainer" style="float:left;">
-              Height :
+            <!-- <br/> -->
+
+            <div class="slidecontainer">
+              <!-- &nbsp;&nbsp; -->
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Height &nbsp;:
               <input type="range" min="1" max="100" value="40" id="boxHeight">
-              <span id="demo2"></span> cm
+              <span id="demo2"></span> cm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
             <script>
               var slider2 = document.getElementById("boxHeight");
@@ -105,9 +129,12 @@
                 output2.innerHTML = this.value;
               }
             </script>
-            <br/>
-            <div class="slidecontainer" style="float:left;">
-              Depth :
+            <!-- <br/> -->
+
+            <div class="slidecontainer">
+              <!-- &nbsp;&nbsp; -->
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Depth &nbsp;&nbsp;:
               <input type="range" min="1" max="100" value="20" id="boxDepth">
               <span id="demo3"></span> cm
             </div>
@@ -120,15 +147,18 @@
                 output3.innerHTML = this.value;
               }
             </script>
-            <a class="navbar-caption text-black display-5">COLOR</a>
-            <br>
-            test
+            <br/>
+            <a class="navbar-caption text-black display-5" style="margin:0.8cm;">COLOR</a>
+            <br/>
+            <!-- &nbsp;&nbsp; -->
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test
         </span>
         <!-- <br/> -->
-
-          <span id = "custom" style="float:center;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span id = "custom" style="float:center;margin-left:20px;background-color:#FFFFFF;">
             <a class="navbar-caption text-black display-5">CHOOSE SIDE</a>
             <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <canvas id="myCanvas"></canvas>
             <!-- three.js library -->
             <script src = "js/three.js"></script>
@@ -136,24 +166,29 @@
             <script src= "js/box.js"></script>
           </span>
 
-          <span style="float:right;">
-            <a class="navbar-caption text-black display-5">ORDER DETAIL</a> <br/>
-            _________________________________________________________________________ <br/>
-            Packaging Type : ___ <br/>
-            Material : ___ <br/>
-            Minimum Order : 50 <br/>
-            Order : ___ <br/>
-            Width : <span id="demo"></span> cm <br/>
-            Height : <span id="demo2"></span> cm <br/>
-            Depth : <span id="demo3"></span> cm <br/>
-            Quantity : ___ <br/>
-            _________________________________________________________________________ <br/>
+          <span style="float:right;margin-right:85px;background-color:#FFFFFF;">
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
             <br/>
-            <a class="navbar-caption text-black display-5"> INSTRUCTIONS : </a><br/>
-            1. Orbit Control : Hold Left-Click Mouse <br/>
-            2. Zoom-in & Zoom-out : Scroll Mouse <br/>
-            3. Make sure all order detail already desire <br/>
+            <a class="navbar-caption text-black display-5" style="margin:0.8cm;">ORDER DETAIL</a><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : ___ <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Material : ___ <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimum Order : 50 <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Order : ___ <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width : <span id="demo"></span> cm <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demo2"></span> cm <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Depth : <span id="demo3"></span> cm <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity : ___ <br/>
+            <!-- &nbsp;&nbsp;____________________________________________________________<br/> -->
+            <br/>
+            <a class="navbar-caption text-black display-5" style="margin:0.8cm;"> INSTRUCTIONS : </a><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Orbit Control : Hold Left-Click Mouse <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Zoom-in & Zoom-out : Scroll Mouse <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Make sure all order detail already desire
+            &nbsp;&nbsp;&nbsp;<br/><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a class="btn btn-md btn-primary display-4" href="">SUBMIT</a>
+            <br/>
+            <br/>
           </span>
 
           <span style="clear:both;"></span>
