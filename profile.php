@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
+
 
 </head>
 <body>
@@ -59,11 +59,12 @@
     <form id="formAdmin" name="form1" method="post" action="">
       <p>&nbsp;</p>
       <table class="noBorder" align="center" width="80%">
-        <tr align="center">
-          <td class="noBorder">USERNAME ID: </td>
+        <tr align="left">
+          <td class="noBorder">USERNAME: </td>
           <?php
               // echo USERNAME AND EMAIL
           ?>
+          
         </tr>
         <tr>
           <td class="noBorder">EMAIL: </td>
@@ -89,6 +90,7 @@
           $data = viewData($sql);
           while ($row = mysqli_fetch_row($data))
           {
+		  echo ("<tr align='center'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>");
             echo ("<tr align='center'><td>". ++$no .".</td><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td><td>$row[3]</td></tr>");
           }
         ?>
@@ -103,17 +105,19 @@
 
 
   <!-- footer -->
-  <section once="" class="cid-rblxeb4aPl" id="footer6-1e">
+ 
+  <section once="" class="cid-rbkA1DU2DQ mbr-reveal" id="footer7-1f">
+  
     <div class="container">
       <div class="media-container-row align-center mbr-white">
         <div class="col-12">
           <p class="mbr-text mb-0 mbr-fonts-style display-7">
             Find us on :</p>
+            <br/>
         </div>
       </div>
     </div>
-  </section>
-  <section once="" class="cid-rbkA1DU2DQ mbr-reveal" id="footer7-1f">
+ 
     <div class="container">
       <div class="media-container-row align-center mbr-white">
         <div class="row social-row">
