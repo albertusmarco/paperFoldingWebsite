@@ -139,6 +139,26 @@ INSERT INTO `login` (`email`,`password`,`role`) VALUES
 
 
 --
+-- Definition of table `material`
+--
+
+DROP TABLE IF EXISTS `material`;
+CREATE TABLE `material` (
+  `id_material` varchar(50) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `status` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_material`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `material`
+--
+
+/*!40000 ALTER TABLE `material` DISABLE KEYS */;
+/*!40000 ALTER TABLE `material` ENABLE KEYS */;
+
+
+--
 -- Definition of table `order`
 --
 
@@ -205,8 +225,6 @@ CREATE TABLE `product` (
   `id_product` varchar(50) NOT NULL DEFAULT '',
   `name` varchar(50) NOT NULL,
   `path_product` varchar(50) NOT NULL,
-  `price` int(10) unsigned NOT NULL,
-  `min_order` int(10) unsigned NOT NULL,
   `status` varchar(50) NOT NULL,
   PRIMARY KEY (`id_product`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -216,10 +234,15 @@ CREATE TABLE `product` (
 --
 
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` (`id_product`,`name`,`path_product`,`price`,`min_order`,`status`) VALUES 
- ('P1','Hard Box','product/product1.json',15000,100,'active'),
- ('P2','Paper Cup','product/product2.json',25000,100,'active'),
- ('P3','Paper Standing Pouch','product/product3.json',10000,100,'active');
+INSERT INTO `product` (`id_product`,`name`,`path_product`,`status`) VALUES 
+ ('P1','Cardboard Box','products/p1.obj','active'),
+ ('P2','Paper Bag','products/p2.obj','active'),
+ ('P3','Paper Cup','products/p3.obj','active'),
+ ('P4','Plastic Pouch','products/p4.obj','active'),
+ ('P5','Paper Pouch','products/p5.obj','active'),
+ ('P6','Pack Label','products/p6.obj','active'),
+ ('P7','Soft Box','products/p7.obj','active'),
+ ('P8','Food Wrap','products/p8.obj','active');
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 
 
