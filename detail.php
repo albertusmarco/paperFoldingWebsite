@@ -76,14 +76,18 @@ include "menu.php";
         <span style="float:right;margin-right:500px;background-color:#FFFFFF;">
           <!-- silahkan code disini DHIENA!! -->
           <a class="navbar-caption text-black display-5" style="margin-left:10px;margin-right:10px;margin-top:10px;">INFORMATION DETAIL</a><br/>
-          <label style="margin-left:10px;margin-right:10px;">Packaging Type : ___ <br/>
-          Material : ___ <br/>
-          Minimum Order : 50 <br/>
-          Order : ___ <br/>
-          Width : <span id="demo"></span> cm <br/>
-          Height : <span id="demo2"></span> cm <br/>
-          Depth : <span id="demo3"></span> cm <br/>
-          Quantity : ___ <br/></label>
+          <?php
+            $no = $_GET['orderID'];
+            $sql = "SELECT `product`.`name`, `material`.`name`, `order_detail`.`qty` FROM `product`, `material`, `order`, `order_detail`, `cust_shelf` WHERE `order`.`id_order` = '$no' AND `order_detail`.`id_order` ='$no' AND `order_detail`.`id_design` = `cust_shelf`.`id_design` AND `cust_shelf`.`id_product` = `product`.`id_product` AND `cust_shelf`.`id_material` = `material`.`id_material`;";
+            $data = viewData($sql);
+            while ($row = mysqli_fetch_row($data)){
+              echo "lsjadfhlahsdflajdnflajnfljadnfljdaslfjb";
+              echo ("<label style='margin-left:10px;margin-right:10px;'>
+                Packaging Type : $row[0] <br/>
+                Material : $row[1] <br/>
+                Quantity : $row[2] <br/></label>");
+            }
+          ?>
         </span>
         <span style="clear:both;"></span>
     </section>
