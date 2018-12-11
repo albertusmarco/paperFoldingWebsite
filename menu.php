@@ -44,14 +44,14 @@ include "koneksi.php";
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item">
-                    <a class="nav-link link text-black display-4" href="index.php#header10-3">
+                    <a class="nav-link link text-black display-4" href="index.php">
                         Home</a>
                 </li><li class="nav-item"><a class="nav-link link text-black display-4" href="index.php#features15-9">
                         Portfolio</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="index.php#testimonials-slider1-b">
                         About</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="noshop.php">
                         Shop</a></li>
                 <li class="nav-item">
-                    <a class="nav-link link text-black display-4" href="https://mobirise.co">
+                    <a class="nav-link link text-black display-4" href="login.php">
                         Sign In</a>
                 </li></ul>
             

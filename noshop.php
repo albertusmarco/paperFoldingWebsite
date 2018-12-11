@@ -40,8 +40,8 @@ include "menu.php";
                 
                 <p class="mbr-text align-center display-5 pb-3 mbr-fonts-style">
                    You haven't signed in<br>any data won't be saved</p>
-                <div class="mbr-section-btn align-center"><a class="btn btn-md btn-white-outline display-4" href="https://mobirise.co">I'm Okay</a>
-                        <a class="btn btn-md btn-primary display-4" href="https://mobirise.co">Sign In</a></div>
+                <div class="mbr-section-btn align-center"><a class="btn btn-md btn-white-outline display-4" href="shop.php">I'm Okay</a>
+                        <a class="btn btn-md btn-primary display-4" href="login.php">Sign In</a></div>
             </div>
         </div>
     </div>
@@ -82,17 +82,17 @@ include "menu.php";
                     
                     
                     
-                <div class="soc-item">
-                        <a href="https://twitter.com/mobirise" target="_blank">
+               <div class="soc-item">
+                        <a href="https://instagram.com/sendwish.id" target="_blank">
                             <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
                         </a>
                     </div><div class="soc-item">
-                        <a href="https://twitter.com/mobirise" target="_blank">
+                        <a href="https://wa.me/6283833002258" target="_blank">
                             <span class="mbr-iconfont mbr-iconfont-social socicon-whatsapp socicon"></span>
                         </a>
                     </div><div class="soc-item">
-                        <a href="https://twitter.com/mobirise" target="_blank">
-                            <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
+                        <a href="contactmail.php" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-mail socicon"></span>
                         </a>
                     </div></div>
             </div>
