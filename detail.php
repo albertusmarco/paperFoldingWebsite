@@ -91,7 +91,7 @@ include "menu.php";
         <span style="clear:both;"></span>
     </section>
 
-    <!-- <section once="" class="cid-rblxeb4aPl" id="footer6-r">
+    <section once="" class="cid-rblxeb4aPl" id="footer6-r">
         <div class="container">
             <div class="media-container-row align-center mbr-white">
                 <div class="col-12">
@@ -125,7 +125,7 @@ include "menu.php";
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
 
       <script src="assets/web/assets/jquery/jquery.min.js"></script>
