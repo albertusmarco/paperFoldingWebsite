@@ -59,7 +59,7 @@ include "menu.php";
     <link rel="stylesheet" type="text/css" href="css/color.css">
   </head>
   <body>
-    <section style="background-color:#7DBDC1;">
+    <section style="background-color:#F5F5F5;">
       <br/><br/><br/><br/>
         <span style="float:center;">
           <h1>Object Detail</h1>
@@ -74,19 +74,17 @@ include "menu.php";
         </span>
 
         <span style="clear:both;"></span>
-        <span style="float:right;">
+        <span style="float:right;margin-right:500px;background-color:#FFFFFF;">
           <!-- silahkan code disini DHIENA!! -->
-          <a class="navbar-caption text-black display-5">INFORMATION DETAIL</a> <br/>
-          ________________________________________________________________________________________________________________________<br/>
-          Packaging Type : ___ <br/>
+          <a class="navbar-caption text-black display-5" style="margin-left:10px;margin-right:10px;margin-top:10px;">INFORMATION DETAIL</a><br/>
+          <label style="margin-left:10px;margin-right:10px;">Packaging Type : ___ <br/>
           Material : ___ <br/>
           Minimum Order : 50 <br/>
           Order : ___ <br/>
           Width : <span id="demo"></span> cm <br/>
           Height : <span id="demo2"></span> cm <br/>
           Depth : <span id="demo3"></span> cm <br/>
-          Quantity : ___ <br/>
-          ________________________________________________________________________________________________________________________
+          Quantity : ___ <br/></label>
         </span>
     </section>
 

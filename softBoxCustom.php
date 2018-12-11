@@ -274,8 +274,17 @@
             <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
             <br/>
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;">ORDER DETAIL</a><br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : ___ <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Material : ___ <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : Soft Box <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Material :
+            <select id="material">
+              <option value="artpaper">Art Paper</option>
+              <option value="artcarton">Art Carton</option>
+              <option value="ivorytexture">Ivory Texture</option>
+              <option value="bcmanila">BC Manila</option>
+              <option value="duplex">Duplex</option>
+              <option value="samson">Samson</option>
+              <option value="paperkraft">Paper Kraft</option>
+            </select> <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimum Order : 50 <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Order : ___ <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width : <span id="demo"></span> cm <br/>
