@@ -30,7 +30,11 @@ CREATE TABLE `cust_shelf` (
   `id_design` varchar(50) NOT NULL,
   `id_customer` varchar(50) NOT NULL,
   `id_product` varchar(50) NOT NULL,
-  `path_design` varchar(50) NOT NULL,
+  `id_material` varchar(50) NOT NULL,
+  `size1` varchar(50) NOT NULL,
+  `size2` varchar(50) NOT NULL,
+  `size3` varchar(50) NOT NULL,
+  `path_product` varchar(50) NOT NULL,
   PRIMARY KEY (`id_design`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -39,17 +43,17 @@ CREATE TABLE `cust_shelf` (
 --
 
 /*!40000 ALTER TABLE `cust_shelf` DISABLE KEYS */;
-INSERT INTO `cust_shelf` (`id_design`,`id_customer`,`id_product`,`path_design`) VALUES 
- ('D1','C1','P1','foto'),
- ('D10','C2','P1','foto'),
- ('D2','C1','P1','foto'),
- ('D3','C3','P3','foto'),
- ('D4','C1','P2','foto'),
- ('D5','C2','P3','foto'),
- ('D6','C4','P3','foto'),
- ('D7','C4','P2','foto'),
- ('D8','C2','P3','foto'),
- ('D9','C2','P2','foto');
+INSERT INTO `cust_shelf` (`id_design`,`id_customer`,`id_product`,`id_material`,`size1`,`size2`,`size3`,`path_product`) VALUES 
+ ('D1','C1','P1','foto','','','',''),
+ ('D10','C2','P1','foto','','','',''),
+ ('D2','C1','P1','foto','','','',''),
+ ('D3','C3','P3','foto','','','',''),
+ ('D4','C1','P2','foto','','','',''),
+ ('D5','C2','P3','foto','','','',''),
+ ('D6','C4','P3','foto','','','',''),
+ ('D7','C4','P2','foto','','','',''),
+ ('D8','C2','P3','foto','','','',''),
+ ('D9','C2','P2','foto','','','','');
 /*!40000 ALTER TABLE `cust_shelf` ENABLE KEYS */;
 
 
