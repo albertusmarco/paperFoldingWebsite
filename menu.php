@@ -1,5 +1,6 @@
 <?php
 include "koneksi.php";
+session_start();
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -51,8 +52,18 @@ include "koneksi.php";
                         About</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="noshop.php">
                         Shop</a></li>
                 <li class="nav-item">
-                    <a class="nav-link link text-black display-4" href="login.php">
-                        Sign In</a>
+                    <a class="nav-link link text-black display-4" href="<?php
+                     if($_SESSION['adasesi'] == "1")
+                        {echo("customer.php");}
+						else
+						{echo("login.php");}
+					?>">  
+					<?php
+					   if($_SESSION['adasesi'] == "1")
+                        {echo($_SESSION['namauser']);}
+						else
+						{echo("Sign In");}
+					?></a>
                 </li></ul>
             
         </div>
