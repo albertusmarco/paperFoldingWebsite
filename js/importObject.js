@@ -2,7 +2,7 @@ var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(45,500 / 500,1,1000);
 
 var renderer = new THREE.WebGLRenderer({canvas: document.getElementById('myCanvas'),antialias: true});
-renderer.setClearColor(074666);
+renderer.setClearColor(0x55B4D4);
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(500,500);
 document.getElementById("custom").appendChild(renderer.domElement);

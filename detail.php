@@ -61,10 +61,10 @@ include "menu.php";
   <body>
     <section style="background-color:#F5F5F5;">
       <br/><br/><br/><br/>
-        <span style="float:center;">
-          <h1>Object Detail</h1>
-        </span>
-        <br/>
+      <span style="float:center;">
+        <h1>Object Detail</h1>
+      </span>
+
         <span id = "custom" style="float:center;">
           <canvas id="myCanvas"></canvas>
           <!-- three.js library -->
@@ -73,7 +73,6 @@ include "menu.php";
           <script src= "js/importObject.js"></script>
         </span>
 
-        <span style="clear:both;"></span>
         <span style="float:right;margin-right:500px;background-color:#FFFFFF;">
           <!-- silahkan code disini DHIENA!! -->
           <a class="navbar-caption text-black display-5" style="margin-left:10px;margin-right:10px;margin-top:10px;">INFORMATION DETAIL</a><br/>
@@ -86,6 +85,7 @@ include "menu.php";
           Depth : <span id="demo3"></span> cm <br/>
           Quantity : ___ <br/></label>
         </span>
+        <span style="clear:both;"></span>
     </section>
 
     <section once="" class="cid-rblxeb4aPl" id="footer6-r">
