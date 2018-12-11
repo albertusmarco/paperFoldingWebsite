@@ -93,15 +93,21 @@
           <br/>
           <a class="navbar-caption text-black display-5" style="margin:0.8cm;">SIZE</a>
           <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a id="size1">8 oz &nbsp;&nbsp;: 6 cm x 5 cm x 5 cm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select id="paperSize">
+              <option value="8oz">8 oz : 6 cm x 5 cm x 5 cm</option>
+              <option value="12oz">12 oz : 8,5 cm x 5,8 cm x 10,5 cm</option>
+              <option value="16oz">16 oz : 8,5 cm x 5,8 cm x 12,5 cm</option>
+            </select>&nbsp;&nbsp;&nbsp;
+            <!-- <a id="size1">8 oz : 6 cm x 5 cm x 5 cm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a id="size2">12 oz : 8,5 cm x 5,8 cm x 10,5 cm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a id="size3">16 oz : 8,5 cm x 5,8 cm x 12,5 cm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+            <a id="size3">16 oz : 8,5 cm x 5,8 cm x 12,5 cm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+            <br/><br/>
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;">COLOR</a>
             <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test
         </span>
         <!-- <br/> -->
 
@@ -127,23 +133,29 @@
           </span>
 
           <span style="float:right;margin-right:85px;background-color:#FFFFFF;">
-            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
             <br/>
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;">ORDER DETAIL</a><br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : ___ <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Material : ___ <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : Paper Cup <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Material :
+            <select id="material">
+              <option value="artpaper">Art Paper</option>
+              <option value="artcarton">Art Carton</option>
+              <option value="ivorytexture">Ivory Texture</option>
+              <option value="bcmanila">BC Manila</option>
+              <option value="duplex">Duplex</option>
+              <option value="samson">Samson</option>
+              <option value="paperkraft">Paper Kraft</option>
+            </select> <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Top Diameter : <span id="demo"></span> cm <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Base Diameter : <span id="demo2"></span> cm <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demo3"></span> cm <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimum Order : 50 <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Order : ___ <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width : <span id="demo"></span> cm <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demo2"></span> cm <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Depth : <span id="demo3"></span> cm <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity : ___ <br/>
-            <!-- &nbsp;&nbsp;____________________________________________________________<br/> -->
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity : <input type="number" name="quantity" min="50" style="width:150px;"> <br/>
             <br/>
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;"> INSTRUCTIONS : </a><br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Orbit Control : Hold Left-Click Mouse <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Zoom-in & Zoom-out : Scroll Mouse <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. The attributes will be changed<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. The attributes will be changed <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;according the side options<br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Make sure all order detail already desire
             &nbsp;&nbsp;&nbsp;&nbsp;<br/><br/>
