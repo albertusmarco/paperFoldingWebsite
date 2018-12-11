@@ -74,6 +74,7 @@ if(isset($_POST["signin"]))
 {
 		$email = $_POST["temail"];
 		$pass = $_POST["tpassword"];
+		$_SESSION['adasesi'] = "0";
 
 		$sql = "select email from login where email = '$email';";
 		$hasil = viewData($sql);
@@ -91,8 +92,9 @@ if(isset($_POST["signin"]))
 		$hasil = viewData($sql);
 		$role = mysqli_fetch_row($hasil);
 		if ($role[0] == 1)	{
-				$_SESSION['username'] = "Admin";
+				$_SESSION['email'] = "Admin";
 				$_SESSION['namauser'] = "Admin";
+				$_SESSION['adasesi'] = "1";
 				echo'<meta http-equiv="refresh" content="1; URL=admin.php" />';
 				}
 		else {
@@ -100,8 +102,9 @@ if(isset($_POST["signin"]))
 			$sql = "select name from customer where email = '$email';";
 		$hasil = viewData($sql);
 		$session = mysqli_fetch_row($hasil);
-			$_SESSION['username'] = "$email";
+			$_SESSION['email'] = "$email";
 			$_SESSION['namauser'] = "$session[0]";
+			$_SESSION['adasesi'] = "1";
 			echo'<meta http-equiv="refresh" content="1; URL=index.php" />';
 			}
 
