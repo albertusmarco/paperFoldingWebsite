@@ -60,7 +60,7 @@
     <form id="formAdmin" name="form1" method="post" action="">
       <p>&nbsp;</p>
       <h2 class="mbr-section-title pb-3 align-center mbr-fonts-style display-2">Customers' Orders List</h2>
-      <p align="center"><i>*Notes: Progress indication "-" means dp has yet not been paid.</i></p>
+      <p align="center"><i>*Notes: Progress indication "-" means dp has not been paid yet.</i></p>
       <table class="noBorder" align="center" width="80%">
         <tr align="center">
           <hr>
