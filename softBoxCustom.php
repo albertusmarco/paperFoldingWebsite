@@ -188,7 +188,6 @@
           <a class="navbar-caption text-black display-5" style="margin:0.8cm;">SIZE</a>
 
             <div class="slidecontainer">
-              <!-- &nbsp;&nbsp; -->
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               Width &nbsp;&nbsp;:
               <input type="range" min="1" max="100" value="50" id="boxWidth">
@@ -196,58 +195,25 @@
               <!-- <p>Custom range slider:</p>
               <input type="range" min="1" max="100" value="50" class="slider" id="myRange"> -->
             </div>
-            <script>
-              var slider = document.getElementById("boxWidth");
-              var output = document.getElementById("demo");
-              output.innerHTML = slider.value;
-
-              slider.oninput = function() {
-                output.innerHTML = this.value;
-              }
-            </script>
-            <!-- <br/> -->
 
             <div class="slidecontainer">
-              <!-- &nbsp;&nbsp; -->
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               Height &nbsp;:
               <input type="range" min="1" max="100" value="50" id="boxHeight">
               <span id="demo2"></span> cm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
-            <script>
-              var slider2 = document.getElementById("boxHeight");
-              var output2 = document.getElementById("demo2");
-              output2.innerHTML = slider2.value;
-
-              slider2.oninput = function() {
-                output2.innerHTML = this.value;
-              }
-            </script>
-            <!-- <br/> -->
 
             <div class="slidecontainer">
-              <!-- &nbsp;&nbsp; -->
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               Depth &nbsp;&nbsp;:
               <input type="range" min="1" max="100" value="50" id="boxDepth">
               <span id="demo3"></span> cm
             </div>
-            <script>
-              var slider3 = document.getElementById("boxDepth");
-              var output3 = document.getElementById("demo3");
-              output3.innerHTML = slider3.value;
-
-              slider3.oninput = function() {
-                output3.innerHTML = this.value;
-              }
-            </script>
             <br/>
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;">COLOR</a>
             <br/>
-            <!-- &nbsp;&nbsp; -->
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test
         </span>
-        <!-- <br/> -->
 
           <span id = "custom" style="float:center;margin-left:10px;">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -271,7 +237,6 @@
           </span>
 
           <span style="float:right;margin-right:85px;background-color:#FFFFFF;">
-            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
             <br/>
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;">ORDER DETAIL</a><br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : Soft Box <br/>
@@ -285,13 +250,11 @@
               <option value="samson">Samson</option>
               <option value="paperkraft">Paper Kraft</option>
             </select> <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width : <span id="demos"></span> cm <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demos2"></span> cm <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Depth : <span id="demos3"></span> cm <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimum Order : 50 <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Order : ___ <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width : <span id="demo"></span> cm <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demo2"></span> cm <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Depth : <span id="demo3"></span> cm <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity : ___ <br/>
-            <!-- &nbsp;&nbsp;____________________________________________________________<br/> -->
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity : <input type="number" name="quantity" min="50" style="width:150px;"> <br/>
             <br/>
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;"> INSTRUCTIONS : </a><br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Orbit Control : Hold Left-Click Mouse <br/>
@@ -307,6 +270,38 @@
           </span>
 
           <span style="clear:both;"></span>
+
+          <script>
+          var slider = document.getElementById("boxWidth");
+          var output = document.getElementById("demo");
+          var outputs = document.getElementById("demos");
+          output.innerHTML = slider.value;
+          outputs.innerHTML = slider.value;
+          slider.oninput = function() {
+            output.innerHTML = this.value;
+            outputs.innerHTML = this.value;
+          }
+
+          var slider2 = document.getElementById("boxHeight");
+          var output2 = document.getElementById("demo2");
+          var outputs2 = document.getElementById("demos2");
+          output2.innerHTML = slider2.value;
+          outputs2.innerHTML = slider2.value;
+          slider2.oninput = function() {
+            output2.innerHTML = this.value;
+            outputs2.innerHTML = this.value;
+          }
+
+          var slider3 = document.getElementById("boxDepth");
+          var output3 = document.getElementById("demo3");
+          var outputs3 = document.getElementById("demos3");
+          output3.innerHTML = slider3.value;
+          outputs3.innerHTML = slider3.value;
+          slider3.oninput = function() {
+            output3.innerHTML = this.value;
+            outputs3.innerHTML = this.value;
+          }
+          </script>
     </section>
 
     <section once="" class="cid-rblxeb4aPl" id="footer6-r">
