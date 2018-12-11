@@ -77,22 +77,21 @@ include "menu.php";
           <!-- silahkan code disini DHIENA!! -->
           <a class="navbar-caption text-black display-5" style="margin-left:10px;margin-right:10px;margin-top:10px;">INFORMATION DETAIL</a><br/>
           <?php
-            $no = $_GET['orderID'];
-            $sql = "SELECT `product`.`name`, `material`.`name`, `order_detail`.`qty` FROM `product`, `material`, `order`, `order_detail`, `cust_shelf` WHERE `order`.`id_order` = '$no' AND `order_detail`.`id_order` ='$no' AND `order_detail`.`id_design` = `cust_shelf`.`id_design` AND `cust_shelf`.`id_product` = `product`.`id_product` AND `cust_shelf`.`id_material` = `material`.`id_material`;";
+            $orderID = $_GET['orderID'];
+            $designID = $_GET['designID'];
+            $sql = "SELECT `product`.`name`, `material`.`name`, `order_detail`.`qty` FROM `product`, `material`, `order`, `order_detail`, `cust_shelf` WHERE `order`.`id_order` = '$orderID' AND `order_detail`.`id_design` ='$designID' AND `order_detail`.`id_design` = `cust_shelf`.`id_design` AND `cust_shelf`.`id_product` = `product`.`id_product` AND `cust_shelf`.`id_material` = `material`.`id_material`;";
             $data = viewData($sql);
             while ($row = mysqli_fetch_row($data)){
-              echo "lsjadfhlahsdflajdnflajnfljadnfljdaslfjb";
               echo ("<label style='margin-left:10px;margin-right:10px;'>
-                Packaging Type : $row[0] <br/>
-                Material : $row[1] <br/>
-                Quantity : $row[2] <br/></label>");
-            }
+                Packaging Type : $row[0]<br/>
+                Material : $row[1]<br/>
+                Quantity : $row[2]<br/></label>");            }
           ?>
         </span>
         <span style="clear:both;"></span>
     </section>
 
-    <section once="" class="cid-rblxeb4aPl" id="footer6-r">
+    <!-- <section once="" class="cid-rblxeb4aPl" id="footer6-r">
         <div class="container">
             <div class="media-container-row align-center mbr-white">
                 <div class="col-12">
@@ -126,7 +125,7 @@ include "menu.php";
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
       <script src="assets/web/assets/jquery/jquery.min.js"></script>

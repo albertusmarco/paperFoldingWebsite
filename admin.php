@@ -79,7 +79,7 @@
           while ($row = mysqli_fetch_row($data))
           {
             echo ("<tr align='center'><td>". ++$no .".</td><td>$row[0]</td><td>");
-            echo '<input class="button button2" type="submit" name="btnOrderID" id="btnOrderID" value="'.$row[1].'" formaction="detail.php?orderID='.$row[1].'"/>';
+            echo '<input class="button button2" type="submit" name="btnOrderID" id="btnOrderID" value="'.$row[1].'" formaction="detail.php?orderID='.$row[1].'&designID='.$row[3].'"/>';
             echo ("</td><td>");
             echo '<input class="button button2" type="submit" name="btnCustID" id="btnCustID" value="'.$row[2].'" formaction="customer.php?custID='.$row[2].'"/>';
             echo("</td><td>$row[3]</td><td>");
