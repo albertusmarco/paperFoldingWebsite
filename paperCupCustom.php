@@ -95,9 +95,9 @@
           <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <select id="paperSize">
-              <option value="8oz">8 oz : 6 cm x 5 cm x 5 cm</option>
-              <option value="12oz">12 oz : 8,5 cm x 5,8 cm x 10,5 cm</option>
-              <option value="16oz">16 oz : 8,5 cm x 5,8 cm x 12,5 cm</option>
+              <option value="1">8 oz : 6 cm x 5 cm x 5 cm</option>
+              <option value="2">12 oz : 8,5 cm x 5,8 cm x 10,5 cm</option>
+              <option value="3">16 oz : 8,5 cm x 5,8 cm x 12,5 cm</option>
             </select>&nbsp;&nbsp;&nbsp;
             <!-- <a id="size1">8 oz : 6 cm x 5 cm x 5 cm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

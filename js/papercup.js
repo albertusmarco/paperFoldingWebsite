@@ -51,54 +51,48 @@ scene.add(ambientLight2);
 var controls = new THREE.OrbitControls(camera,renderer.domElement);
 
 //get ID from file php
-// var boxWidth = document.getElementById("boxWidth");
-// var boxHeight = document.getElementById("boxHeight");
-// var boxDepth = document.getElementById("boxDepth");
-
-var geometry = new THREE.CylinderGeometry(8.5,5.8,12.5,50);
+var e = document.getElementById("paperSize");
+var radiusTop = 6;
+var radiusBottom = 5;
+var height = 5;
 
 //create the shape
 //create the material, color, or image textures
-// var cubeMaterials =
-// [
-//   new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Right Side
-//   new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Left Side
-//   new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Top Side
-//   new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}),//Bottom Side
-//   new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}),//Front Side
-//   new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}) //Back Side
-// ];
-
-// var material = new THREE.MeshFaceMaterial(cubeMaterials);
+var geometry = new THREE.CylinderGeometry(radiusTop,radiusBottom,height,50);
 var material = new THREE.MeshBasicMaterial( {color: 0x696969} );
 var papercup = new THREE.Mesh(geometry,material);
 scene.add(papercup);
 
-// boxWidth.addEventListener('input', sliderChange);
-// boxHeight.addEventListener('input', sliderChange);
-// boxDepth.addEventListener('input', sliderChange);
-//
-// function sliderChange() {
-//   while(scene.children.length > 0){
-//     scene.remove(scene.children[0]);
-//   }
-//   var geometry = new THREE.BoxGeometry(boxWidth.value,boxHeight.value,boxDepth.value);
-//   //create the shape
-//   //create the material, color, or image textures
-//   var cubeMaterials =
-//   [
-//     new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Right Side
-//     new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Left Side
-//     new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Top Side
-//     new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}),//Bottom Side
-//     new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}),//Front Side
-//     new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}) //Back Side
-//   ];
-//
-//   var material = new THREE.MeshFaceMaterial(cubeMaterials);
-//   var cube = new THREE.Mesh(geometry,material);
-//   scene.add(cube);
-// }
+e.addEventListener('click', changeSize);
+
+//change paperSizeValue
+function changeSize() {
+  while(scene.children.length > 0){
+    scene.remove(scene.children[0]);
+  }
+  var paperSizeValue = e.options[e.selectedIndex].value;
+  switch(paperSizeValue){
+    case '1':
+      radiusTop = 6;
+      radiusBottom = 5;
+      height = 5;
+      break;
+    case '2':
+      radiusTop = 8.5;
+      radiusBottom = 5.8;
+      height = 10.5;
+      break;
+    case '3':
+      radiusTop = 8.5;
+      radiusBottom = 5.8;
+      height = 12.5;
+      break;
+  }
+  var geometry = new THREE.CylinderGeometry(radiusTop,radiusBottom,height,50);
+  var material = new THREE.MeshBasicMaterial( {color: 0x696969} );
+  var papercup = new THREE.Mesh(geometry,material);
+  scene.add(papercup);
+}
 
 camera.position.z=50;
 
