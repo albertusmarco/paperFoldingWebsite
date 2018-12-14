@@ -146,9 +146,9 @@
               <option value="samson">Samson</option>
               <option value="paperkraft">Paper Kraft</option>
             </select> <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Top Diameter : <span id="demo"></span> cm <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Base Diameter : <span id="demo2"></span> cm <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demo3"></span> cm <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Top Diameter : <span id="demo">6</span> cm <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Base Diameter : <span id="demo2">5</span> cm <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demo3">5</span> cm <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimum Order : 50 <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity : <input type="number" name="quantity" min="50" style="width:150px;"> <br/>
             <br/>
@@ -164,6 +164,36 @@
             <br/>
             <br/>
           </span>
+
+          <script>
+            var e = document.getElementById("paperSize");
+            var radiusTop = 6;
+            var radiusBottom = 5;
+            var height = 5;
+            e.onclick = function() {
+              var paperSizeValue = e.options[e.selectedIndex].value;
+              switch(paperSizeValue){
+                case '1':
+                  radiusTop = 6;
+                  radiusBottom = 5;
+                  height = 5;
+                  break;
+                case '2':
+                  radiusTop = 8.5;
+                  radiusBottom = 5.8;
+                  height = 10.5;
+                  break;
+                case '3':
+                  radiusTop = 8.5;
+                  radiusBottom = 5.8;
+                  height = 12.5;
+                  break;
+              }
+              document.getElementById("demo").innerHTML = radiusTop;
+              document.getElementById("demo2").innerHTML = radiusBottom;
+              document.getElementById("demo3").innerHTML = height;
+            }
+          </script>
 
           <span style="clear:both;"></span>
     </section>
