@@ -27,7 +27,15 @@ include "menu.php";
                We are a group of passionate designers and developers who really love creating awesome food and beverage packaging
             </p>
             <div class="mbr-section-btn align-right"><a class="btn btn-md btn-primary-outline display-4" href="index.php#features18-k">TUTORIAL</a>
-                <a class="btn btn-md btn-primary display-4" href="noshop.php">GO TO SHOP</a></div>
+                <a class="btn btn-md btn-primary display-4" href="
+                <?php
+                  if($_SESSION['adasesi'] == '1'){
+                    echo('shop.php');
+                  }else{
+                    echo('noshop.php');
+                  }
+                  ?>
+                ">GO TO SHOP</a></div>
         </div>
     </div>
 
@@ -247,7 +255,15 @@ include "menu.php";
     <div class="container">
         <div class="media-container-row title">
             <div class="col-12 col-md-8">
-                <div class="mbr-section-btn align-center"><a class="btn btn-primary display-4" href="noshop.php">OK, I'm Ready!</a></div>
+                <div class="mbr-section-btn align-center"><a class="btn btn-primary display-4" href="
+                    <?php
+                          if($_SESSION['adasesi'] == '1'){
+                            echo('shop.php');
+                          }else{
+                            echo('noshop.php');
+                          }
+                          ?>
+                    ">OK, I'm Ready!</a></div>
             </div>
         </div>
     </div>

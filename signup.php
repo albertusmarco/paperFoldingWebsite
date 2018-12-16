@@ -185,16 +185,16 @@ if(isset($_POST["signup"]))
 
 
                 <div class="soc-item">
-                        <a href="https://twitter.com/mobirise" target="_blank">
+                        <a href="https://instagram.com/sendwish.id" target="_blank">
                             <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
                         </a>
                     </div><div class="soc-item">
-                        <a href="https://twitter.com/mobirise" target="_blank">
+                        <a href="https://wa.me/6283833002258" target="_blank">
                             <span class="mbr-iconfont mbr-iconfont-social socicon-whatsapp socicon"></span>
                         </a>
                     </div><div class="soc-item">
-                        <a href="https://twitter.com/mobirise" target="_blank">
-                            <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
+                        <a href="contactmail.php" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-mail socicon"></span>
                         </a>
                     </div></div>
             </div>
