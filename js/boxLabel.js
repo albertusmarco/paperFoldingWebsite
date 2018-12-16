@@ -57,6 +57,11 @@ var boxDepth = document.getElementById("boxDepth");
 
 var geometry = new THREE.BoxGeometry(boxWidth.value,boxHeight.value,boxDepth.value);
 
+function processColor() {
+  var color = document.getElementById("color").value;
+  console.log(color);
+}
+
 //create the shape
 //create the material, color, or image textures
 var cubeMaterials =

@@ -56,6 +56,11 @@ var radiusTop = 6;
 var radiusBottom = 5;
 var height = 5;
 
+function processColor() {
+  var color = document.getElementById("color").value;
+  console.log(color);
+}
+
 //create the shape
 //create the material, color, or image textures
 var paperMaterials =
