@@ -225,7 +225,7 @@
               <option value="left">LEFT</option>
               <option value="right">RIGHT</option>
               <option value="top">TOP</option>
-              <option value="down">DOWN</option>
+              <option value="down">BOTTOM</option>
             </select>
             <br/>
             &nbsp;&nbsp;

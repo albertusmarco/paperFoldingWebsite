@@ -67,7 +67,7 @@
             <div class="menu-logo">
                 <div class="navbar-brand">
 
-                    <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-5">SENDWISH : CARDBOARD CUSTOMIZE</a></span>
+                    <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-5">SENDWISH : PACKLABEL CUSTOMIZE</a></span>
                 </div>
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -103,17 +103,16 @@
             </div>
 
             <div class="slidecontainer">
-              <!-- &nbsp;&nbsp; -->
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               Height &nbsp;:
-              <input type="range" min="1" max="100" value="40" id="boxHeight">
+              <input type="range" min="1" max="100" value="50" id="boxHeight">
               <span id="demo2"></span> cm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
 
             <div class="slidecontainer">
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               Depth &nbsp;&nbsp;:
-              <input type="range" min="1" max="100" value="20" id="boxDepth">
+              <input type="range" min="1" max="100" value="50" id="boxDepth">
               <span id="demo3"></span> cm
             </div>
             <br/>
@@ -129,8 +128,6 @@
           <select id="side" style="width:125px">
             <option value="front">FRONT</option>
             <option value="back">BACK</option>
-            <option value="left">LEFT</option>
-            <option value="right">RIGHT</option>
             <option value="top">TOP</option>
             <option value="down">BOTTOM</option>
           </select>
@@ -140,13 +137,13 @@
           <!-- three.js library -->
           <script src = "js/three.js"></script>
           <script src = "js/OrbitControls.js"></script>
-          <script src= "js/box.js"></script>
+          <script src= "js/boxLabel.js"></script>
         </span>
 
           <span style="float:right;margin-right:85px;background-color:#FFFFFF;">
             <br/>
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;">ORDER DETAIL</a><br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : Card Board <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : Pack Label <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Material :
             <select id="material">
               <option value="artpaper">Art Paper</option>

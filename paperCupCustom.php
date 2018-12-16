@@ -117,11 +117,7 @@
             &nbsp;
             <select id="side" style="width:125px">
               <option value="front">FRONT</option>
-              <option value="back">BACK</option>
-              <option value="left">LEFT</option>
-              <option value="right">RIGHT</option>
-              <option value="top">TOP</option>
-              <option value="down">DOWN</option>
+              <option value="down">BOTTOM</option>
             </select>
             <br/>
             &nbsp;&nbsp;
