@@ -54,7 +54,12 @@ session_start();
                 <li class="nav-item">
                     <a class="nav-link link text-black display-4" href="<?php
                      if($_SESSION['adasesi'] == "1")
-                        {echo("customer.php");}
+                        {
+                          if($_SESSION['namauser'] == "Admin"){
+                            echo("admin.php");
+                          }else{
+                          echo("profile.php");}
+                        }
 						else
 						{echo("login.php");}
 					?>">  

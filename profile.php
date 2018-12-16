@@ -60,18 +60,21 @@
       <p>&nbsp;</p>
       <table class="noBorder" align="center" width="80%">
         <tr align="left">
-          <td class="noBorder">USERNAME: </td>
           <?php
-              // echo USERNAME AND EMAIL
+            $emailcust = $_SESSION['email'];
+            $sql = "SELECT `customer`.name from `customer` WHERE `email`='$emailcust';";
+            $data = viewData($sql);
+            $row = mysqli_fetch_row($data);
+            echo ("<td class='noBorder'>Username: $row[0]<td>");
           ?>
-          
         </tr>
         <tr>
-          <td class="noBorder">EMAIL: </td>
           <?php
-              // echo USERNAME AND EMAIL
+            $sql = "SELECT `customer`.email from `customer` WHERE `email`='$emailcust';";
+            $data = viewData($sql);
+            $row = mysqli_fetch_row($data);
+            echo ("<td class='noBorder'>Email: $row[0]<td>");
           ?>
-          </td>
         </tr>
       </table>
       <p>&nbsp;</p>
@@ -95,8 +98,16 @@
           }
         ?>
       </table>
+      <p>&nbsp;</p>
+      <p align="center">
+        <input class="btn btn-form btn-primary display-4" type="submit" name="signout" id="signout" value="Sign Out" />
+        <?php
+          if(isset($_POST["signout"]))
+          {$_SESSION['adasesi'] = "0";
+          echo'<meta http-equiv="refresh" content="1; URL=index.php" />';}
+        ?>
+      </p>
     </form>
-    
   </section>
 
 

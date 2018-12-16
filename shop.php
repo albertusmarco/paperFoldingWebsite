@@ -28,11 +28,97 @@ include "menu.php";
 
   <section class="header10 cid-rbkq4YRq2S mbr-fullscreen mbr-parallax-background" id="header10-3">
   <section class="features18 popup-btn-cards cid-rbljldAFZH" id="features18-k">
+    
     <div class="container">
-      <p>o(╥﹏╥)o ... ??</p>
-      <h3 class="mbr-section-subtitle display-5 align-center mbr-fonts-style mbr-light">Choose your packaging type</h3>
-      <h3 class="mbr-section-subtitle display-5 align-center mbr-fonts-style mbr-light">Choose the material</h3>
-    </div>  
+        <h3 class="mbr-section-subtitle display-5 align-center mbr-fonts-style mbr-light">Choose your packaging type</h3>
+        <div class="media-container-row pt-5 ">
+          <div class="card p-3 col-12 col-md-6 col-lg-4">
+            <div class="card-wrapper ">
+              <div class="card-img">
+                <img src="assets/images/hard-box-300x300.png" alt="Mobirise" title="">
+              </div>
+              <div class="card-box">
+                <h4 class="card-title mbr-fonts-style display-7">Hard Box</h4>
+              </div>
+            </div>
+          </div>
+          <div class="card p-3 col-12 col-md-6 col-lg-4">
+            <div class="card-wrapper">
+              <div class="card-img">
+                <img src="assets/images/paper-cup-300x300.png" alt="Mobirise" title="">
+              </div>
+              <div class="card-box">
+                <h4 class="card-title mbr-fonts-style display-7">Paper Cup</h4>  
+              </div>
+            </div>
+          </div>
+          <div class="card p-3 col-12 col-md-6 col-lg-4">
+            <div class="card-wrapper">
+              <div class="card-img">
+                <img src="assets/images/pling-fix-1-300x300.png" alt="Mobirise" title="">
+              </div>
+              <div class="card-box">
+                <h4 class="card-title mbr-fonts-style display-7">Paper Standing Pouch</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h3 class="mbr-section-subtitle display-5 align-center mbr-fonts-style mbr-light">Choose the material</h3>
+        <div class="container-fluid">
+          <div class="media-container-row">
+            <div class="card p-3 col-12 col-md-6 col-lg-3">
+              <div class="card-wrapper">
+                <div class="card-img">
+                  <img src="assets/images/singkatan-hvs-376x289.png" alt="Mobirise" title="">
+                </div>
+                <div class="card-box">
+                  <h4 class="card-title pb-3 mbr-fonts-style display-7">Art Paper</h4>
+                  <p class="mbr-text mbr-fonts-style display-7">
+                    Available in&nbsp;85 gr, 100 gr, 115 gr, 120 gr, and 150 gr</p>
+                </div>
+              </div>
+            </div>
+            <div class="card p-3 col-12 col-md-6 col-lg-3">
+              <div class="card-wrapper">
+                <div class="card-img">
+                  <img src="assets/images/used-paper-box-folding-gluing-machine-spare-464x464.jpg" alt="Mobirise" title="">
+                </div>
+                <div class="card-box">
+                  <h4 class="card-title pb-3 mbr-fonts-style display-7">Art Carton</h4>
+                  <p class="mbr-text mbr-fonts-style display-7">Available in 190 gr, 210 gr, 230 gr, 260 gr, 310 gr, 350 gr, and 400 gr
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card p-3 col-12 col-md-6 col-lg-3">
+              <div class="card-wrapper">
+                <div class="card-img">
+                  <img src="assets/images/download-262x192.jpg" alt="Mobirise" title="">
+                </div>
+                <div class="card-box">
+                  <h4 class="card-title pb-3 mbr-fonts-style display-7">Ivory Texture</h4>
+                  <p class="mbr-text mbr-fonts-style display-7">
+                    Available in&nbsp;210 gr, 230 gr, 250 gr, 310 gr, and 400 gr</p>
+                </div>
+              </div>
+            </div>
+            <div class="card p-3 col-12 col-md-6 col-lg-3">
+              <div class="card-wrapper">
+                <div class="card-img">
+                  <img src="assets/images/kertas-manila-kertas-manila-mudah-didapat-464x343.jpg" alt="Mobirise" title="">
+                </div>
+                <div class="card-box">
+                  <h4 class="card-title pb-3 mbr-fonts-style display-7">BC Manila</h4>
+                  <p class="mbr-text mbr-fonts-style display-7">
+                     Available in&nbsp;160 gr, 220 gr, and 250 g</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   </section>
   </section>
 

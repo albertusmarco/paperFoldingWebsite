@@ -56,16 +56,27 @@
     }
   </style>
 
+<?php
+  $custID = $_GET['custID'];
+?>
+
   <section class="features18 popup-btn-cards cid-rbljldAFZH" id="features18-k">
     <form id="formAdmin" name="form1" method="post" action="">
       <p>&nbsp;</p>
       <table align="center" width="80%" border="0">
         <tr align="left">
-          <td height="50">Customer ID</td>
-          <td>:
+          <td height="50">Customer ID: </td>
+          <td>
             <?php
-			$emailcust = $_SESSION['email'];
-               $sql = "SELECT `customer`.id_customer from `customer` WHERE `email`='$emailcust';";
+              echo $custID;
+            ?>
+          </td>
+        </tr>
+        <tr align="left">
+          <td height="50">Name:</td>
+          <td>
+            <?php
+              $sql = "SELECT `customer`.name from `customer` WHERE `id_customer`='$custID';";
               $data = viewData($sql);
               $row = mysqli_fetch_row($data);
               echo $row[0];
@@ -73,10 +84,10 @@
           </td>
         </tr>
         <tr align="left">
-          <td height="50">Name</td>
-          <td>:
+          <td height="50">Address: </td>
+          <td>
             <?php
-			   $sql = "SELECT `customer`.name from `customer` WHERE `email`='$emailcust';";
+              $sql = "SELECT `customer`.address from `customer` WHERE `id_customer`='$custID';";
               $data = viewData($sql);
               $row = mysqli_fetch_row($data);
               echo $row[0];
@@ -84,10 +95,10 @@
           </td>
         </tr>
         <tr align="left">
-          <td height="50">Address</td>
-          <td>:
+          <td height="50">Email: </td>
+          <td>
             <?php
-              $sql = "SELECT `customer`.address from `customer` WHERE `email`='$emailcust';";
+              $sql = "SELECT `customer`.email from `customer` WHERE `id_customer`='$custID';";
               $data = viewData($sql);
               $row = mysqli_fetch_row($data);
               echo $row[0];
@@ -95,10 +106,10 @@
           </td>
         </tr>
         <tr align="left">
-          <td height="50">Email</td>
-          <td>:
+          <td height="50">Phone: </td>
+          <td>
             <?php
-              $sql = "SELECT `customer`.email from `customer` WHERE `email`='$emailcust';";
+              $sql = "SELECT `customer`.phone from `customer` WHERE `id_customer`='$custID';";
               $data = viewData($sql);
               $row = mysqli_fetch_row($data);
               echo $row[0];
@@ -106,21 +117,10 @@
           </td>
         </tr>
         <tr align="left">
-          <td height="50">Phone</td>
-          <td>:
+          <td height="50">Postal Code: </td>
+          <td>
             <?php
-              $sql = "SELECT `customer`.phone from `customer` WHERE `email`='$emailcust';";
-              $data = viewData($sql);
-              $row = mysqli_fetch_row($data);
-              echo $row[0];
-            ?>
-          </td>
-        </tr>
-        <tr align="left">
-          <td height="50">Postal Code</td>
-          <td>:
-            <?php
-              $sql = "SELECT `customer`.postal_code from `customer` WHERE `email`='$emailcust';";
+              $sql = "SELECT `customer`.postal_code from `customer` WHERE `id_customer`='$custID'";
               $data = viewData($sql);
               $row = mysqli_fetch_row($data);
               echo $row[0];
@@ -130,12 +130,11 @@
       </table>
       <p>&nbsp;</p>
       <p align="center">
-      <input class="btn btn-form btn-primary display-4" type="submit" name="signout" id="signout" value="Sign Out" />
-      <?php
-	  if(isset($_POST["signout"]))
-	  {$_SESSION['adasesi'] = "0";
-	  echo'<meta http-equiv="refresh" content="1; URL=index.php" />';}
-	  ?>
+        <input class="btn btn-form btn-primary display-4" type="submit" name="back" id="back" value="Back To Order List" />
+        <?php
+          if(isset($_POST["back"])){
+          echo'<meta http-equiv="refresh" content="1; URL=admin.php" />';}
+        ?>
       </p>
     </form>
     
@@ -147,17 +146,16 @@
 
 
   <!-- footer -->
-  <section once="" class="cid-rblxeb4aPl" id="footer6-1e">
+   <section once="" class="cid-rbkA1DU2DQ mbr-reveal" id="footer7-1f">
     <div class="container">
       <div class="media-container-row align-center mbr-white">
         <div class="col-12">
           <p class="mbr-text mb-0 mbr-fonts-style display-7">
             Find us on :</p>
+            <br/>
         </div>
       </div>
     </div>
-  </section>
-  <section once="" class="cid-rbkA1DU2DQ mbr-reveal" id="footer7-1f">
     <div class="container">
       <div class="media-container-row align-center mbr-white">
         <div class="row social-row">

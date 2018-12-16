@@ -22,8 +22,6 @@
   <link rel="stylesheet" href="assets/socicon/css/styles.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
 
 </head>
 <body>
@@ -109,6 +107,14 @@
         ?>
       </table>
       <p>&nbsp;</p>
+      <p align="center">
+        <input class="btn btn-form btn-primary display-4" type="submit" name="signout" id="signout" value="Sign Out" />
+        <?php
+          if(isset($_POST["signout"]))
+          {$_SESSION['adasesi'] = "0";
+          echo'<meta http-equiv="refresh" content="1; URL=index.php" />';}
+        ?>
+      </p>
     </form>
     <?php
       if (isset($_POST['Update'])) {
