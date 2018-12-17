@@ -51,7 +51,7 @@ session_start();
                         Portfolio</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="index.php#testimonials-slider1-b">
                         About</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="
                           <?php
-                          if($_SESSION['adasesi'] == '1'){
+                          if($_SESSION['adasesi'] == "1"){
                             echo('shop.php');
                           }else{
                             echo('noshop.php');
@@ -60,7 +60,10 @@ session_start();
                         Shop</a></li>
                 <li class="nav-item">
                     <a class="nav-link link text-black display-4" href="<?php
-                     if($_SESSION['adasesi'] == "1")
+					if(!isset($_SESSION['adasesi']))
+					{echo("login.php");}
+					else
+					{if($_SESSION['adasesi'] == "1")
                         {
                           if($_SESSION['namauser'] == "Admin"){
                             echo("admin.php");
@@ -68,13 +71,17 @@ session_start();
                           echo("profile.php");}
                         }
 						else
-						{echo("login.php");}
+						{echo("login.php");}}
+					
 					?>">  
 					<?php
-					   if($_SESSION['adasesi'] == "1")
+					if(!isset($_SESSION['adasesi']))
+					{echo("Sign In");}
+					else
+					  { if($_SESSION['adasesi'] == "1")
                         {echo($_SESSION['namauser']);}
 						else
-						{echo("Sign In");}
+						{echo("Sign In");}}
 					?></a>
                 </li></ul>
             
