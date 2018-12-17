@@ -68,6 +68,17 @@ session_start();
                         </div>
                     </div>
                 </div>
+<input type="checkbox" onclick="myFunction()"> Show Password
+<script>
+function myFunction() {
+  var x = document.getElementById("tpassword");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
 
 <?php
 
