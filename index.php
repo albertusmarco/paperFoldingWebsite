@@ -52,53 +52,139 @@ include "menu.php";
             Step by Step Tutorial</h2>
         <h3 class="mbr-section-subtitle display-5 align-center mbr-fonts-style mbr-light">
             1. Choose your packaging type</h3>
-        <div class="media-container-row pt-5 ">
-            <div class="card p-3 col-12 col-md-6 col-lg-4">
-                <div class="card-wrapper ">
+        
+   
+
+    
+        <div class="media-container-row">
+            <div class="card p-3 col-12 col-md-6 col-lg-3">
+             
                     <div class="card-img">
-                        <div class="mbr-overlay"></div>
-                        <div class="mbr-section-btn text-center"><a href="hardbox.php" class="btn btn-primary display-4">Learn More</a></div>
-                        <img src="assets/images/hard-box-300x300.png" alt="Mobirise" title="">
+                        <img src="assets/images/cardboard-fix-492x492.png" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">
-                            Hard Box</h4>
+                            Cardbox</h4>
                         
                     </div>
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-6 col-lg-4">
-                <div class="card-wrapper">
-                    <div class="card-img">
-                        <div class="mbr-overlay"></div>
-                        <div class="mbr-section-btn text-center"><a href="papercup.php" class="btn btn-primary display-4">Learn More</a></div>
-                        <img src="assets/images/paper-cup-300x300.png" alt="Mobirise" title="">
-                    </div>
-                    <div class="card-box">
-                        <h4 class="card-title mbr-fonts-style display-7">Paper Cup</h4>
-                        
-                    </div>
-                </div>
+                    <div class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">
+                            Learn More
+                        </a></div>
+                
             </div>
 
-            <div class="card p-3 col-12 col-md-6 col-lg-4">
-                <div class="card-wrapper">
+            <div class="card p-3 col-12 col-md-6 col-lg-3">
+              
                     <div class="card-img">
-                        <div class="mbr-overlay"></div>
-                        <div class="mbr-section-btn text-center"><a href="paperstandingpouch.php" class="btn btn-primary display-4">Learn More</a></div>
-                        <img src="assets/images/pling-fix-1-300x300.png" alt="Mobirise" title="">
+                        <img src="assets/images/paper-cup-fix-2-492x492.png" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">
-                            Paper Standing Pouch</h4>
+                            Paper Cup</h4>
                         
                     </div>
-                </div>
+                    <div class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">
+                            Learn More
+                        </a></div>
+               
             </div>
 
+            <div class="card p-3 col-12 col-md-6 col-lg-3">
+               
+                    <div class="card-img">
+                        <img src="assets/images/paper-pouch-fix-492x492.png" alt="Mobirise" title="">
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title mbr-fonts-style display-7">
+                            Paper Pouch</h4>
+                        
+                    </div>
+                    <div class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">
+                            Learn More
+                        </a></div>
+                
+            </div>
+
+            <div class="card p-3 col-12 col-md-6 col-lg-3">
+              
+                    <div class="card-img">
+                        <img src="assets/images/food-wrap-fix-492x492.png" alt="Mobirise" title="">
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title mbr-fonts-style display-7">
+                            Food Wrap</h4>
+                        
+                    </div>
+                    <div class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">
+                            Learn More
+                        </a></div>
             
+            </div>
         </div>
+      
+        <div class="media-container-row">
+            <div class="card p-3 col-12 col-md-6 col-lg-3">
+              
+                    <div class="card-img">
+                        <img src="assets/images/paper-bag-fix-492x492.png" alt="Mobirise" title="">
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title mbr-fonts-style display-7">
+                            Paper Bag</h4>
+                        
+                    </div>
+                    <div class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">
+                            Learn More</a></div>
+               
+            </div>
+
+            <div class="card p-3 col-12 col-md-6 col-lg-3">
+               
+                    <div class="card-img">
+                        <img src="assets/images/pack-label-492x492.png" alt="Mobirise" title="">
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title mbr-fonts-style display-7">
+                            Pack Label</h4>
+                        
+                    </div>
+                    <div class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">
+                            Learn More</a></div>
+                
+            </div>
+
+            <div class="card p-3 col-12 col-md-6 col-lg-3">
+              
+                    <div class="card-img">
+                        <img src="assets/images/soft-box-super-fix-492x492.png" alt="Mobirise" title="">
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title mbr-fonts-style display-7">
+                            Soft Box</h4>
+                        
+                    </div>
+                    <div class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">
+                            Learn More</a></div>
+              
+            </div>
+
+            <div class="card p-3 col-12 col-md-6 col-lg-3">
+            
+                    <div class="card-img">
+                        <img src="assets/images/plastic-pouch-fix-492x492.png" alt="Mobirise" title="">
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title mbr-fonts-style display-7">
+                            Plastic Pouch</h4>
+                        
+                    </div>
+                    <div align="center" class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">
+                            Learn More!</a></div>
+                
+            </div>
+      
     </div>
+     </div>
 </section>
 
 <section class="mbr-section article content1 cid-rblls8eMxl" id="content1-m">
