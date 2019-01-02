@@ -57,11 +57,6 @@
 
   var geometry = new THREE.BoxGeometry(boxWidth.value,boxHeight.value,boxDepth.value);
 
-  function processColor() {
-    var color = document.getElementById("color").value;
-    console.log(color);
-  }
-
   //create the shape
   //create the material, color, or image textures
   var cubeMaterials =
@@ -86,22 +81,14 @@
     while(scene.children.length > 0){
       scene.remove(scene.children[0]);
     }
-    var geometry = new THREE.BoxGeometry(boxWidth.value,boxHeight.value,boxDepth.value);
-    //create the shape
-    //create the material, color, or image textures
-    var cubeMaterials =
-    [
-      new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Right Side
-      new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Left Side
-      new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Top Side
-      new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}),//Bottom Side
-      new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}),//Front Side
-      new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}) //Back Side
-    ];
-
-    var material = new THREE.MeshFaceMaterial(cubeMaterials);
-    var cube = new THREE.Mesh(geometry,material);
+    geometry = new THREE.BoxGeometry(boxWidth.value,boxHeight.value,boxDepth.value);
+    cube = new THREE.Mesh(geometry,material);
     scene.add(cube);
+  }
+
+  function processColor() {
+    var color = document.getElementById("color").value;
+    console.log(color);
   }
 
   camera.position.z=200;

@@ -1,99 +1,51 @@
-<!-- <div align="center">
-  <p>
-<div class="color" id="redscale">
-<div style='background-color:#f00;'>a</div>
-<div style='background-color:#e00;'>a</div>
-<div style='background-color:#d00;'>a</div>
-<div style='background-color:#c00;'>a</div>
-<div style='background-color:#b00;'>a</div>
-<div style='background-color:#a00;'>a</div>
-<div style='background-color:#900;'>a</div>
-<div style='background-color:#800;'>a</div>
-<div style='background-color:#700;'>a</div>
-<div style='background-color:#600;'>a</div>
-<div style='background-color:#500;'>a</div>
-<div style='background-color:#400;'>a</div>
-<div style='background-color:#300;'>a</div>
-<div style='background-color:#200;'>a</div>
-<div style='background-color:#100;'>a</div>
-<div style='background-color:#000;'>a</div>
-</div>
-<div class="color" id="greenscale">
-<div style='background-color:#0f0;'>a</div>
-<div style='background-color:#0e0;'>a</div>
-<div style='background-color:#0d0;'>a</div>
-<div style='background-color:#0c0;'>a</div>
-<div style='background-color:#0b0;'>a</div>
-<div style='background-color:#0a0;'>a</div>
-<div style='background-color:#090;'>a</div>
-<div style='background-color:#080;'>a</div>
-<div style='background-color:#070;'>a</div>
-<div style='background-color:#060;'>a</div>
-<div style='background-color:#050;'>a</div>
-<div style='background-color:#040;'>a</div>
-<div style='background-color:#030;'>a</div>
-<div style='background-color:#020;'>a</div>
-<div style='background-color:#010;'>a</div>
-<div style='background-color:#000;'>a</div>
-</div>
-<div class="color" id="bluescale">
-<div style='background-color:#00f;'>a</div>
-<div style='background-color:#00e;'>a</div>
-<div style='background-color:#00d;'>a</div>
-<div style='background-color:#00c;'>a</div>
-<div style='background-color:#00b;'>a</div>
-<div style='background-color:#00a;'>a</div>
-<div style='background-color:#009;'>a</div>
-<div style='background-color:#008;'>a</div>
-<div style='background-color:#007;'>a</div>
-<div style='background-color:#006;'>a</div>
-<div style='background-color:#005;'>a</div>
-<div style='background-color:#004;'>a</div>
-<div style='background-color:#003;'>a</div>
-<div style='background-color:#002;'>a</div>
-<div style='background-color:#001;'>a</div>
-<div style='background-color:#000;'>a</div>
-</div>
-<div class="color" id="yellowscale">
-<div style='background-color:#ff0;'>a</div>
-<div style='background-color:#ee0;'>a</div>
-<div style='background-color:#dd0;'>a</div>
-<div style='background-color:#cc0;'>a</div>
-<div style='background-color:#bb0;'>a</div>
-<div style='background-color:#aa0;'>a</div>
-<div style='background-color:#990;'>a</div>
-<div style='background-color:#880;'>a</div>
-<div style='background-color:#770;'>a</div>
-<div style='background-color:#660;'>a</div>
-<div style='background-color:#550;'>a</div>
-<div style='background-color:#440;'>a</div>
-<div style='background-color:#330;'>a</div>
-<div style='background-color:#220;'>a</div>
-<div style='background-color:#110;'>a</div>
-<div style='background-color:#000;'>a</div>
-</div>
-<div class="color" id="cyanscale">
-<div style='background-color:#0ff;'>a</div>
-<div style='background-color:#0ee;'>a</div>
-<div style='background-color:#0dd;'>a</div>
-<div style='background-color:#0cc;'>a</div>
-<div style='background-color:#0bb;'>a</div>
-<div style='background-color:#0aa;'>a</div>
-<div style='background-color:#099;'>a</div>
-<div style='background-color:#088;'>a</div>
-<div style='background-color:#077;'>a</div>
-<div style='background-color:#066;'>a</div>
-<div style='background-color:#055;'>a</div>
-<div style='background-color:#044;'>a</div>
-<div style='background-color:#033;'>a</div>
-<div style='background-color:#022;'>a</div>
-<div style='background-color:#011;'>a</div>
-<div style='background-color:#000;'>a</div>
-</div>
-</p>
-</div> -->
 <?php
 include "menu.php";
+//
+// // Turn off error reporting
+// error_reporting(0);
+//
+// $target_dir = "asset/";
+// $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+// $uploadOk = 1;
+// $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+// // Check if image file is a actual image or fake image
+// if(isset($_POST["submit"])) {
+//   $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+//   if($check !== false) {
+//     // echo "File is an image - " . $check["mime"] . ".";
+//     $uploadOk = 1;
+//   } else {
+//     // echo "File is not an image.";
+//     $uploadOk = 0;
+//   }
+// }
+// // Check if file already exists
+// if (file_exists($target_file)) {
+//   // echo "Sorry, file already exists.";
+//   $uploadOk = 0;
+// }
+// // Check file size
+// if ($_FILES["fileToUpload"]["size"] > 500000) {
+//   // echo "Sorry, your file is too large.";
+//   $uploadOk = 0;
+// }
+// // Allow certain file formats
+// if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+// && $imageFileType != "gif" ) {
+//   // echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+//   $uploadOk = 0;
+// }
+// // Check if $uploadOk is set to 0 by an error
+// if ($uploadOk == 0) {
+//   echo "Sorry, your file was not uploaded.";
+//   // if everything is ok, try to upload file
+// } else {
+//   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+//     echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+//   } else {
+//     echo "Sorry, there was an error uploading your file.";
+//   }
+// }
 ?>
 <!DOCTYPE html>
 <html>
@@ -180,14 +132,65 @@ include "menu.php";
               <span id="demo3"></span> cm
             </div>
             <br/>
+
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;">COLOR</a>
             <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             Choose : <input type="color" id="color"/>
             <br/>
-            <input type="button" onclick="processColor()" value="Apply" style="margin-left:225px">
+            <input id="applyButton1" type="button" onclick="processColor()" value="Apply" style="margin-left:225px"/>
             <br/>
             <br/>
+
+            <a class="navbar-caption text-black display-5" style="margin:0.8cm;">IMAGE</a>
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" value="Choose File" id="imageButtonCopy"/>
+            <span id="customText">No file chosen, yet.</span>
+            <br/>
+            <br/>
+            <span id="imageSpan" style="margin:1cm;"></span>
+            <input type="file" name="fileToUpload" id="imageButton" hidden="hidden"/>
+            <br/>
+            <input id="applyButton2" type="button" onclick="processImage()" value="Apply" style="margin-left:225px"/>
+            <br/>
+            <br/>
+            <script>
+            var realFileBtn = document.getElementById("imageButton");
+            var customBtn = document.getElementById("imageButtonCopy");
+            var customTxt = document.getElementById("customText");
+            var reader;
+            var img;
+
+            customBtn.addEventListener("click", function(){
+              realFileBtn.click();
+            })
+
+            realFileBtn.addEventListener("change", function(){
+              if(realFileBtn.value) {
+                // console.log(realFileBtn.files);
+                reader = new FileReader();
+                reader.onload = function(){
+                  img = new Image();
+                  img.src = reader.result;
+                  img.style.width = "100px";
+                  img.style.height = "100px";
+                  document.getElementById("imageSpan").appendChild(img);
+                }
+                reader.readAsDataURL(realFileBtn.files[0]);
+
+                customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+              }
+              else {
+                customTxt.innerHTML = "No file chosen, yet.";
+              }
+            })
+
+            function processImage() {
+              var image = realFileBtn.files;
+              console.log(image);
+            }
+            </script>
         </span>
 
           <span id = "custom" style="float:center;margin-left:10px;">
