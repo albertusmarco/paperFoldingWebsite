@@ -1,3 +1,6 @@
+<?php
+include "menu.php";
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -54,39 +57,6 @@
     <link rel="stylesheet" type="text/css" href="css/color.css">
   </head>
   <body>
-    <section class="menu cid-rbkgwRuNyn" once="menu" id="menu2-1">
-        <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-            <div class="menu-logo">
-                <div class="navbar-brand">
-
-                    <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-5">SENDWISH : FOODWRAP CUSTOMIZE</a></span>
-                </div>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item">
-                        <a class="nav-link link text-black display-4" href="index.php#header10-3">
-                            Home</a>
-                    </li><li class="nav-item"><a class="nav-link link text-black display-4" href="index.php#features15-9">
-                            Portfolio</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="index.php#testimonials-slider1-b">
-                            About</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="noshop.php">
-                            Shop</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link link text-black display-4" href="https://mobirise.co">
-                            Sign In</a>
-                    </li></ul>
-
-            </div>
-        </nav>
-    </section>
-
     <section style="background-color:#F5F5F5;">
       <br/><br/><br/><br/>
         <span style="float:left;margin-left:80px;margin-top:35px;background-color:#FFFFFF;">
