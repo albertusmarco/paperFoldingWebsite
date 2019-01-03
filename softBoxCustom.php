@@ -190,9 +190,9 @@ include "menu.php";
               }
             })
 
-            function processImage() {
-              console.log(img);
-            }
+            // function processImage() {
+            //   console.log(img);
+            // }
             </script>
         </span>
 

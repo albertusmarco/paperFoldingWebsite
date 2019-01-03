@@ -91,9 +91,9 @@
     console.log(color);
   }
 
-  // function processImage() {
-  //   console.log(color);
-  // }
+  function processImage() {
+    console.log(color);
+  }
 
   camera.position.z=200;
 
