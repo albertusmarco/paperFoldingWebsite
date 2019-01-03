@@ -159,8 +159,11 @@ include "menu.php";
             var realFileBtn = document.getElementById("imageButton");
             var customBtn = document.getElementById("imageButtonCopy");
             var customTxt = document.getElementById("customText");
+            var applyButton2 = document.getElementById("applyButton2");
             var reader;
-            var img;
+            var img = new Image();
+
+            applyButton2.style.visibility = "hidden";
 
             customBtn.addEventListener("click", function(){
               realFileBtn.click();
@@ -169,9 +172,9 @@ include "menu.php";
             realFileBtn.addEventListener("change", function(){
               if(realFileBtn.value) {
                 // console.log(realFileBtn.files);
+                applyButton2.style.visibility = "visible";
                 reader = new FileReader();
                 reader.onload = function(){
-                  img = new Image();
                   img.src = reader.result;
                   img.style.width = "100px";
                   img.style.height = "100px";
@@ -182,13 +185,13 @@ include "menu.php";
                 customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
               }
               else {
-                customTxt.innerHTML = "No file chosen, yet.";
+                // customTxt.innerHTML = "No file chosen, yet.";
+                customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
               }
             })
 
             function processImage() {
-              var image = realFileBtn.files;
-              console.log(image);
+              console.log(img);
             }
             </script>
         </span>
