@@ -189,10 +189,6 @@ include "menu.php";
                 customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
               }
             })
-
-            // function processImage() {
-            //   console.log(img);
-            // }
             </script>
         </span>
 
