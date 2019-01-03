@@ -26,7 +26,100 @@ include "menu.php";
 </head>
 <body>
 
-  <section class="header10 cid-rbkq4YRq2S mbr-fullscreen mbr-parallax-background" id="header10-3">
+<style>
+  /*[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+*/
+  /* IMAGE STYLES */
+  [type=radio] + img {
+    cursor: pointer;
+  }
+
+  /* CHECKED STYLES */
+  [type=radio]:checked + img {
+    outline: 2px solid #0000ff;
+  }
+</style>
+
+  <section class="header10 cid-rbkq4YRq2S mbr-fullscreen mbr-parallax-background">
+    <div class="container">
+      <h1 class="mbr-section-subtitle align-right mbr-light pb-3 mbr-fonts-style display-2">Welcome to Shop!</h2>
+      <h3 class="mbr-text align-right pb-3 mbr-fonts-style display-5">Select Packaging Type:</h3>
+      <h3 class="mbr-text align-right pb-3 mbr-fonts-style display-5">
+      <label>
+        <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="cardBox">
+        <img src="assets/images/cardboard-fix-492x492.png" alt="CardBox" title="" width="200" height="200">
+      </label>
+      <label>
+        <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="paperCup">
+        <img src="assets/images/paper-cup-fix-2-492x492.png" alt="PaperCup" title="" width="200" height="200">
+      </label>
+      <label>
+        <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="paperPouch">
+        <img src="assets/images/paper-pouch-fix-492x492.png" alt="PaperPouch" title="" width="200" height="200">
+      </label>
+      <label>
+        <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="foodWrap">
+        <img src="assets/images/food-wrap-fix-492x492.png" alt="FoodWrap" title="" width="200" height="200">
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="paperBag">
+        <img src="assets/images/paper-bag-fix-492x492.png" alt="PaperBag" title="" width="200" height="200">
+      </label>
+      <label>
+        <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="packLabel">
+        <img src="assets/images/pack-label-492x492.png" alt="Mobirise" title="PackLabel" width="200" height="200">
+      </label>
+      <label>
+        <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="softBox">
+        <img src="assets/images/soft-box-super-fix-492x492.png" alt="SoftBox" title="" width="200" height="200">
+      </label>
+      <label>
+        <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="plasticPouch">
+        <img src="assets/images/plastic-pouch-fix-492x492.png" alt="PlasticPouch" title="" width="200" height="200">
+      </label>
+    </h3>
+    <h3 class="mbr-text align-right pb-3 mbr-fonts-style display-5">Select Meterial Type:</h3>
+    <!-- <form> -->
+      <p class="mbr-text align-right pb-3 mbr-fonts-style display-5">
+        <input type="radio" name="mateT" value="artPaper"> Art Paper &nbsp;
+        <input type="radio" name="mateT" value="artCarton"> Art Carton &nbsp;
+        <input type="radio" name="mateT" value="ivoryTexture"> Ivory Texture &nbsp;
+        <input type="radio" name="mateT" value="bcManila"> BC Manila &nbsp;
+        <input type="radio" name="mateT" value="duplex"> Duplex &nbsp;
+        <input type="radio" name="mateT" value="samson"> Samson &nbsp;
+        <input type="radio" name="mateT" value="paperKraft"> Paper Kraft &nbsp;
+      </p>
+     <!--  <p align="right"><button onclick="myFunction()">Specs List</button></p>
+      <input type="text" id="selectSpecs">
+      
+      
+    </form>
+
+    <script>
+      function myFunction() {
+        var material = document.forms[0];
+        var txt = "";
+        var i;
+        for (i = 0; i < material.length; i++) {
+          if (material[i].checked) {
+            txt = txt + material[i].value + " ";
+          }
+        }
+        document.getElementById("selectSpecs").value = txt;
+      }
+    </script> -->
+
+    </div>
+  </section>
+
+
+  <!-- <section class="header10 cid-rbkq4YRq2S mbr-fullscreen mbr-parallax-background" id="header10-3">
   <section class="features18 popup-btn-cards cid-rbljldAFZH" id="features18-k">
     
     <div class="container">
@@ -120,7 +213,7 @@ include "menu.php";
         </div>
       </div>
   </section>
-  </section>
+  </section> -->
 
 <!-- footer -->
   <section once="" class="cid-rblxeb4aPl" id="footer6-1e">
@@ -148,7 +241,7 @@ include "menu.php";
               </a>
             </div><div class="soc-item">
               <a href="contactmail.php" target="_blank">
-                <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
+                <span class="mbr-iconfont mbr-iconfont-social socicon-mail socicon"></span>
               </a>
             </div></div>
         </div>

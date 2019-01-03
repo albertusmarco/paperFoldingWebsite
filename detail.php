@@ -116,7 +116,7 @@ include "menu.php";
                             </a>
                         </div><div class="soc-item">
                             <a href="https://twitter.com/mobirise" target="_blank">
-                                <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-mail socicon"></span>
                             </a>
                         </div></div>
                 </div>
