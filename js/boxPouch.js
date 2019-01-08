@@ -18,28 +18,6 @@ window.addEventListener('resize',function()
     camera.updateProjectionMatrix();
 });
 
-// if ( /(iPad|iPhone|iPod)/g.test( navigator.userAgent ) ) {
-//
-// 	// var scene = document.getElementById( 'scene' );
-//
-// 	var boxWidth = scene.style.width = getComputedStyle( scene ).width;
-// 	var boxHeight = scene.style.height = getComputedStyle( scene ).height;
-// 	scene.setAttribute( 'scrolling', 'no' );
-//
-// }
-
-//import an object file(json)
-// var loader = new THREE.ObjectLoader();
-
-// loader.load(
-//   'file.json',
-//
-//   function(object)
-//   {
-//     scene.add(object);
-//   }
-// );
-
 //lighting
 var ambientLight = new THREE.AmbientLight(0xFFFFFF,0.5);
 scene.add(ambientLight);
@@ -51,60 +29,37 @@ scene.add(ambientLight2);
 var controls = new THREE.OrbitControls(camera,renderer.domElement);
 
 //get ID from file php
-var e = document.getElementById("paperSize");
-var radiusTop = 6;
-var radiusBottom = 5;
-var height = 5;
+var boxWidth = document.getElementById("boxWidth");
+var boxHeight = document.getElementById("boxHeight");
+
+var geometry = new THREE.BoxGeometry(boxWidth.value,boxHeight.value,1);
 
 //create the shape
 //create the material, color, or image textures
-var paperMaterials =
+var cubeMaterials =
 [
-  new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Side
+  new THREE.MeshBasicMaterial({color : 0xFFFFFF, side : THREE.DoubleSide}),//Right Side
+  new THREE.MeshBasicMaterial({color : 0xFFFFFF, side : THREE.DoubleSide}),//Left Side
   new THREE.MeshBasicMaterial({color : 0xFFFFFF, side : THREE.DoubleSide}),//Top Side
-  new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide})//Bottom Side
+  new THREE.MeshBasicMaterial({color : 0xFFFFFF, side : THREE.DoubleSide}),//Bottom Side
+  new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}),//Front Side
+  new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}) //Back Side
 ];
-var geometry = new THREE.CylinderGeometry(radiusTop,radiusBottom,height,50);
-var material = new THREE.MeshFaceMaterial( paperMaterials );
-var papercup = new THREE.Mesh(geometry,material);
-scene.add(papercup);
 
-e.addEventListener('click', changeSize);
+var material = new THREE.MeshFaceMaterial(cubeMaterials);
+var cube = new THREE.Mesh(geometry,material);
+scene.add(cube);
 
-//change paperSizeValue
-function changeSize() {
+boxWidth.addEventListener('input', sliderChange);
+boxHeight.addEventListener('input', sliderChange);
+
+function sliderChange() {
   while(scene.children.length > 0){
     scene.remove(scene.children[0]);
   }
-  var paperSizeValue = e.options[e.selectedIndex].value;
-  switch(paperSizeValue){
-    case '1':
-      radiusTop = 6;
-      radiusBottom = 5;
-      height = 5;
-      break;
-    case '2':
-      radiusTop = 8.5;
-      radiusBottom = 5.8;
-      height = 10.5;
-      break;
-    case '3':
-      radiusTop = 8.5;
-      radiusBottom = 5.8;
-      height = 12.5;
-      break;
-  }
-
-  var geometry = new THREE.CylinderGeometry(radiusTop,radiusBottom,height,50);
-  var paperMaterials =
-  [
-    new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Side
-    new THREE.MeshBasicMaterial({color : 0xFFFFFF, side : THREE.DoubleSide}),//Top Side
-    new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}),//Bottom Side
-  ];
-  var material = new THREE.MeshFaceMaterial( paperMaterials );
-  var papercup = new THREE.Mesh(geometry,material);
-  scene.add(papercup);
+  geometry = new THREE.BoxGeometry(boxWidth.value,boxHeight.value,1);
+  cube = new THREE.Mesh(geometry,material);
+  scene.add(cube);
 }
 
 function processColor() {
@@ -130,7 +85,7 @@ function processImage() {
   // scene.add(cube);
 }
 
-camera.position.z=50;
+camera.position.z=200;
 
 //game logic
 var update = function()

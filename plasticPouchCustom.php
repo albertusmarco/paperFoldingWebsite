@@ -62,25 +62,30 @@ include "menu.php";
         <span style="float:left;margin-left:80px;margin-top:35px;background-color:#FFFFFF;">
           <br/>
           <a class="navbar-caption text-black display-5" style="margin:0.8cm;">SIZE</a>
-          <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <select id="paperSize">
-              <option value="1">8 oz : 6 cm x 5 cm x 5 cm</option>
-              <option value="2">12 oz : 8,5 cm x 5,8 cm x 10,5 cm</option>
-              <option value="3">16 oz : 8,5 cm x 5,8 cm x 12,5 cm</option>
-            </select>&nbsp;&nbsp;&nbsp;
-            <!-- <a id="size1">8 oz : 6 cm x 5 cm x 5 cm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a id="size2">12 oz : 8,5 cm x 5,8 cm x 10,5 cm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a id="size3">16 oz : 8,5 cm x 5,8 cm x 12,5 cm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-            <br/><br/>
+
+            <div class="slidecontainer">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Width &nbsp;&nbsp;:
+              <input type="range" min="1" max="100" value="50" id="boxWidth">
+              <span id="demo"></span> cm
+              <!-- <p>Custom range slider:</p>
+              <input type="range" min="1" max="100" value="50" class="slider" id="myRange"> -->
+            </div>
+
+            <div class="slidecontainer">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Height &nbsp;:
+              <input type="range" min="1" max="100" value="75" id="boxHeight">
+              <span id="demo2"></span> cm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <br/>
+
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;">COLOR</a>
             <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             Choose : <input type="color" id="color"/>
             <br/>
-            <input type="button" onclick="processColor()" value="Apply" style="margin-left:225px">
+            <input id="applyButton1" type="button" onclick="processColor()" value="Apply" style="margin-left:225px"/>
             <br/>
             <br/>
 
@@ -133,7 +138,6 @@ include "menu.php";
             })
             </script>
         </span>
-        <!-- <br/> -->
 
           <span id = "custom" style="float:center;margin-left:10px;">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -141,7 +145,7 @@ include "menu.php";
             &nbsp;
             <select id="side" style="width:125px">
               <option value="front">FRONT</option>
-              <option value="down">BOTTOM</option>
+              <option value="back">BACK</option>
             </select>
             <br/>
             &nbsp;&nbsp;
@@ -149,13 +153,13 @@ include "menu.php";
             <!-- three.js library -->
             <script src = "js/three.js"></script>
             <script src = "js/OrbitControls.js"></script>
-            <script src= "js/papercup.js"></script>
+            <script src= "js/boxPouch.js"></script>
           </span>
 
           <span style="float:right;margin-right:85px;background-color:#FFFFFF;">
             <br/>
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;">ORDER DETAIL</a><br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : Paper Cup <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : Plastic Pouch <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Material :
             <select id="material">
               <option value="artpaper">Art Paper</option>
@@ -166,16 +170,15 @@ include "menu.php";
               <option value="samson">Samson</option>
               <option value="paperkraft">Paper Kraft</option>
             </select> <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Top Diameter : <span id="demo">6</span> cm <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Base Diameter : <span id="demo2">5</span> cm <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demo3">5</span> cm <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width : <span id="demos"></span> cm <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demos2"></span> cm <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimum Order : 50 <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity : <input type="number" name="quantity" min="50" style="width:150px;"> <br/>
             <br/>
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;"> INSTRUCTIONS : </a><br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Orbit Control : Hold Left-Click Mouse <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Zoom-in & Zoom-out : Scroll Mouse <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. The attributes will be changed <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. The attributes will be changed<br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;according the side options<br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Make sure all order detail already desire
             &nbsp;&nbsp;&nbsp;&nbsp;<br/><br/>
@@ -185,37 +188,29 @@ include "menu.php";
             <br/>
           </span>
 
-          <script>
-            var e = document.getElementById("paperSize");
-            var radiusTop = 6;
-            var radiusBottom = 5;
-            var height = 5;
-            e.onclick = function() {
-              var paperSizeValue = e.options[e.selectedIndex].value;
-              switch(paperSizeValue){
-                case '1':
-                  radiusTop = 6;
-                  radiusBottom = 5;
-                  height = 5;
-                  break;
-                case '2':
-                  radiusTop = 8.5;
-                  radiusBottom = 5.8;
-                  height = 10.5;
-                  break;
-                case '3':
-                  radiusTop = 8.5;
-                  radiusBottom = 5.8;
-                  height = 12.5;
-                  break;
-              }
-              document.getElementById("demo").innerHTML = radiusTop;
-              document.getElementById("demo2").innerHTML = radiusBottom;
-              document.getElementById("demo3").innerHTML = height;
-            }
-          </script>
-
           <span style="clear:both;"></span>
+
+          <script>
+          var slider = document.getElementById("boxWidth");
+          var output = document.getElementById("demo");
+          var outputs = document.getElementById("demos");
+          output.innerHTML = slider.value;
+          outputs.innerHTML = slider.value;
+          slider.oninput = function() {
+            output.innerHTML = this.value;
+            outputs.innerHTML = this.value;
+          }
+
+          var slider2 = document.getElementById("boxHeight");
+          var output2 = document.getElementById("demo2");
+          var outputs2 = document.getElementById("demos2");
+          output2.innerHTML = slider2.value;
+          outputs2.innerHTML = slider2.value;
+          slider2.oninput = function() {
+            output2.innerHTML = this.value;
+            outputs2.innerHTML = this.value;
+          }
+          </script>
     </section>
 
     <section once="" class="cid-rblxeb4aPl" id="footer6-r">
