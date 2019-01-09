@@ -74,13 +74,6 @@ function changeSize() {
   }
 
   var geometry = new THREE.CylinderGeometry(radiusTop,radiusBottom,height,50);
-  var paperMaterials =
-  [
-    new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Side
-    new THREE.MeshBasicMaterial({color : 0xFFFFFF, side : THREE.DoubleSide}),//Top Side
-    new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}),//Bottom Side
-  ];
-  var material = new THREE.MeshFaceMaterial( paperMaterials );
   var papercup = new THREE.Mesh(geometry,material);
   scene.add(papercup);
 }

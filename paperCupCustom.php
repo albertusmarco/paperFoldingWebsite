@@ -65,16 +65,12 @@ include "menu.php";
           <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <select id="paperSize">
-              <option value="1">8 oz : 6 cm x 5 cm x 5 cm</option>
+              <option value="1" selected>8 oz : 6 cm x 5 cm x 5 cm</option>
               <option value="2">12 oz : 8,5 cm x 5,8 cm x 10,5 cm</option>
               <option value="3">16 oz : 8,5 cm x 5,8 cm x 12,5 cm</option>
             </select>&nbsp;&nbsp;&nbsp;
-            <!-- <a id="size1">8 oz : 6 cm x 5 cm x 5 cm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a id="size2">12 oz : 8,5 cm x 5,8 cm x 10,5 cm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a id="size3">16 oz : 8,5 cm x 5,8 cm x 12,5 cm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
             <br/><br/>
+
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;">COLOR</a>
             <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

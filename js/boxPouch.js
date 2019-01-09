@@ -29,10 +29,12 @@ scene.add(ambientLight2);
 var controls = new THREE.OrbitControls(camera,renderer.domElement);
 
 //get ID from file php
-var boxWidth = document.getElementById("boxWidth");
-var boxHeight = document.getElementById("boxHeight");
+//get ID from file php
+var e = document.getElementById("pouchSize");
+var boxWidth = 13;
+var boxHeight = 20;
 
-var geometry = new THREE.BoxGeometry(boxWidth.value,boxHeight.value,1);
+var geometry = new THREE.BoxGeometry(boxWidth,boxHeight,1);
 
 //create the shape
 //create the material, color, or image textures
@@ -50,19 +52,66 @@ var material = new THREE.MeshFaceMaterial(cubeMaterials);
 var cube = new THREE.Mesh(geometry,material);
 scene.add(cube);
 
-boxWidth.addEventListener('input', sliderChange);
-boxHeight.addEventListener('input', sliderChange);
+e.addEventListener('click', changeSize);
 
-function sliderChange() {
+//change paperSizeValue
+function changeSize() {
   while(scene.children.length > 0){
     scene.remove(scene.children[0]);
   }
-  geometry = new THREE.BoxGeometry(boxWidth.value,boxHeight.value,1);
-  cube = new THREE.Mesh(geometry,material);
+  var pouchSizeValue = e.options[e.selectedIndex].value;
+  switch(pouchSizeValue){
+    case '1':
+      boxWidth = 13;
+      boxHeight = 20;
+      break;
+    case '2':
+      boxWidth = 14;
+      boxHeight = 23;
+      break;
+    case '3':
+      boxWidth = 16;
+      boxHeight = 29;
+      break;
+    case '4':
+      boxWidth = 22;
+      boxHeight = 29;
+      break;
+    case '5':
+      boxWidth = 9;
+      boxHeight = 15;
+      break;
+    case '6':
+      boxWidth = 13;
+      boxHeight = 20;
+      break;
+    case '7':
+      boxWidth = 14;
+      boxHeight = 23;
+      break;
+    case '8':
+      boxWidth = 16;
+      boxHeight = 25;
+      break;
+    case '9':
+      boxWidth = 18;
+      boxHeight = 29;
+      break;
+    case '10':
+      boxWidth = 22.5;
+      boxHeight = 33;
+      break;
+  }
+
+  var geometry = new THREE.BoxGeometry(boxWidth,boxHeight,1);
+  var cube = new THREE.Mesh(geometry,material);
   scene.add(cube);
 }
 
+var custom=0;
+
 function processColor() {
+  custom=1;
   var color = document.getElementById("color").value;
   console.log(color);
 }
@@ -101,10 +150,11 @@ realFileBtn.addEventListener("change", function(){
 })
 
 function processImage() {
+  custom=1;
   console.log(img);
 }
 
-camera.position.z=200;
+camera.position.z=50;
 
 //game logic
 var update = function()

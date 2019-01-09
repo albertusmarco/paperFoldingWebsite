@@ -62,23 +62,17 @@ include "menu.php";
         <span style="float:left;margin-left:80px;margin-top:35px;background-color:#FFFFFF;">
           <br/>
           <a class="navbar-caption text-black display-5" style="margin:0.8cm;">SIZE</a>
-
-            <div class="slidecontainer">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              Width &nbsp;&nbsp;:
-              <input type="range" min="1" max="100" value="50" id="boxWidth">
-              <span id="demo"></span> cm
-              <!-- <p>Custom range slider:</p>
-              <input type="range" min="1" max="100" value="50" class="slider" id="myRange"> -->
-            </div>
-
-            <div class="slidecontainer">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              Height &nbsp;:
-              <input type="range" min="1" max="100" value="75" id="boxHeight">
-              <span id="demo2"></span> cm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </div>
-            <br/>
+          <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select id="pouchSize">
+              <option value="5">9 cm x 15 cm</option>
+              <option value="6" selected>13 cm x 20 cm</option>
+              <option value="7">14 cm x 23 cm</option>
+              <option value="8">16 cm x 25 cm</option>
+              <option value="9">18 cm x 29 cm</option>
+              <option value="10">22,5 cm x 33 cm</option>
+            </select>&nbsp;&nbsp;&nbsp;
+            <br/><br/>
 
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;">COLOR</a>
             <br/>
@@ -135,8 +129,8 @@ include "menu.php";
               <option value="samson">Samson</option>
               <option value="paperkraft">Paper Kraft</option>
             </select> <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width : <span id="demos"></span> cm <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demos2"></span> cm <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width : <span id="demo">13</span> cm <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demo2">20</span> cm <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimum Order : 50 <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity : <input type="number" name="quantity" min="50" style="width:150px;"> <br/>
             <br/>
@@ -153,29 +147,44 @@ include "menu.php";
             <br/>
           </span>
 
-          <span style="clear:both;"></span>
-
           <script>
-          var slider = document.getElementById("boxWidth");
-          var output = document.getElementById("demo");
-          var outputs = document.getElementById("demos");
-          output.innerHTML = slider.value;
-          outputs.innerHTML = slider.value;
-          slider.oninput = function() {
-            output.innerHTML = this.value;
-            outputs.innerHTML = this.value;
-          }
-
-          var slider2 = document.getElementById("boxHeight");
-          var output2 = document.getElementById("demo2");
-          var outputs2 = document.getElementById("demos2");
-          output2.innerHTML = slider2.value;
-          outputs2.innerHTML = slider2.value;
-          slider2.oninput = function() {
-            output2.innerHTML = this.value;
-            outputs2.innerHTML = this.value;
-          }
+            var e = document.getElementById("pouchSize");
+            var boxWidth = 13;
+            var boxHeight = 20;
+            e.onclick = function() {
+              var pouchSizeValue = e.options[e.selectedIndex].value;
+              switch(pouchSizeValue){
+                case '5':
+                  boxWidth = 9;
+                  boxHeight = 15;
+                  break;
+                case '6':
+                  boxWidth = 13;
+                  boxHeight = 20;
+                  break;
+                case '7':
+                  boxWidth = 14;
+                  boxHeight = 23;
+                  break;
+                case '8':
+                  boxWidth = 16;
+                  boxHeight = 25;
+                  break;
+                case '9':
+                  boxWidth = 18;
+                  boxHeight = 29;
+                  break;
+                case '10':
+                  boxWidth = 22.5;
+                  boxHeight = 33;
+                  break;
+              }
+              document.getElementById("demo").innerHTML = boxWidth;
+              document.getElementById("demo2").innerHTML = boxHeight;
+            }
           </script>
+
+          <span style="clear:both;"></span>
     </section>
 
     <section once="" class="cid-rblxeb4aPl" id="footer6-r">
