@@ -59,14 +59,21 @@
 
   //create the shape
   //create the material, color, or image textures
+  var rightSide = new THREE.MeshBasicMaterial({color : 0xFFFFFF, side : THREE.DoubleSide});
+  var leftSide = new THREE.MeshBasicMaterial({color : 0xFFFFFF, side : THREE.DoubleSide});
+  var topSide = new THREE.MeshBasicMaterial({color : 0xFFFFFF, side : THREE.DoubleSide});
+  var bottomSide = new THREE.MeshBasicMaterial({color : 0xFFFFFF, side : THREE.DoubleSide});
+  var frontSide = new THREE.MeshBasicMaterial({color : 0xFFFFFF, side : THREE.DoubleSide});
+  var backSide = new THREE.MeshBasicMaterial({color : 0xFFFFFF, side : THREE.DoubleSide});
+
   var cubeMaterials =
   [
-    new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Right Side
-    new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Left Side
-    new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Top Side
-    new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}),//Bottom Side
-    new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}),//Front Side
-    new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}) //Back Side
+    rightSide,//Right Side
+    leftSide,//Left Side
+    topSide,//Top Side
+    bottomSide,//Bottom Side
+    frontSide,//Front Side
+    backSide//Back Side
   ];
 
   var material = new THREE.MeshFaceMaterial(cubeMaterials);
@@ -87,8 +94,48 @@
   }
 
   function processColor() {
+    var side = document.getElementById("side");
+    var sideValue = side.options[side.selectedIndex].value;
     var color = document.getElementById("color").value;
     console.log(color);
+
+    switch(sideValue) {
+      case 'front':
+        frontSide = new THREE.MeshBasicMaterial({color : color, side : THREE.DoubleSide});
+        break;
+      case 'back':
+        backSide = new THREE.MeshBasicMaterial({color : color, side : THREE.DoubleSide});
+        break;
+      case 'left':
+        leftSide = new THREE.MeshBasicMaterial({color : color, side : THREE.DoubleSide});
+        break;
+      case 'right':
+        rightSide = new THREE.MeshBasicMaterial({color : color, side : THREE.DoubleSide});
+        break;
+      case 'top':
+        topSide = new THREE.MeshBasicMaterial({color : color, side : THREE.DoubleSide});
+        break;
+      case 'down':
+        bottomSide = new THREE.MeshBasicMaterial({color : color, side : THREE.DoubleSide});
+        break;
+    }
+
+    while(scene.children.length > 0){
+      scene.remove(scene.children[0]);
+    }
+
+    cubeMaterials =
+    [
+      rightSide,//Right Side
+      leftSide,//Left Side
+      topSide,//Top Side
+      bottomSide,//Bottom Side
+      frontSide,//Front Side
+      backSide//Back Side
+    ];
+    material = new THREE.MeshFaceMaterial(cubeMaterials);
+    cube = new THREE.Mesh(geometry,material);
+    scene.add(cube);
   }
 
   var realFileBtn = document.getElementById("imageButton");
@@ -125,18 +172,48 @@
   })
 
   function processImage() {
+    var side = document.getElementById("side");
+    var sideValue = side.options[side.selectedIndex].value;
     console.log(img);
+
+    var textureLoader = new THREE.TextureLoader();
+    var texture = textureLoader.load( 'asset/bobby.jpg' );
+    var texture1 = textureLoader.load( 'asset/bobby2.jpg' );
+
+
+    switch(sideValue) {
+      case 'front':
+        frontSide = new THREE.MeshBasicMaterial({map : texture, side : THREE.DoubleSide});
+        break;
+      case 'back':
+        backSide = new THREE.MeshBasicMaterial({map : texture, side : THREE.DoubleSide});
+        break;
+      case 'left':
+        leftSide = new THREE.MeshBasicMaterial({map : texture, side : THREE.DoubleSide});
+        break;
+      case 'right':
+        rightSide = new THREE.MeshBasicMaterial({map : texture, side : THREE.DoubleSide});
+        break;
+      case 'top':
+        topSide = new THREE.MeshBasicMaterial({map : texture, side : THREE.DoubleSide});
+        break;
+      case 'down':
+        bottomSide = new THREE.MeshBasicMaterial({map : texture, side : THREE.DoubleSide});
+        break;
+    }
+
     while(scene.children.length > 0){
       scene.remove(scene.children[0]);
     }
+
     cubeMaterials =
     [
-      new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Right Side
-      new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Left Side
-      new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Top Side
-      new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}),//Bottom Side
-      new THREE.MeshBasicMaterial({map : new THREE.Texture(img), side : THREE.DoubleSide}),//Front Side
-      new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}) //Back Side
+      rightSide,//Right Side
+      leftSide,//Left Side
+      topSide,//Top Side
+      bottomSide,//Bottom Side
+      frontSide,//Front Side
+      backSide//Back Side
     ];
     material = new THREE.MeshFaceMaterial(cubeMaterials);
     cube = new THREE.Mesh(geometry,material);
