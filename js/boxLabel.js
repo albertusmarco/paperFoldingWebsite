@@ -18,28 +18,6 @@ window.addEventListener('resize',function()
     camera.updateProjectionMatrix();
 });
 
-// if ( /(iPad|iPhone|iPod)/g.test( navigator.userAgent ) ) {
-//
-// 	// var scene = document.getElementById( 'scene' );
-//
-// 	var boxWidth = scene.style.width = getComputedStyle( scene ).width;
-// 	var boxHeight = scene.style.height = getComputedStyle( scene ).height;
-// 	scene.setAttribute( 'scrolling', 'no' );
-//
-// }
-
-//import an object file(json)
-// var loader = new THREE.ObjectLoader();
-
-// loader.load(
-//   'file.json',
-//
-//   function(object)
-//   {
-//     scene.add(object);
-//   }
-// );
-
 //lighting
 var ambientLight = new THREE.AmbientLight(0xFFFFFF,0.5);
 scene.add(ambientLight);
@@ -82,19 +60,6 @@ function sliderChange() {
     scene.remove(scene.children[0]);
   }
   var geometry = new THREE.BoxGeometry(boxWidth.value,boxHeight.value,boxDepth.value);
-  //create the shape
-  //create the material, color, or image textures
-  var cubeMaterials =
-  [
-    new THREE.MeshBasicMaterial({color : 0xFFFFFF, side : THREE.DoubleSide}),//Right Side
-    new THREE.MeshBasicMaterial({color : 0xFFFFFF, side : THREE.DoubleSide}),//Left Side
-    new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Top Side
-    new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}),//Bottom Side
-    new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}),//Front Side
-    new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}) //Back Side
-  ];
-
-  var material = new THREE.MeshFaceMaterial(cubeMaterials);
   var cube = new THREE.Mesh(geometry,material);
   scene.add(cube);
 }
@@ -104,22 +69,41 @@ function processColor() {
   console.log(color);
 }
 
+var realFileBtn = document.getElementById("imageButton");
+var customBtn = document.getElementById("imageButtonCopy");
+var customTxt = document.getElementById("customText");
+var applyButton2 = document.getElementById("applyButton2");
+var reader;
+var img = new Image();
+
+applyButton2.style.visibility = "hidden";
+
+customBtn.addEventListener("click", function(){
+  realFileBtn.click();
+})
+
+realFileBtn.addEventListener("change", function(){
+  if(realFileBtn.value) {
+    // console.log(realFileBtn.files);
+    applyButton2.style.visibility = "visible";
+    reader = new FileReader();
+    reader.onload = function(){
+      img.src = reader.result;
+      img.style.width = "100px";
+      img.style.height = "100px";
+      document.getElementById("imageSpan").appendChild(img);
+    }
+    reader.readAsDataURL(realFileBtn.files[0]);
+
+    customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+  }
+  else {
+    customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+  }
+})
+
 function processImage() {
-  console.log(document.getElementById("imageSpan").innerHTML);
-  // while(scene.children.length > 0){
-  //   scene.remove(scene.children[0]);
-  // }
-  // cubeMaterials =
-  // [
-  //   new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Right Side
-  //   new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Left Side
-  //   new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Top Side
-  //   new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}),//Bottom Side
-  //   new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}),//Front Side
-  //   new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}) //Back Side
-  // ];
-  // cube = new THREE.Mesh(geometry,material);
-  // scene.add(cube);
+  console.log(img);
 }
 
 camera.position.z=200;

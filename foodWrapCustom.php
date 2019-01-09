@@ -110,41 +110,6 @@ include "menu.php";
             <input id="applyButton2" type="button" onclick="processImage()" value="Apply" style="margin-left:225px"/>
             <br/>
             <br/>
-            <script>
-            var realFileBtn = document.getElementById("imageButton");
-            var customBtn = document.getElementById("imageButtonCopy");
-            var customTxt = document.getElementById("customText");
-            var applyButton2 = document.getElementById("applyButton2");
-            var reader;
-            var img = new Image();
-
-            applyButton2.style.visibility = "hidden";
-
-            customBtn.addEventListener("click", function(){
-              realFileBtn.click();
-            })
-
-            realFileBtn.addEventListener("change", function(){
-              if(realFileBtn.value) {
-                // console.log(realFileBtn.files);
-                applyButton2.style.visibility = "visible";
-                reader = new FileReader();
-                reader.onload = function(){
-                  img.src = reader.result;
-                  img.style.width = "100px";
-                  img.style.height = "100px";
-                  document.getElementById("imageSpan").appendChild(img);
-                }
-                reader.readAsDataURL(realFileBtn.files[0]);
-
-                customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-              }
-              else {
-                // customTxt.innerHTML = "No file chosen, yet.";
-                customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-              }
-            })
-            </script>
         </span>
 
         <span id = "custom" style="float:center;margin-left:10px;">
