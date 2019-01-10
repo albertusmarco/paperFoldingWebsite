@@ -36,11 +36,15 @@ var height = 5;
 
 //create the shape
 //create the material, color, or image textures
+var frontSide = new THREE.MeshBasicMaterial({color : 0xFFFFFF, side : THREE.DoubleSide});
+var topSide = new THREE.MeshBasicMaterial({color : 0xFFFFFF, side : THREE.DoubleSide});
+var bottomSide = new THREE.MeshBasicMaterial({color : 0xFFFFFF, side : THREE.DoubleSide});
+
 var paperMaterials =
 [
-  new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Side
-  new THREE.MeshBasicMaterial({color : 0xFFFFFF, side : THREE.DoubleSide}),//Top Side
-  new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide})//Bottom Side
+  frontSide,//Front Side
+  topSide,//Top Side
+  bottomSide//Bottom Side
 ];
 var geometry = new THREE.CylinderGeometry(radiusTop,radiusBottom,height,50);
 var material = new THREE.MeshFaceMaterial( paperMaterials );
@@ -79,8 +83,32 @@ function changeSize() {
 }
 
 function processColor() {
+  var side = document.getElementById("side");
+  var sideValue = side.options[side.selectedIndex].value;
   var color = document.getElementById("color").value;
   console.log(color);
+
+  switch(sideValue) {
+    case 'front':
+      frontSide = new THREE.MeshBasicMaterial({color : color, side : THREE.DoubleSide});
+    case 'down':
+      bottomSide = new THREE.MeshBasicMaterial({color : color, side : THREE.DoubleSide});
+      break;
+  }
+
+  while(scene.children.length > 0){
+    scene.remove(scene.children[0]);
+  }
+
+  var paperMaterials =
+  [
+    frontSide,//Front Side
+    topSide,//Top Side
+    bottomSide//Bottom Side
+  ];
+  material = new THREE.MeshFaceMaterial(paperMaterials);
+  cube = new THREE.Mesh(geometry,material);
+  scene.add(cube);
 }
 
 var realFileBtn = document.getElementById("imageButton");
@@ -117,7 +145,40 @@ realFileBtn.addEventListener("change", function(){
 })
 
 function processImage() {
+  var side = document.getElementById("side");
+  var sideValue = side.options[side.selectedIndex].value;
   console.log(img);
+
+  // var imgConvert = img.toDataURL();
+  // document.getElementById("applybutton2").href = imgConvert;
+  // document.getElementById("applybutton2").download = 'image.png';
+
+  var textureLoader = new THREE.TextureLoader();
+  var texture = textureLoader.load( 'asset/bobby.jpg' );
+  var texture1 = textureLoader.load( 'asset/bobby2.jpg' );
+
+
+  switch(sideValue) {
+    case 'front':
+      frontSide = new THREE.MeshBasicMaterial({map : texture, side : THREE.DoubleSide});
+    case 'down':
+      bottomSide = new THREE.MeshBasicMaterial({map : texture, side : THREE.DoubleSide});
+      break;
+  }
+
+  while(scene.children.length > 0){
+    scene.remove(scene.children[0]);
+  }
+
+  var paperMaterials =
+  [
+    frontSide,//Front Side
+    topSide,//Top Side
+    bottomSide//Bottom Side
+  ];
+  material = new THREE.MeshFaceMaterial(paperMaterials);
+  cube = new THREE.Mesh(geometry,material);
+  scene.add(cube);
 }
 
 camera.position.z=50;
