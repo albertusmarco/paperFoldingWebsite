@@ -64,10 +64,10 @@ include "menu.php";
                     </div>
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">
-                            Cardbox</h4>
+                            Cardboard Box</h4>
                         
                     </div>
-                    <div class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">
+                    <div class="mbr-section-btn text-center"><a href="cardboardbox.php" class="btn btn-primary display-4">
                             Learn More
                         </a></div>
                 
@@ -83,7 +83,7 @@ include "menu.php";
                             Paper Cup</h4>
                         
                     </div>
-                    <div class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">
+                    <div class="mbr-section-btn text-center"><a href="papercupp.php" class="btn btn-primary display-4">
                             Learn More
                         </a></div>
                
@@ -99,7 +99,7 @@ include "menu.php";
                             Paper Pouch</h4>
                         
                     </div>
-                    <div class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">
+                    <div class="mbr-section-btn text-center"><a href="paperpouch.php" class="btn btn-primary display-4">
                             Learn More
                         </a></div>
                 
@@ -115,7 +115,7 @@ include "menu.php";
                             Food Wrap</h4>
                         
                     </div>
-                    <div class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">
+                    <div class="mbr-section-btn text-center"><a href="foodwrap.php" class="btn btn-primary display-4">
                             Learn More
                         </a></div>
             
@@ -133,7 +133,7 @@ include "menu.php";
                             Paper Bag</h4>
                         
                     </div>
-                    <div class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">
+                    <div class="mbr-section-btn text-center"><a href="paperbag.php" class="btn btn-primary display-4">
                             Learn More</a></div>
                
             </div>
@@ -148,7 +148,7 @@ include "menu.php";
                             Pack Label</h4>
                         
                     </div>
-                    <div class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">
+                    <div class="mbr-section-btn text-center"><a href="packlabel.php" class="btn btn-primary display-4">
                             Learn More</a></div>
                 
             </div>
@@ -163,7 +163,7 @@ include "menu.php";
                             Soft Box</h4>
                         
                     </div>
-                    <div class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">
+                    <div class="mbr-section-btn text-center"><a href="softbox.php" class="btn btn-primary display-4">
                             Learn More</a></div>
               
             </div>
@@ -178,8 +178,8 @@ include "menu.php";
                             Plastic Pouch</h4>
                         
                     </div>
-                    <div align="center" class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">
-                            Learn More!</a></div>
+                    <div align="center" class="mbr-section-btn text-center"><a href="plasticpouch.php" class="btn btn-primary display-4">
+                            Learn More</a></div>
                 
             </div>
       
@@ -482,11 +482,6 @@ include "menu.php";
 
 
 <section once="" class="cid-rblxeb4aPl" id="footer6-r">
-
-    
-
-    
-
     <div class="container">
         <div class="media-container-row align-center mbr-white">
             <div class="col-12">
@@ -495,41 +490,23 @@ include "menu.php";
             </div>
         </div>
     </div>
-</section>
-<section once="" class="cid-rbkA1DU2DQ mbr-reveal" id="footer7-f">
-
-    
-
-    
-
     <div class="container">
         <div class="media-container-row align-center mbr-white">
-            
             <div class="row social-row">
                 <div class="social-list align-right pb-2">
-                    
-                    
-                    
-                    
-                    
-                    
                 <div class="soc-item">
                         <a href="https://instagram.com/sendwish.id" target="_blank">
                             <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
                         </a>
-                    </div><div class="soc-item">
-                        <a href="https://wa.me/6283833002258" target="_blank">
+                         <a href="https://wa.me/6283833002258" target="_blank">
                             <span class="mbr-iconfont mbr-iconfont-social socicon-whatsapp socicon"></span>
                         </a>
-                    </div><div class="soc-item">
-                        <a href="contactmail.php" target="_blank">
+                         <a href="contactmail.php" target="_blank">
                             <span class="mbr-iconfont mbr-iconfont-social socicon-mail socicon"></span>
                         </a>
                     </div></div>
             </div>
-            <div class="row row-copirayt">
-                <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7"></p>
-            </div>
+            
         </div>
     </div>
 </section>
