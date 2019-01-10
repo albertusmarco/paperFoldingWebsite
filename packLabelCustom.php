@@ -89,7 +89,7 @@ include "menu.php";
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;">COLOR</a>
             <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Choose : <input type="color" id="color"/>
+            Choose : <input type="color" id="color" value="#ffffff"/>
             <br/>
             <input type="button" onclick="processColor()" value="Apply" style="margin-left:225px">
             <br/>
