@@ -135,13 +135,34 @@ include "menu.php";
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : Pack Label <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Material :
             <select id="material">
-              <option value="artpaper">Art Paper</option>
-              <option value="artcarton">Art Carton</option>
-              <option value="ivorytexture">Ivory Texture</option>
-              <option value="bcmanila">BC Manila</option>
-              <option value="duplex">Duplex</option>
-              <option value="samson">Samson</option>
-              <option value="paperkraft">Paper Kraft</option>
+              <option value="artpaper150">Art Paper 150gr</option>
+              <option value="artpaper210">Art Paper 210gr</option>
+              <option value="artpaper230">Art Paper 230gr</option>
+              <option value="artpaper260">Art Paper 260gr</option>
+              <option value="artpaper310">Art Paper 310gr</option>
+              <option value="ivory210">Ivory 210gr</option>
+              <option value="ivory230">Ivory 230gr</option>
+              <option value="ivory250">Ivory 250gr</option>
+              <option value="ivory310">Ivory 310gr</option>
+              <option value="bcmanila150">BC Manila 150gr</option>
+              <option value="duplex230">Duplex 230gr</option>
+              <option value="duplex250">Duplex 250gr</option>
+              <option value="duplex270">Duplex 270gr</option>
+              <option value="duplex300">Duplex 300gr</option>
+            </select> <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Combination :
+            <select id="comination">
+              <option value="stickervinyl">Sticker Vinyl</option>
+              <option value="stickerbontax">Sticker Bontax</option>
+              <option value="hotprint">Hot Print</option>
+              <option value="uvprint">UV Print</option>
+              <option value="silversticker">Silver Sticker</option>
+              <option value="goldsticker">Gold Sticker</option>
+            </select> <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lamination :
+            <select id="material">
+              <option value="doff">Doff</option>
+              <option value="glossy">Glossy</option>
             </select> <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width : <span id="demos"></span> cm <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demos2"></span> cm <br/>

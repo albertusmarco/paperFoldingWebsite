@@ -119,13 +119,17 @@ include "menu.php";
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : Plastic Pouch <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Material :
             <select id="material">
-              <option value="artpaper">Art Paper</option>
-              <option value="artcarton">Art Carton</option>
-              <option value="ivorytexture">Ivory Texture</option>
-              <option value="bcmanila">BC Manila</option>
-              <option value="duplex">Duplex</option>
-              <option value="samson">Samson</option>
-              <option value="paperkraft">Paper Kraft</option>
+              <option value="plasticandfoil">Plastic and Foil</option>
+            </select> <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Combination :
+            <select id="comination">
+              <option value="sablon">Sablon</option>
+              <option value="stickervinyl">Sticker Vinyl</option>
+              <option value="stickerbontax">Sticker Bontax</option>
+              <option value="hotprint">Hot Print</option>
+              <option value="uvprint">UV Print</option>
+              <option value="silversticker">Silver Sticker</option>
+              <option value="goldsticker">Gold Sticker</option>
             </select> <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width : <span id="demo">13</span> cm <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demo2">20</span> cm <br/>
