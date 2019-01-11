@@ -139,13 +139,16 @@ include "menu.php";
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : Food Wrap <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Material :
             <select id="material">
-              <option value="artpaper">Art Paper</option>
-              <option value="artcarton">Art Carton</option>
-              <option value="ivorytexture">Ivory Texture</option>
-              <option value="bcmanila">BC Manila</option>
-              <option value="duplex">Duplex</option>
-              <option value="samson">Samson</option>
-              <option value="paperkraft">Paper Kraft</option>
+              <option value="foodgradepaper">Food Grade Paper</option>
+            </select> <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Combination :
+            <select id="combination">
+              <option value="stickervinyl">Sticker Vinyl</option>
+              <option value="stickerbontax">Sticker Bontax</option>
+              <option value="silversticker">Silver Sticker</option>
+              <option value="goldsticker">Gold Sticker</option>
+              <option value="hotprint">Hot Print</option>
+              <option value="uvprint">UV Print</option>
             </select> <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width : <span id="demos"></span> cm <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demos2"></span> cm <br/>
@@ -224,7 +227,7 @@ include "menu.php";
                         </a>
                     </div></div>
             </div>
-            
+
         </div>
     </div>
 </section>
