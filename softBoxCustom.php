@@ -206,7 +206,7 @@ include "menu.php";
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Make sure all order detail already desire
             &nbsp;&nbsp;&nbsp;&nbsp;<br/><br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="btn btn-md btn-primary display-4" href="">SUBMIT</a>
+            <a class="btn btn-md btn-primary display-4" onClick="process3D()">SUBMIT</a>
             <br/>
             <br/>
           </span>
