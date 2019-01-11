@@ -30,7 +30,10 @@ CREATE TABLE `cust_shelf` (
   `id_design` varchar(50) NOT NULL,
   `id_customer` varchar(50) NOT NULL,
   `id_product` varchar(50) NOT NULL,
-  `id_material` varchar(50) NOT NULL,
+  `material` varchar(225) DEFAULT NULL,
+  `combination` varchar(225) DEFAULT NULL,
+  `lamination` varchar(225) DEFAULT NULL,
+  `available` varchar(225) DEFAULT NULL,
   `size1` varchar(50) NOT NULL,
   `size2` varchar(50) NOT NULL,
   `size3` varchar(50) NOT NULL,
@@ -43,17 +46,17 @@ CREATE TABLE `cust_shelf` (
 --
 
 /*!40000 ALTER TABLE `cust_shelf` DISABLE KEYS */;
-INSERT INTO `cust_shelf` (`id_design`,`id_customer`,`id_product`,`id_material`,`size1`,`size2`,`size3`,`path_product`) VALUES 
- ('D1','C1','P1','M1','','','',''),
- ('D10','C2','P1','M1','','','',''),
- ('D2','C1','P1','M1','','','',''),
- ('D3','C3','P3','M1','','','',''),
- ('D4','C1','P2','M1','','','',''),
- ('D5','C2','P3','M1','','','',''),
- ('D6','C4','P3','M1','','','',''),
- ('D7','C4','P2','M1','','','',''),
- ('D8','C2','P3','M1','','','',''),
- ('D9','C2','P2','M1','','','','');
+INSERT INTO `cust_shelf` (`id_design`,`id_customer`,`id_product`,`material`,`combination`,`lamination`,`available`,`size1`,`size2`,`size3`,`path_product`) VALUES 
+ ('D1','C1','P1','Corrugated','Sticker Vinly',NULL,'','','','',''),
+ ('D10','C2','P1','Corrugated','Silver Sticker',NULL,'','','','',''),
+ ('D2','C1','P1','Corrugated','Gold Sticker',NULL,'','','','',''),
+ ('D3','C3','P3','Polylethylene (PE) Water Proof','Sticker Bontax',NULL,'','','','',''),
+ ('D4','C1','P2','Art Paper 210 gr','Hot Print','Doff','','','','',''),
+ ('D5','C2','P3','Polylethylene (PE) Water Proof','Gold Sticker',NULL,'','','','',''),
+ ('D6','C4','P3','Polylethylene (PE) Water Proof','Sticker Vinly',NULL,'','','','',''),
+ ('D7','C4','P2','Ivory 230 gr','UV Print','Glossy','','','','',''),
+ ('D8','C2','P3','Polylethylene (PE) Water Proof','Silver Sticker',NULL,'','','','',''),
+ ('D9','C2','P2','Samson 70 gr','UV Print','Glossy','','','','','');
 /*!40000 ALTER TABLE `cust_shelf` ENABLE KEYS */;
 
 
@@ -81,7 +84,9 @@ INSERT INTO `customer` (`id_customer`,`name`,`email`,`phone`,`address`,`postal_c
  ('C1','Fania Cecillia','fcecillia@student.ciputra.ac.id','087856933365','Wiyung',60228),
  ('C2','Albertus Marco','amarco@student.ciputra.ac.id','088966548595','Pakuwon',60112),
  ('C3','Dewi Salma Salsabila','dsalma@student.ciputra.ac.id','081265996325','Pakuwon',60112),
- ('C4','Dhienalight','dhienalight@student.ciputra.ac.id','081256692145','Sepanjang',61257);
+ ('C4','Dhienalight','dhienalight@student.ciputra.ac.id','081256692145','Sepanjang',61257),
+ ('C5','cobaa','jj','8520','huha',522),
+ ('C6','bobby','bobby@gmail.com','0819','jalan',91);
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 
 
@@ -136,32 +141,12 @@ CREATE TABLE `login` (
 INSERT INTO `login` (`email`,`password`,`role`) VALUES 
  ('admin','admin',1),
  ('amarco@student.ciputra.ac.id','ampass',2),
+ ('bobby@gmail.com','bpass',2),
  ('dhienalight@student.ciputra.ac.id','dpass',2),
  ('dsalma@student.ciputra.ac.id','dsspass',2),
- ('fcecillia@student.ciputra.ac.id','fcpass',2);
+ ('fcecillia@student.ciputra.ac.id','fcpass',2),
+ ('jj','pass',2);
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
-
-
---
--- Definition of table `material`
---
-
-DROP TABLE IF EXISTS `material`;
-CREATE TABLE `material` (
-  `id_material` varchar(50) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `status` varchar(50) NOT NULL,
-  PRIMARY KEY (`id_material`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `material`
---
-
-/*!40000 ALTER TABLE `material` DISABLE KEYS */;
-INSERT INTO `material` (`id_material`,`name`,`status`) VALUES 
- ('M1','Paper','active');
-/*!40000 ALTER TABLE `material` ENABLE KEYS */;
 
 
 --
