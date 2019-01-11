@@ -84,17 +84,17 @@ include "menu.php";
         <img src="assets/images/plastic-pouch-fix-492x492.png" alt="PlasticPouch" title="" width="200" height="200">
       </label>
     </h3>
-    <h3 class="mbr-text align-right pb-3 mbr-fonts-style display-5">Select Meterial Type:</h3>
+    <!-- <h3 class="mbr-text align-right pb-3 mbr-fonts-style display-5">Select Meterial Type:</h3> -->
     <!-- <form> -->
-      <p class="mbr-text align-right pb-3 mbr-fonts-style display-5">
-        <input type="radio" name="mateT" value="artPaper"> Art Paper &nbsp;
-        <input type="radio" name="mateT" value="artCarton"> Art Carton &nbsp;
-        <input type="radio" name="mateT" value="ivoryTexture"> Ivory Texture &nbsp;
-        <input type="radio" name="mateT" value="bcManila"> BC Manila &nbsp;
-        <input type="radio" name="mateT" value="duplex"> Duplex &nbsp;
-        <input type="radio" name="mateT" value="samson"> Samson &nbsp;
-        <input type="radio" name="mateT" value="paperKraft"> Paper Kraft &nbsp;
-      </p>
+      <!-- <p class="mbr-text align-right pb-3 mbr-fonts-style display-5"> -->
+        <!-- <input type="radio" name="mateT" value="artPaper"> Art Paper &nbsp; -->
+        <!-- <input type="radio" name="mateT" value="artCarton"> Art Carton &nbsp; -->
+        <!-- <input type="radio" name="mateT" value="ivoryTexture"> Ivory Texture &nbsp; -->
+        <!-- <input type="radio" name="mateT" value="bcManila"> BC Manila &nbsp; -->
+        <!-- <input type="radio" name="mateT" value="duplex"> Duplex &nbsp; -->
+        <!-- <input type="radio" name="mateT" value="samson"> Samson &nbsp; -->
+        <!-- <input type="radio" name="mateT" value="paperKraft"> Paper Kraft &nbsp; -->
+      <!-- </p> -->
      <!--  <p align="right"><button onclick="myFunction()">Specs List</button></p>
       <input type="text" id="selectSpecs">
       
