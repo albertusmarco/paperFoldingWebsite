@@ -136,7 +136,12 @@ if(isset($_POST["signup"]))
 	$a = insertData($sql);
 	
 	if ($a >0)
-	{echo '<meta http-equiv="refresh" content="1; URL=index.php" />';}
+	{$sql = "select name from customer where email = '$email';";
+		$hasil = viewData($sql);
+		$session = mysqli_fetch_row($hasil);
+			$_SESSION['namauser'] = "$session[0]";
+			$_SESSION['adasesi'] = 1;
+		echo '<meta http-equiv="refresh" content="1; URL=index.php" />';}
 	}
 }
 ?> 
