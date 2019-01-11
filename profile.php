@@ -89,7 +89,7 @@
         </tr>
         <?php
           $no = 0;
-          $sql = "SELECT `order`.order_time, `order`.id_order, `order_detail`.id_design, `order`.status FROM `order`, `order_detail` WHERE `order`.id_order = `order_detail`.id_order AND `order`.id_customer = 'C1';"; //NEED TO GET ID FROM USER SESSION
+          $sql = "SELECT `order`.order_time, `order`.id_order, `order_detail`.id_design, `order`.status FROM `customer`, `order`, `order_detail` WHERE `customer`.`email` = '$emailcust' AND `order`.id_order = `order_detail`.id_order AND `order`.id_customer = `customer`.id_customer";
           $data = viewData($sql);
           while ($row = mysqli_fetch_row($data))
           {
