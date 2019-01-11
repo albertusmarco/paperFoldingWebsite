@@ -138,13 +138,14 @@ include "menu.php";
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : Card Board <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Material :
             <select id="material">
-              <option value="artpaper">Art Paper</option>
-              <option value="artcarton">Art Carton</option>
-              <option value="ivorytexture">Ivory Texture</option>
-              <option value="bcmanila">BC Manila</option>
-              <option value="duplex">Duplex</option>
-              <option value="samson">Samson</option>
-              <option value="paperkraft">Paper Kraft</option>
+              <option value="corrugated">Corrugated</option>
+            </select> <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Combination :
+            <select id="comination">
+              <option value="stickervinyl">Sticker Vinyl</option>
+              <option value="stickerbontax">Sticker Bontax</option>
+              <option value="silversticker">Silver Sticker</option>
+              <option value="goldsticker">Gold Sticker</option>
             </select> <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width : <span id="demos"></span> cm <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demos2"></span> cm <br/>
