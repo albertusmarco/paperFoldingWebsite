@@ -163,42 +163,23 @@ echo '<a href="signup.php">Sign Up</a>';
             </div>
         </div>
     </div>
-</section>
-
-<section once="" class="cid-rbkA1DU2DQ mbr-reveal" id="footer7-f">
-
-
-
-
-
     <div class="container">
         <div class="media-container-row align-center mbr-white">
-
             <div class="row social-row">
                 <div class="social-list align-right pb-2">
-
-
-
-
-
-
                 <div class="soc-item">
                         <a href="https://instagram.com/sendwish.id" target="_blank">
                             <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
                         </a>
-                    </div><div class="soc-item">
-                        <a href="https://wa.me/6283833002258" target="_blank">
+                         <a href="https://wa.me/6283833002258" target="_blank">
                             <span class="mbr-iconfont mbr-iconfont-social socicon-whatsapp socicon"></span>
                         </a>
-                    </div><div class="soc-item">
-                        <a href="contactmail.php" target="_blank">
+                         <a href="contactmail.php" target="_blank">
                             <span class="mbr-iconfont mbr-iconfont-social socicon-mail socicon"></span>
                         </a>
                     </div></div>
             </div>
-            <div class="row row-copirayt">
-                <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7"></p>
-            </div>
+            
         </div>
     </div>
 </section>
