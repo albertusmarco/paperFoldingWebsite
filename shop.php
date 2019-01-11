@@ -47,8 +47,12 @@ include "menu.php";
 
   <section class="header10 cid-rbkq4YRq2S mbr-fullscreen mbr-parallax-background">
     <div class="container">
+      <br>
+      &nbsp;
       <h1 class="mbr-section-subtitle align-right mbr-light pb-3 mbr-fonts-style display-2">Welcome to Shop!</h2>
-      <h3 class="mbr-text align-right pb-3 mbr-fonts-style display-5">Select Packaging Type:</h3>
+      <h3 class="mbr-text align-right pb-3 mbr-fonts-style display-5">
+        Select Packaging Type:
+      </h3>
       <h3 class="mbr-text align-right pb-3 mbr-fonts-style display-5">
       <label>
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="cardBox">
