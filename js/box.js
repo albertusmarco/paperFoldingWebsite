@@ -251,6 +251,8 @@
 
   GameLoop();
 
-  // export object 3D to JSON
-  // var json = scene.toJSON();
-  // console.log(json);
+  function process3D(){
+    // export object 3D to JSON
+    var json = scene.toJSON();
+    console.log(json);
+  }  

@@ -121,13 +121,17 @@ include "menu.php";
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : Paper Pouch <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Material :
             <select id="material">
-              <option value="artpaper">Art Paper</option>
-              <option value="artcarton">Art Carton</option>
-              <option value="ivorytexture">Ivory Texture</option>
-              <option value="bcmanila">BC Manila</option>
-              <option value="duplex">Duplex</option>
-              <option value="samson">Samson</option>
-              <option value="paperkraft">Paper Kraft</option>
+              <option value="kraftandfoil">Kraft and Foil</option>
+            </select> <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Combination :
+            <select id="comination">
+              <option value="sablon">Sablon</option>
+              <option value="stickervinyl">Sticker Vinyl</option>
+              <option value="stickerbontax">Sticker Bontax</option>
+              <option value="hotprint">Hot Print</option>
+              <option value="uvprint">UV Print</option>
+              <option value="silversticker">Silver Sticker</option>
+              <option value="goldsticker">Gold Sticker</option>
             </select> <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width : <span id="demo">13</span> cm <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demo2">20</span> cm <br/>
@@ -187,43 +191,37 @@ include "menu.php";
           <span style="clear:both;"></span>
     </section>
 
+    
+
     <section once="" class="cid-rblxeb4aPl" id="footer6-r">
-        <div class="container">
-            <div class="media-container-row align-center mbr-white">
-                <div class="col-12">
-                    <p class="mbr-text mb-0 mbr-fonts-style display-7">
-                        Find us on :</p>
-                </div>
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="col-12">
+                <p class="mbr-text mb-0 mbr-fonts-style display-7">
+                    Find us on :</p>
             </div>
         </div>
-    </section>
-
-    <section once="" class="cid-rbkA1DU2DQ mbr-reveal" id="footer7-1f">
-      <div class="container">
+    </div>
+    <div class="container">
         <div class="media-container-row align-center mbr-white">
-          <div class="row social-row">
-            <div class="social-list align-right pb-2">
-              <div class="soc-item">
-                <a href="https://instagram.com/sendwish.id" target="_blank">
-                  <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
-                </a>
-              </div><div class="soc-item">
-                <a href="https://wa.me/6283833002258" target="_blank">
-                  <span class="mbr-iconfont mbr-iconfont-social socicon-whatsapp socicon"></span>
-                </a>
-              </div><div class="soc-item">
-                <a href="contactmail.php" target="_blank">
-                  <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
-                </a>
-              </div></div>
-          </div>
-          <div class="row row-copirayt">
-            <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7"></p>
-          </div>
+            <div class="row social-row">
+                <div class="social-list align-right pb-2">
+                <div class="soc-item">
+                        <a href="https://instagram.com/sendwish.id" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
+                        </a>
+                         <a href="https://wa.me/6283833002258" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-whatsapp socicon"></span>
+                        </a>
+                         <a href="contactmail.php" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-mail socicon"></span>
+                        </a>
+                    </div></div>
+            </div>
+            
         </div>
-      </div>
-    </section>
-
+    </div>
+</section>
 
       <script src="assets/web/assets/jquery/jquery.min.js"></script>
       <script src="assets/popper/popper.min.js"></script>

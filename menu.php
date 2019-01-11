@@ -51,7 +51,7 @@ session_start();
                         Portfolio</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="index.php#testimonials-slider1-b">
                         About</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="
                           <?php
-                          if($_SESSION['adasesi'] == "1"){
+                          if(!isset($_SESSION['adasesi'])){
                             echo('shop.php');
                           }else{
                             echo('noshop.php');

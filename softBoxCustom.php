@@ -184,13 +184,34 @@ include "menu.php";
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : Soft Box <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Material :
             <select id="material">
-              <option value="artpaper">Art Paper</option>
-              <option value="artcarton">Art Carton</option>
-              <option value="ivorytexture">Ivory Texture</option>
-              <option value="bcmanila">BC Manila</option>
-              <option value="duplex">Duplex</option>
-              <option value="samson">Samson</option>
-              <option value="paperkraft">Paper Kraft</option>
+              <option value="artpaper150">Art Paper 150gr</option>
+              <option value="artpaper210">Art Paper 210gr</option>
+              <option value="artpaper230">Art Paper 230gr</option>
+              <option value="artpaper260">Art Paper 260gr</option>
+              <option value="artpaper310">Art Paper 310gr</option>
+              <option value="ivory210">Ivory 210gr</option>
+              <option value="ivory230">Ivory 230gr</option>
+              <option value="ivory250">Ivory 250gr</option>
+              <option value="ivory310">Ivory 310gr</option>
+              <option value="duplex230">Duplex 230gr</option>
+              <option value="duplex250">Duplex 250gr</option>
+              <option value="duplex270">Duplex 270gr</option>
+              <option value="duplex300">Duplex 300gr</option>
+              <option value="bcmanila150">BC Manila 150gr</option>
+            </select> <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Combination :
+            <select id="combination">
+              <option value="stickervinyl">Sticker Vinyl</option>
+              <option value="stickerbontax">Sticker Bontax</option>
+              <option value="silversticker">Silver Sticker</option>
+              <option value="goldsticker">Gold Sticker</option>
+              <option value="hotprint">Hot Print</option>
+              <option value="uvprint">UV Print</option>
+            </select> <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lamination :
+            <select id="lamination">
+              <option value="doff">Doff</option>
+              <option value="glossy">Glossy</option>
             </select> <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width : <span id="demos"></span> cm <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demos2"></span> cm <br/>
@@ -206,7 +227,7 @@ include "menu.php";
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Make sure all order detail already desire
             &nbsp;&nbsp;&nbsp;&nbsp;<br/><br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="btn btn-md btn-primary display-4" href="">SUBMIT</a>
+            <a class="btn btn-md btn-primary display-4" onClick="process3D()">SUBMIT</a>
             <br/>
             <br/>
           </span>
@@ -246,42 +267,36 @@ include "menu.php";
           </script>
     </section>
 
-    <section once="" class="cid-rblxeb4aPl" id="footer6-r">
-        <div class="container">
-            <div class="media-container-row align-center mbr-white">
-                <div class="col-12">
-                    <p class="mbr-text mb-0 mbr-fonts-style display-7">
-                        Find us on :</p>
-                </div>
+
+<section once="" class="cid-rblxeb4aPl" id="footer6-r">
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="col-12">
+                <p class="mbr-text mb-0 mbr-fonts-style display-7">
+                    Find us on :</p>
             </div>
         </div>
-    </section>
-
-    <section once="" class="cid-rbkA1DU2DQ mbr-reveal" id="footer7-1f">
-      <div class="container">
+    </div>
+    <div class="container">
         <div class="media-container-row align-center mbr-white">
-          <div class="row social-row">
-            <div class="social-list align-right pb-2">
-              <div class="soc-item">
-                <a href="https://instagram.com/sendwish.id" target="_blank">
-                  <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
-                </a>
-              </div><div class="soc-item">
-                <a href="https://wa.me/6283833002258" target="_blank">
-                  <span class="mbr-iconfont mbr-iconfont-social socicon-whatsapp socicon"></span>
-                </a>
-              </div><div class="soc-item">
-                <a href="contactmail.php" target="_blank">
-                  <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
-                </a>
-              </div></div>
-          </div>
-          <div class="row row-copirayt">
-            <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7"></p>
-          </div>
+            <div class="row social-row">
+                <div class="social-list align-right pb-2">
+                <div class="soc-item">
+                        <a href="https://instagram.com/sendwish.id" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
+                        </a>
+                         <a href="https://wa.me/6283833002258" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-whatsapp socicon"></span>
+                        </a>
+                         <a href="contactmail.php" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-mail socicon"></span>
+                        </a>
+                    </div></div>
+            </div>
+
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
 
       <script src="assets/web/assets/jquery/jquery.min.js"></script>

@@ -139,13 +139,16 @@ include "menu.php";
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : Food Wrap <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Material :
             <select id="material">
-              <option value="artpaper">Art Paper</option>
-              <option value="artcarton">Art Carton</option>
-              <option value="ivorytexture">Ivory Texture</option>
-              <option value="bcmanila">BC Manila</option>
-              <option value="duplex">Duplex</option>
-              <option value="samson">Samson</option>
-              <option value="paperkraft">Paper Kraft</option>
+              <option value="foodgradepaper">Food Grade Paper</option>
+            </select> <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Combination :
+            <select id="combination">
+              <option value="stickervinyl">Sticker Vinyl</option>
+              <option value="stickerbontax">Sticker Bontax</option>
+              <option value="silversticker">Silver Sticker</option>
+              <option value="goldsticker">Gold Sticker</option>
+              <option value="hotprint">Hot Print</option>
+              <option value="uvprint">UV Print</option>
             </select> <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width : <span id="demos"></span> cm <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demos2"></span> cm <br/>
@@ -200,41 +203,34 @@ include "menu.php";
     </section>
 
     <section once="" class="cid-rblxeb4aPl" id="footer6-r">
-        <div class="container">
-            <div class="media-container-row align-center mbr-white">
-                <div class="col-12">
-                    <p class="mbr-text mb-0 mbr-fonts-style display-7">
-                        Find us on :</p>
-                </div>
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="col-12">
+                <p class="mbr-text mb-0 mbr-fonts-style display-7">
+                    Find us on :</p>
             </div>
         </div>
-    </section>
-
-    <section once="" class="cid-rbkA1DU2DQ mbr-reveal" id="footer7-1f">
-      <div class="container">
+    </div>
+    <div class="container">
         <div class="media-container-row align-center mbr-white">
-          <div class="row social-row">
-            <div class="social-list align-right pb-2">
-              <div class="soc-item">
-                <a href="https://instagram.com/sendwish.id" target="_blank">
-                  <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
-                </a>
-              </div><div class="soc-item">
-                <a href="https://wa.me/6283833002258" target="_blank">
-                  <span class="mbr-iconfont mbr-iconfont-social socicon-whatsapp socicon"></span>
-                </a>
-              </div><div class="soc-item">
-                <a href="contactmail.php" target="_blank">
-                  <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
-                </a>
-              </div></div>
-          </div>
-          <div class="row row-copirayt">
-            <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7"></p>
-          </div>
+            <div class="row social-row">
+                <div class="social-list align-right pb-2">
+                <div class="soc-item">
+                        <a href="https://instagram.com/sendwish.id" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
+                        </a>
+                         <a href="https://wa.me/6283833002258" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-whatsapp socicon"></span>
+                        </a>
+                         <a href="contactmail.php" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-mail socicon"></span>
+                        </a>
+                    </div></div>
+            </div>
+
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
 
       <script src="assets/web/assets/jquery/jquery.min.js"></script>
