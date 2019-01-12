@@ -86,7 +86,7 @@ function processColor() {
   var side = document.getElementById("side");
   var sideValue = side.options[side.selectedIndex].value;
   var color = document.getElementById("color").value;
-  console.log(color);
+  // console.log(color);
 
   switch(sideValue) {
     case 'front':
@@ -147,16 +147,17 @@ realFileBtn.addEventListener("change", function(){
 function processImage() {
   var side = document.getElementById("side");
   var sideValue = side.options[side.selectedIndex].value;
-  console.log(img);
+  // console.log(img);
 
   // var imgConvert = img.toDataURL();
   // document.getElementById("applybutton2").href = imgConvert;
   // document.getElementById("applybutton2").download = 'image.png';
 
-  var textureLoader = new THREE.TextureLoader();
-  var texture = textureLoader.load( 'asset/bobby.jpg' );
-  var texture1 = textureLoader.load( 'asset/bobby2.jpg' );
+  // var textureLoader = new THREE.TextureLoader();
+  // var texture = textureLoader.load( 'asset/bobby.jpg' );
+  // var texture1 = textureLoader.load( 'asset/bobby2.jpg' );
 
+  var texture = new THREE.ImageUtils.loadTexture(img.src);
 
   switch(sideValue) {
     case 'front':

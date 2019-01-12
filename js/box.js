@@ -97,7 +97,7 @@
     var side = document.getElementById("side");
     var sideValue = side.options[side.selectedIndex].value;
     var color = document.getElementById("color").value;
-    console.log(color);
+    // console.log(color);
 
     switch(sideValue) {
       case 'front':
@@ -174,7 +174,7 @@
   function processImage() {
     var side = document.getElementById("side");
     var sideValue = side.options[side.selectedIndex].value;
-    console.log(img);
+    // console.log(img);
 
     // var imgConvert = img.toDataURL();
     // document.getElementById("applybutton2").href = imgConvert;
@@ -185,7 +185,6 @@
     // var texture1 = textureLoader.load( 'asset/bobby2.jpg' );
 
     var texture = new THREE.ImageUtils.loadTexture(img.src);
-
 
     switch(sideValue) {
       case 'front':
@@ -255,4 +254,4 @@
     // export object 3D to JSON
     var json = scene.toJSON();
     console.log(json);
-  }  
+  }
