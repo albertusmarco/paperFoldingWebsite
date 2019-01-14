@@ -288,9 +288,29 @@
         judul = 'Soft Box';
         if(custom == 0){
           tipeHarga = 'Plain Price';
+          if(quantity.value > 50) {
+            harga = '12.500';
+          }
+          else {
+            harga = '17.200';
+          }
         }
         else {
           tipeHarga = 'Customization Price';
+          if(quantity.value > 50) {
+            if(quantity.value < 101) {
+              harga = '24.500';
+            }
+            else if(quantity.value < 501) {
+              harga = '17.200';
+            }
+            else {
+              harga = '9.500';
+            }
+          }
+          else {
+            harga = '30.000';
+          }
         }
         break;
       case 'PAPER BAG':
