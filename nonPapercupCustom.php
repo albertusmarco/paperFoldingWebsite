@@ -100,8 +100,8 @@ include "menu.php";
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a class="navbar-caption text-black display-5">CHOOSE SIDE :</a>
             &nbsp;
-            <select id="side" style="width:125px">
-              <option value="front">FRONT</option>
+            <select id="side" style="width:160px">
+              <option value="front">FRONT & BOTTOM</option>
               <option value="down">BOTTOM</option>
             </select>
             <br/>
@@ -116,6 +116,7 @@ include "menu.php";
           <span style="float:right;margin-right:85px;background-color:#FFFFFF;">
             <br/>
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;">CUSTOM DETAIL</a><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : Paper Cup <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Top Diameter : <span id="demo">6</span> cm <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Base Diameter : <span id="demo2">5</span> cm <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demo3">5</span> cm <br/>

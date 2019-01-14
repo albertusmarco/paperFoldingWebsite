@@ -17,18 +17,6 @@ include "menu.php";
       /* width:1000px;
       height:1000px; */
     }
-    /* canvas {
-    padding: 10;
-    margin: auto;
-    display: block;
-    width: 800px;
-    height: 600px;
-    position: absolute;
-    top: 10;
-    bottom: 10;
-    left: 10;
-    right: 10;
-    } */
     </style>
 
     <!-- mobirise template -->
@@ -64,10 +52,13 @@ include "menu.php";
           <a class="navbar-caption text-black display-5" style="margin:0.8cm;">SIZE</a>
           <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <select id="paperSize">
-              <option value="1" selected>8 oz : 6 cm x 5 cm x 5 cm</option>
-              <option value="2">12 oz : 8,5 cm x 5,8 cm x 10,5 cm</option>
-              <option value="3">16 oz : 8,5 cm x 5,8 cm x 12,5 cm</option>
+            <select id="pouchSize">
+              <option value="5">9 cm x 15 cm</option>
+              <option value="6" selected>13 cm x 20 cm</option>
+              <option value="7">14 cm x 23 cm</option>
+              <option value="8">16 cm x 25 cm</option>
+              <option value="9">18 cm x 29 cm</option>
+              <option value="10">22,5 cm x 33 cm</option>
             </select>&nbsp;&nbsp;&nbsp;
             <br/><br/>
 
@@ -76,7 +67,7 @@ include "menu.php";
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             Choose : <input type="color" id="color" value="#ffffff"/>
             <br/>
-            <input type="button" onclick="processColor()" value="Apply" style="margin-left:225px">
+            <input id="applyButton1" type="button" onclick="processColor()" value="Apply" style="margin-left:225px"/>
             <br/>
             <br/>
 
@@ -94,15 +85,14 @@ include "menu.php";
             <br/>
             <br/>
         </span>
-        <!-- <br/> -->
 
           <span id = "custom" style="float:center;margin-left:10px;">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a class="navbar-caption text-black display-5">CHOOSE SIDE :</a>
             &nbsp;
-            <select id="side" style="width:160px">
-              <option value="front">FRONT & BOTTOM</option>
-              <option value="down">BOTTOM</option>
+            <select id="side" style="width:125px">
+              <option value="front">FRONT</option>
+              <option value="back">BACK</option>
             </select>
             <br/>
             &nbsp;&nbsp;
@@ -110,78 +100,68 @@ include "menu.php";
             <!-- three.js library -->
             <script src = "js/three.js"></script>
             <script src = "js/OrbitControls.js"></script>
-            <script src= "js/papercup.js"></script>
+            <script src= "js/boxPouch.js"></script>
           </span>
 
           <span style="float:right;margin-right:85px;background-color:#FFFFFF;">
             <br/>
-            <a class="navbar-caption text-black display-5" style="margin:0.8cm;">ORDER DETAIL</a><br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : Paper Cup <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Material :
-            <select id="material">
-              <option value="polylethylene">Polylethylene Water Proof</option>
-            </select> <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Combination :
-            <select id="comination">
-              <option value="stickervinyl">Sticker Vinyl</option>
-              <option value="stickerbontax">Sticker Bontax</option>
-              <option value="silversticker">Silver Sticker</option>
-              <option value="goldsticker">Gold Sticker</option>
-            </select> <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Top Diameter : <span id="demo">6</span> cm <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Base Diameter : <span id="demo2">5</span> cm <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demo3">5</span> cm <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimum Order : 50 <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity : <input type="number" name="quantity" min="50" style="width:150px;"> <br/>
-            <br/>
+            <a class="navbar-caption text-black display-5" style="margin:0.8cm;">CUSTOM DETAIL</a><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : Paper Pouch <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width : <span id="demo">13</span> cm <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demo2">20</span> cm <br/>
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;"> INSTRUCTIONS : </a><br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Orbit Control : Hold Left-Click Mouse <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Zoom-in & Zoom-out : Scroll Mouse <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. The attributes will be changed <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. The attributes will be changed<br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;according the side options<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Make sure all order detail already desire
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. You can't save your customization due
+            &nbsp;&nbsp;&nbsp;&nbsp;<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to your sign in requirement
             &nbsp;&nbsp;&nbsp;&nbsp;<br/><br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="btn btn-md btn-primary display-4" href="">SUBMIT</a>
-            <br/>
-            <br/>
           </span>
 
-          <script>
-            var e = document.getElementById("paperSize");
-            var radiusTop = 6;
-            var radiusBottom = 5;
-            var height = 5;
-            e.onclick = function() {
-              var paperSizeValue = e.options[e.selectedIndex].value;
-              switch(paperSizeValue){
-                case '1':
-                  radiusTop = 6;
-                  radiusBottom = 5;
-                  height = 5;
-                  break;
-                case '2':
-                  radiusTop = 8.5;
-                  radiusBottom = 5.8;
-                  height = 10.5;
-                  break;
-                case '3':
-                  radiusTop = 8.5;
-                  radiusBottom = 5.8;
-                  height = 12.5;
-                  break;
-              }
-              document.getElementById("demo").innerHTML = radiusTop;
-              document.getElementById("demo2").innerHTML = radiusBottom;
-              document.getElementById("demo3").innerHTML = height;
-            }
-          </script>
-
           <span style="clear:both;"></span>
+
+          <script>
+          var e = document.getElementById("pouchSize");
+          var boxWidth = 13;
+          var boxHeight = 20;
+          e.onclick = function() {
+            var pouchSizeValue = e.options[e.selectedIndex].value;
+            switch(pouchSizeValue){
+              case '5':
+                boxWidth = 9;
+                boxHeight = 15;
+                break;
+              case '6':
+                boxWidth = 13;
+                boxHeight = 20;
+                break;
+              case '7':
+                boxWidth = 14;
+                boxHeight = 23;
+                break;
+              case '8':
+                boxWidth = 16;
+                boxHeight = 25;
+                break;
+              case '9':
+                boxWidth = 18;
+                boxHeight = 29;
+                break;
+              case '10':
+                boxWidth = 22.5;
+                boxHeight = 33;
+                break;
+            }
+            document.getElementById("demo").innerHTML = boxWidth;
+            document.getElementById("demo2").innerHTML = boxHeight;
+          }
+          </script>
     </section>
 
 
-    <section once="" class="cid-rblxeb4aPl" id="footer6-r">
+<section once="" class="cid-rblxeb4aPl" id="footer6-r">
     <div class="container">
         <div class="media-container-row align-center mbr-white">
             <div class="col-12">
@@ -210,6 +190,7 @@ include "menu.php";
         </div>
     </div>
 </section>
+
 
       <script src="assets/web/assets/jquery/jquery.min.js"></script>
       <script src="assets/popper/popper.min.js"></script>

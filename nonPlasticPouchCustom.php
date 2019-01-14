@@ -50,30 +50,15 @@ include "menu.php";
         <span style="float:left;margin-left:80px;margin-top:35px;background-color:#FFFFFF;">
           <br/>
           <a class="navbar-caption text-black display-5" style="margin:0.8cm;">SIZE</a>
-
-            <div class="slidecontainer">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              Width &nbsp;&nbsp;:
-              <input type="range" min="1" max="100" value="50" id="boxWidth">
-              <span id="demo"></span> cm
-              <!-- <p>Custom range slider:</p>
-              <input type="range" min="1" max="100" value="50" class="slider" id="myRange"> -->
-            </div>
-
-            <div class="slidecontainer">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              Height &nbsp;:
-              <input type="range" min="1" max="100" value="50" id="boxHeight">
-              <span id="demo2"></span> cm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </div>
-
-            <div class="slidecontainer">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              Depth &nbsp;&nbsp;:
-              <input type="range" min="1" max="100" value="50" id="boxDepth">
-              <span id="demo3"></span> cm
-            </div>
-            <br/>
+          <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select id="pouchSize">
+              <option value="1" selected>13 cm x 20 cm</option>
+              <option value="2">14 cm x 23 cm</option>
+              <option value="3">16 cm x 29 cm</option>
+              <option value="4">22 cm x 29 cm</option>
+            </select>&nbsp;&nbsp;&nbsp;
+            <br/><br/>
 
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;">COLOR</a>
             <br/>
@@ -106,10 +91,6 @@ include "menu.php";
             <select id="side" style="width:125px">
               <option value="front">FRONT</option>
               <option value="back">BACK</option>
-              <option value="left">LEFT</option>
-              <option value="right">RIGHT</option>
-              <option value="top">TOP</option>
-              <option value="down">BOTTOM</option>
             </select>
             <br/>
             &nbsp;&nbsp;
@@ -117,15 +98,15 @@ include "menu.php";
             <!-- three.js library -->
             <script src = "js/three.js"></script>
             <script src = "js/OrbitControls.js"></script>
-            <script src= "js/box.js"></script>
+            <script src= "js/boxPouch.js"></script>
           </span>
 
           <span style="float:right;margin-right:85px;background-color:#FFFFFF;">
             <br/>
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;">CUSTOM DETAIL</a><br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width : <span id="demos"></span> cm <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demos2"></span> cm <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Depth : <span id="demos3"></span> cm <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packaging Type : Plastic Pouch <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width : <span id="demo">13</span> cm <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height : <span id="demo2">20</span> cm <br/>
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;"> INSTRUCTIONS : </a><br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Orbit Control : Hold Left-Click Mouse <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Zoom-in & Zoom-out : Scroll Mouse <br/>
@@ -140,34 +121,31 @@ include "menu.php";
           <span style="clear:both;"></span>
 
           <script>
-          var slider = document.getElementById("boxWidth");
-          var output = document.getElementById("demo");
-          var outputs = document.getElementById("demos");
-          output.innerHTML = slider.value;
-          outputs.innerHTML = slider.value;
-          slider.oninput = function() {
-            output.innerHTML = this.value;
-            outputs.innerHTML = this.value;
-          }
-
-          var slider2 = document.getElementById("boxHeight");
-          var output2 = document.getElementById("demo2");
-          var outputs2 = document.getElementById("demos2");
-          output2.innerHTML = slider2.value;
-          outputs2.innerHTML = slider2.value;
-          slider2.oninput = function() {
-            output2.innerHTML = this.value;
-            outputs2.innerHTML = this.value;
-          }
-
-          var slider3 = document.getElementById("boxDepth");
-          var output3 = document.getElementById("demo3");
-          var outputs3 = document.getElementById("demos3");
-          output3.innerHTML = slider3.value;
-          outputs3.innerHTML = slider3.value;
-          slider3.oninput = function() {
-            output3.innerHTML = this.value;
-            outputs3.innerHTML = this.value;
+          var e = document.getElementById("pouchSize");
+          var boxWidth = 13;
+          var boxHeight = 20;
+          e.onclick = function() {
+            var pouchSizeValue = e.options[e.selectedIndex].value;
+            switch(pouchSizeValue){
+              case '1':
+                boxWidth = 13;
+                boxHeight = 20;
+                break;
+              case '2':
+                boxWidth = 14;
+                boxHeight = 23;
+                break;
+              case '3':
+                boxWidth = 16;
+                boxHeight = 29;
+                break;
+              case '4':
+                boxWidth = 22;
+                boxHeight = 29;
+                break;
+            }
+            document.getElementById("demo").innerHTML = boxWidth;
+            document.getElementById("demo2").innerHTML = boxHeight;
           }
           </script>
     </section>

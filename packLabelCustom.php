@@ -126,7 +126,7 @@ include "menu.php";
           <!-- three.js library -->
           <script src = "js/three.js"></script>
           <script src = "js/OrbitControls.js"></script>
-          <script src= "js/boxLabel.js"></script>
+          <script src= "js/box.js"></script>
         </span>
 
           <span style="float:right;margin-right:85px;background-color:#FFFFFF;">
@@ -241,7 +241,7 @@ include "menu.php";
                         </a>
                     </div></div>
             </div>
-            
+
         </div>
     </div>
 </section>
