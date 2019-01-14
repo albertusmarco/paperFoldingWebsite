@@ -110,8 +110,8 @@ function changeSize() {
       break;
   }
 
-  var geometry = new THREE.BoxGeometry(boxWidth,boxHeight,1);
-  var cube = new THREE.Mesh(geometry,material);
+  geometry = new THREE.BoxGeometry(boxWidth,boxHeight,1);
+  cube = new THREE.Mesh(geometry,material);
   scene.add(cube);
 }
 
@@ -170,6 +170,7 @@ function processColor() {
     frontSide,//Front Side
     backSide//Back Side
   ];
+  
   material = new THREE.MeshFaceMaterial(cubeMaterials);
   cube = new THREE.Mesh(geometry,material);
   scene.add(cube);
@@ -290,28 +291,62 @@ GameLoop();
 
 function process3D(){
   var packagingType = document.getElementById("jenis").innerHTML;
+  var judul;
+  var tipeHarga;
+  var harga = 0;
+
   switch (packagingType) {
     case 'PLASTIC POUCH':
-      console.log('Plastic Pouch');
+      judul = 'Plastic Pouch';
       if(custom == 0){
-        console.log('Plain Price');
+        tipeHarga = 'Plain Price';
       }
       else {
-        console.log('Customization Price');
+        tipeHarga = 'Customization Price';
       }
       break;
     case 'PAPER POUCH':
-      console.log('Paper Pouch');
+      judul = 'Paper Pouch';
       if(custom == 0){
-        console.log('Plain Price');
+        tipeHarga = 'Plain Price';
       }
       else {
-        console.log('Customization Price');
+        tipeHarga = 'Customization Price';
       }
       break;
   }
 
-  // export object 3D to JSON
-  var json = scene.toJSON();
-  // console.log(json);
+  // Get the modal
+  var modal = document.getElementById('myModal');
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  // Display the modal
+  document.getElementById("judul").innerHTML = judul;
+  document.getElementById("tipeHarga").innerHTML = tipeHarga;
+  document.getElementById("harga").innerHTML = harga;
+  modal.style.display = "block";
+
+  document.getElementById("okBtn").onclick = function() {
+    // export object 3D to JSON
+    var json = scene.toJSON();
+    // console.log(json);
+  }
+
+  document.getElementById("cancelBtn").onclick = function() {
+    modal.style.display = "none";
+  }
 }

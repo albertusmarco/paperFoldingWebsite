@@ -31,6 +31,81 @@ include "menu.php";
     } */
     </style>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      border: 1px solid #888;
+      width: 80%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s
+    }
+
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+      from {top:-300px; opacity:0}
+      to {top:0; opacity:1}
+    }
+
+    @keyframes animatetop {
+      from {top:-300px; opacity:0}
+      to {top:0; opacity:1}
+    }
+
+    /* The Close Button */
+    .close {
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .modal-header {
+      padding: 2px 16px;
+      background-color: #00a1c3;
+      color: white;
+    }
+
+    .modal-body {padding: 2px 16px;}
+
+    .modal-footer {
+      padding: 2px 16px;
+      background-color: #00a1c3;
+      color: white;
+    }
+    </style>
+
     <!-- mobirise template -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -261,5 +336,24 @@ include "menu.php";
       <script src="assets/mbr-testimonials-slider/mbr-testimonials-slider.js"></script>
       <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
       <script src="assets/theme/js/script.js"></script>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+      <div class="modal-header">
+        <h2>Order Confirmation : <span id="judul"></span></h2>
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p>Your Estimated <span id="tipeHarga"></span> is : Rp <span id="harga"></span>,00</p>
+        <p>Are you sure?</p>
+      </div>
+      <div class="modal-footer">
+        <input id="okBtn" type="button" value="OK"/>
+        <input id="cancelBtn" type="button" value="Cancel"/>
+      </div>
+      </div>
+      </div>
   </body>
 </html>

@@ -77,8 +77,8 @@ function changeSize() {
       break;
   }
 
-  var geometry = new THREE.CylinderGeometry(radiusTop,radiusBottom,height,50);
-  var papercup = new THREE.Mesh(geometry,material);
+  geometry = new THREE.CylinderGeometry(radiusTop,radiusBottom,height,50);
+  papercup = new THREE.Mesh(geometry,material);
   scene.add(papercup);
 }
 
@@ -122,8 +122,8 @@ function processColor() {
     bottomSide//Bottom Side
   ];
   material = new THREE.MeshFaceMaterial(paperMaterials);
-  cube = new THREE.Mesh(geometry,material);
-  scene.add(cube);
+  papercup = new THREE.Mesh(geometry,material);
+  scene.add(papercup);
 }
 
 var realFileBtn = document.getElementById("imageButton");
@@ -224,15 +224,49 @@ var GameLoop = function()
 GameLoop();
 
 function process3D(){
-  console.log('Paper Cup');
+  var judul;
+  var tipeHarga;
+  var harga = 0;
+
+  judul = 'Paper Cup';
   if(custom == 0){
-    console.log('Plain Price');
+    tipeHarga = 'Plain Price';
   }
   else {
-    console.log('Customization Price');
+    tipeHarga = 'Customization Price';
   }
 
-  // export object 3D to JSON
-  var json = scene.toJSON();
-  // console.log(json);
+  // Get the modal
+  var modal = document.getElementById('myModal');
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  // Display the modal
+  document.getElementById("judul").innerHTML = judul;
+  document.getElementById("tipeHarga").innerHTML = tipeHarga;
+  document.getElementById("harga").innerHTML = harga;
+  modal.style.display = "block";
+
+  document.getElementById("okBtn").onclick = function() {
+    // export object 3D to JSON
+    var json = scene.toJSON();
+    // console.log(json);
+  }
+
+  document.getElementById("cancelBtn").onclick = function() {
+    modal.style.display = "none";
+  }
 }
