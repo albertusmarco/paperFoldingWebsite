@@ -115,14 +115,26 @@ function changeSize() {
   scene.add(cube);
 }
 
-var custom=0;
+var custom = 0;
+var clicked = 0;
 
 function processColor() {
-  custom=1;
   var side = document.getElementById("side");
   var sideValue = side.options[side.selectedIndex].value;
   var color = document.getElementById("color").value;
   // console.log(color);
+  if (clicked == 0) {
+    if(color == '#ffffff') {
+      custom = 0;
+    }
+    else {
+      custom = 1;
+      clicked = 1;
+    }
+  }
+  else {
+    custom = 1;
+  }
 
   switch(sideValue) {
     case 'front':
@@ -197,7 +209,7 @@ realFileBtn.addEventListener("change", function(){
 })
 
 function processImage() {
-  custom=1;
+  custom = 1;
   var side = document.getElementById("side");
   var sideValue = side.options[side.selectedIndex].value;
   console.log(img);
@@ -276,6 +288,30 @@ var GameLoop = function()
 
 GameLoop();
 
-// export object 3D to JSON
-// var json = scene.toJSON();
-// console.log(json);
+function process3D(){
+  var packagingType = document.getElementById("jenis").innerHTML;
+  switch (packagingType) {
+    case 'PLASTIC POUCH':
+      console.log('Plastic Pouch');
+      if(custom == 0){
+        console.log('Plain Price');
+      }
+      else {
+        console.log('Customization Price');
+      }
+      break;
+    case 'PAPER POUCH':
+      console.log('Paper Pouch');
+      if(custom == 0){
+        console.log('Plain Price');
+      }
+      else {
+        console.log('Customization Price');
+      }
+      break;
+  }
+
+  // export object 3D to JSON
+  var json = scene.toJSON();
+  // console.log(json);
+}

@@ -106,6 +106,7 @@ include "menu.php";
     <section style="background-color:#F5F5F5;">
       <br/><br/><br/><br/>
         <span style="float:left;margin-left:80px;margin-top:35px;background-color:#FFFFFF;">
+          <span id="jenis" value="softbox" hidden="hidden">SOFT BOX</span>
           <br/>
           <a class="navbar-caption text-black display-5" style="margin:0.8cm;">SIZE</a>
 

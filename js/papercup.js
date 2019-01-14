@@ -82,11 +82,26 @@ function changeSize() {
   scene.add(papercup);
 }
 
+var custom = 0;
+var clicked = 0;
+
 function processColor() {
   var side = document.getElementById("side");
   var sideValue = side.options[side.selectedIndex].value;
   var color = document.getElementById("color").value;
   // console.log(color);
+  if (clicked == 0) {
+    if(color == '#ffffff') {
+      custom = 0;
+    }
+    else {
+      custom = 1;
+      clicked = 1;
+    }
+  }
+  else {
+    custom = 1;
+  }
 
   switch(sideValue) {
     case 'front':
@@ -145,6 +160,7 @@ realFileBtn.addEventListener("change", function(){
 })
 
 function processImage() {
+  custom=1;
   var side = document.getElementById("side");
   var sideValue = side.options[side.selectedIndex].value;
   // console.log(img);
@@ -207,6 +223,16 @@ var GameLoop = function()
 
 GameLoop();
 
-// export object 3D to JSON
-// var json = scene.toJSON();
-// console.log(json);
+function process3D(){
+  console.log('Paper Cup');
+  if(custom == 0){
+    console.log('Plain Price');
+  }
+  else {
+    console.log('Customization Price');
+  }
+
+  // export object 3D to JSON
+  var json = scene.toJSON();
+  // console.log(json);
+}

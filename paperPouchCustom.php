@@ -60,6 +60,7 @@ include "menu.php";
     <section style="background-color:#F5F5F5;">
       <br/><br/><br/><br/>
         <span style="float:left;margin-left:80px;margin-top:35px;background-color:#FFFFFF;">
+          <span id="jenis" value="softbox" hidden="hidden">PAPER POUCH</span>
           <br/>
           <a class="navbar-caption text-black display-5" style="margin:0.8cm;">SIZE</a>
           <br/>
@@ -146,7 +147,7 @@ include "menu.php";
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Make sure all order detail already desire
             &nbsp;&nbsp;&nbsp;&nbsp;<br/><br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="btn btn-md btn-primary display-4" href="">SUBMIT</a>
+            <a class="btn btn-md btn-primary display-4" onClick="process3D()">SUBMIT</a>
             <br/>
             <br/>
           </span>
@@ -191,7 +192,7 @@ include "menu.php";
           <span style="clear:both;"></span>
     </section>
 
-    
+
 
     <section once="" class="cid-rblxeb4aPl" id="footer6-r">
     <div class="container">
@@ -218,7 +219,7 @@ include "menu.php";
                         </a>
                     </div></div>
             </div>
-            
+
         </div>
     </div>
 </section>

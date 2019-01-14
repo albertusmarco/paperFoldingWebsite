@@ -93,11 +93,26 @@
     scene.add(cube);
   }
 
+  var custom = 0;
+  var clicked = 0;
+
   function processColor() {
     var side = document.getElementById("side");
     var sideValue = side.options[side.selectedIndex].value;
     var color = document.getElementById("color").value;
     // console.log(color);
+    if (clicked == 0) {
+      if(color == '#ffffff') {
+        custom = 0;
+      }
+      else {
+        custom = 1;
+        clicked = 1;
+      }
+    }
+    else {
+      custom = 1;
+    }
 
     switch(sideValue) {
       case 'front':
@@ -172,6 +187,7 @@
   })
 
   function processImage() {
+    custom = 1;
     var side = document.getElementById("side");
     var sideValue = side.options[side.selectedIndex].value;
     // console.log(img);
@@ -251,7 +267,56 @@
   GameLoop();
 
   function process3D(){
+    var packagingType = document.getElementById("jenis").innerHTML;
+    switch (packagingType) {
+      case 'SOFT BOX':
+        console.log('Soft Box');
+        if(custom == 0){
+          console.log('Plain Price');
+        }
+        else {
+          console.log('Customization Price');
+        }
+        break;
+      case 'PAPER BAG':
+        console.log('Paper Bag');
+        if(custom == 0){
+          console.log('Plain Price');
+        }
+        else {
+          console.log('Customization Price');
+        }
+        break;
+      case 'PACK LABEL':
+        console.log('Pack Label');
+        if(custom == 0){
+          console.log('Plain Price');
+        }
+        else {
+          console.log('Customization Price');
+        }
+        break;
+      case 'FOOD WRAP':
+        console.log('Food Wrap');
+        if(custom == 0){
+          console.log('Plain Price');
+        }
+        else {
+          console.log('Customization Price');
+        }
+        break;
+      case 'CARD BOARD':
+        console.log('Card Board');
+        if(custom == 0){
+          console.log('Plain Price');
+        }
+        else {
+          console.log('Customization Price');
+        }
+        break;
+    }
+
     // export object 3D to JSON
     var json = scene.toJSON();
-    console.log(json);
+    // console.log(json);
   }
