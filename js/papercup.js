@@ -224,9 +224,20 @@ var GameLoop = function()
 GameLoop();
 
 function process3D(){
+  var material = document.getElementById("material");
+  var combination = document.getElementById("combination");
+  var lamination = document.getElementById("lamination");
+  var quantity = document.getElementById("quantity");
   var judul;
   var tipeHarga;
   var harga = 0;
+
+  if(quantity.value == null) {
+    quantity.value = 50;
+  }
+  else if (quantity.value < 50) {
+    quantity.value = 50;
+  }
 
   judul = 'Paper Cup';
   if(custom == 0){

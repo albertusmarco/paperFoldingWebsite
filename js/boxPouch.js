@@ -170,7 +170,7 @@ function processColor() {
     frontSide,//Front Side
     backSide//Back Side
   ];
-  
+
   material = new THREE.MeshFaceMaterial(cubeMaterials);
   cube = new THREE.Mesh(geometry,material);
   scene.add(cube);
@@ -291,9 +291,20 @@ GameLoop();
 
 function process3D(){
   var packagingType = document.getElementById("jenis").innerHTML;
+  var material = document.getElementById("material");
+  var combination = document.getElementById("combination");
+  var lamination = document.getElementById("lamination");
+  var quantity = document.getElementById("quantity");
   var judul;
   var tipeHarga;
   var harga = 0;
+
+  if(quantity.value == null) {
+    quantity.value = 50;
+  }
+  else if (quantity.value < 50) {
+    quantity.value = 50;
+  }
 
   switch (packagingType) {
     case 'PLASTIC POUCH':
