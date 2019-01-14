@@ -13,9 +13,6 @@ include "menu.php";
 
 
 <section class="engine"><a href="https://mobirise.info/u">bootstrap html templates</a></section><section class="header10 cid-rbkq4YRq2S mbr-fullscreen mbr-parallax-background" id="header10-3">
-
-    
-
     
 
     <div class="container">

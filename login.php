@@ -106,7 +106,7 @@ if(isset($_POST["signin"]))
 		if ($role[0] == 1)	{
 				$_SESSION['email'] = "Admin";
 				$_SESSION['namauser'] = "Admin";
-				$_SESSION['adasesi'] = 1;
+				$_SESSION['adasesi'] = "1";
 				echo'<meta http-equiv="refresh" content="1; URL=admin.php" />';
 				}
 		else {
@@ -116,7 +116,7 @@ if(isset($_POST["signin"]))
 		$session = mysqli_fetch_row($hasil);
 			$_SESSION['email'] = "$email";
 			$_SESSION['namauser'] = "$session[0]";
-			$_SESSION['adasesi'] = 1;
+			$_SESSION['adasesi'] = "1";
 			echo'<meta http-equiv="refresh" content="1; URL=index.php" />';
 			}
 

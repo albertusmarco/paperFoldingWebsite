@@ -56,36 +56,101 @@ include "menu.php";
       <h3 class="mbr-text align-right pb-3 mbr-fonts-style display-5">
       <label>
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="cardBox">
-        <img src="assets/images/cardboard-fix-492x492.png" alt="CardBox" title="" width="200" height="200">
+        <a href="
+        <?php
+          if($_SESSION['adasesi'] == "1"){
+            echo('cardBoardCustom.php');
+          }else{
+            echo('nonCardBoardCustom.php');
+          }
+        ?>">
+
+        <img src="assets/images/cardboard-fix-492x492.png" alt="CardBox" title="" width="200" height="200"></a>
       </label>
       <label>
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="paperCup">
-        <img src="assets/images/paper-cup-fix-2-492x492.png" alt="PaperCup" title="" width="200" height="200">
+        <a href="
+        <?php
+          if($_SESSION['adasesi'] == "1"){
+            echo('papercupCustom.php');
+          }else{
+            echo('nonPaperCupCustom.php');
+          }
+        ?>">
+        <img src="assets/images/paper-cup-fix-2-492x492.png" alt="PaperCup" title="" width="200" height="200"></a>
       </label>
       <label>
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="paperPouch">
-        <img src="assets/images/paper-pouch-fix-492x492.png" alt="PaperPouch" title="" width="200" height="200">
+        <a href="
+        <?php
+          if($_SESSION['adasesi'] == "1"){
+            echo('paperPouchCustom.php');
+          }else{
+            echo('nonPaperPouchCustom.php');
+          }
+        ?>">
+        <img src="assets/images/paper-pouch-fix-492x492.png" alt="PaperPouch" title="" width="200" height="200"></a>
       </label>
       <label>
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="foodWrap">
-        <img src="assets/images/food-wrap-fix-492x492.png" alt="FoodWrap" title="" width="200" height="200">
+        <a href="
+        <?php
+          if($_SESSION['adasesi'] == "1"){
+            echo('foodWrapCustom.php');
+          }else{
+            echo('nonFoodWrapCustom.php');
+          }
+        ?>">
+        <img src="assets/images/food-wrap-fix-492x492.png" alt="FoodWrap" title="" width="200" height="200"></a>
       </label>
       <br>
       <label>
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="paperBag">
-        <img src="assets/images/paper-bag-fix-492x492.png" alt="PaperBag" title="" width="200" height="200">
+        <a href="
+        <?php
+          if($_SESSION['adasesi'] == "1"){
+            echo('paperBagCustom.php');
+          }else{
+            echo('nonPaperBagCustom.php');
+          }
+        ?>">
+        <img src="assets/images/paper-bag-fix-492x492.png" alt="PaperBag" title="" width="200" height="200"></a>
       </label>
       <label>
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="packLabel">
-        <img src="assets/images/pack-label-492x492.png" alt="Mobirise" title="PackLabel" width="200" height="200">
+        <a href="
+        <?php
+          if($_SESSION['adasesi'] == "1"){
+            echo('packLabelCustom.php');
+          }else{
+            echo('nonPackLabelCustom.php');
+          }
+        ?>">
+        <img src="assets/images/pack-label-492x492.png" alt="Mobirise" title="PackLabel" width="200" height="200"></a>
       </label>
       <label>
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="softBox">
-        <img src="assets/images/soft-box-super-fix-492x492.png" alt="SoftBox" title="" width="200" height="200">
+        <a href="
+        <?php
+          if($_SESSION['adasesi'] == "1"){
+            echo('softBoxCustom.php');
+          }else{
+            echo('nonSoftBoxCustom.php');
+          }
+        ?>">
+        <img src="assets/images/soft-box-super-fix-492x492.png" alt="SoftBox" title="" width="200" height="200"></a>
       </label>
       <label>
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="plasticPouch">
-        <img src="assets/images/plastic-pouch-fix-492x492.png" alt="PlasticPouch" title="" width="200" height="200">
+        <a href="
+        <?php
+          if($_SESSION['adasesi'] == "1"){
+            echo('plasticPouchCustom.php');
+          }else{
+            echo('nonPlasticPouchCustom.php');
+          }
+        ?>">
+        <img src="assets/images/plastic-pouch-fix-492x492.png" alt="PlasticPouch" title="" width="200" height="200"></a>
       </label>
     </h3>
     <!-- <h3 class="mbr-text align-right pb-3 mbr-fonts-style display-5">Select Meterial Type:</h3> -->
