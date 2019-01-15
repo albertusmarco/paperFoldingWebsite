@@ -311,9 +311,138 @@ function process3D(){
       judul = 'Plastic Pouch';
       if(custom == 0){
         tipeHarga = 'Plain Price';
+        if(boxWidth == 13) {
+          if(quantity.value > 100) {
+            harga = '750';
+          }
+          else {
+            harga = '800';
+          }
+        }
+        else if(boxWidth == 14) {
+          if(quantity.value > 100) {
+            harga = '850';
+          }
+          else {
+            harga = '900';
+          }
+        }
+        else if(boxWidth == 16) {
+          if(quantity.value > 100) {
+            harga = '1.000';
+          }
+          else {
+            harga = '1.100';
+          }
+        }
+        else if(boxWidth == 22) {
+          if(quantity.value > 100) {
+            harga = '1.500';
+          }
+          else {
+            harga = '1.750';
+          }
+        }
+        else {
+          harga = 0;
+        }
       }
       else {
         tipeHarga = 'Customization Price';
+        if(combination.value == "sablon") {
+          if(boxWidth == 13) {
+            if(quantity.value > 50) {
+              harga = '950';
+            }
+            else {
+              harga = '1.200';
+            }
+          }
+          else if(boxWidth == 14) {
+            if(quantity.value > 50) {
+              harga = '1.100';
+            }
+            else {
+              harga = '1.500';
+            }
+          }
+          else if(boxWidth == 16) {
+            if(quantity.value > 50) {
+              harga = '1.200';
+            }
+            else {
+              harga = '1.500';
+            }
+          }
+          else if(boxWidth == 22) {
+            if(quantity.value > 50) {
+              harga = '1.750';
+            }
+            else {
+              harga = '2.600';
+            }
+          }
+          else {
+            harga = 0;
+          }
+        }
+        else {
+          if(boxWidth == 13) {
+            if(quantity.value > 500) {
+              if(quantity.value <= 1000) {
+                harga = '2.100';
+              }
+              else {
+                harga = '1.200';
+              }
+            }
+            else {
+              harga = '3.000';
+            }
+          }
+          else if(boxWidth == 14) {
+            if(quantity.value > 500) {
+              if(quantity.value <= 1000) {
+                harga = '3.000';
+              }
+              else {
+                harga = '1.450';
+              }
+            }
+            else {
+              harga = '4.100';
+            }
+          }
+          else if(boxWidth == 16) {
+            if(quantity.value > 500) {
+              if(quantity.value <= 1000) {
+                harga = '3.200';
+              }
+              else {
+                harga = '1.800';
+              }
+            }
+            else {
+              harga = '5.000';
+            }
+          }
+          else if(boxWidth == 22) {
+            if(quantity.value > 500) {
+              if(quantity.value <= 1000) {
+                harga = '4.750';
+              }
+              else {
+                harga = '2.600';
+              }
+            }
+            else {
+              harga = '7.500';
+            }
+          }
+          else {
+            harga = 0;
+          }
+        }
       }
       break;
     case 'PAPER POUCH':
