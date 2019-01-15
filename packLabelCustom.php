@@ -227,7 +227,7 @@ include "menu.php";
               <option value="duplex300">Duplex 300gr</option>
             </select> <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Combination :
-            <select id="comination">
+            <select id="combination">
               <option value="stickervinyl">Sticker Vinyl</option>
               <option value="stickerbontax">Sticker Bontax</option>
               <option value="hotprint">Hot Print</option>

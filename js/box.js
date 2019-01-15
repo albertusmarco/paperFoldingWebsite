@@ -298,14 +298,16 @@
         else {
           tipeHarga = 'Customization Price';
           if(quantity.value > 50) {
-            if(quantity.value < 101) {
+            if(quantity.value <= 100) {
               harga = '24.500';
             }
-            else if(quantity.value < 501) {
-              harga = '17.200';
-            }
             else {
-              harga = '9.500';
+              if(quantity.value <= 500) {
+                harga = '17.200';
+              }
+              else {
+                harga = '9.500';
+              }
             }
           }
           else {
@@ -317,36 +319,184 @@
         judul = 'Paper Bag';
         if(custom == 0){
           tipeHarga = 'Plain Price';
+          if(material.value == "samson70" || material.value == "samson80" || material.value == "samson150") {
+            if(quantity.value > 100) {
+              harga = '600';
+            }
+            else {
+              harga = '800';
+            }
+          }
+          else {
+            if(quantity.value > 50) {
+              if(quantity.value <= 100) {
+                harga = '5.000';
+              }
+              else {
+                if(quantity.value <= 200) {
+                  harga = '3.200';
+                }
+                else {
+                  harga = '1.750';
+                }
+              }
+            }
+            else {
+              harga = '7.000';
+            }
+          }
         }
         else {
           tipeHarga = 'Customization Price';
+          if(material.value == "samson70" || material.value == "samson80" || material.value == "samson150") {
+            if(quantity.value > 50) {
+              if(quantity.value <= 100) {
+                harga = '3.000';
+              }
+              else {
+                if(quantity.value <= 500) {
+                  harga = '1.000';
+                }
+                else {
+                  harga = '800';
+                }
+              }
+            }
+            else {
+              harga = '5.000';
+            }
+          }
+          else {
+            if(quantity.value > 50) {
+              if(quantity.value <= 100) {
+                harga = '7.000';
+              }
+              else {
+                if(quantity.value <= 500) {
+                  harga = '3.800';
+                }
+                else {
+                  harga = '1.500';
+                }
+              }
+            }
+            else {
+              harga = '12.000';
+            }
+          }
         }
         break;
       case 'PACK LABEL':
         judul = 'Pack Label';
         if(custom == 0){
           tipeHarga = 'Plain Price';
+          if(quantity.value > 50) {
+            if(quantity.value <= 100) {
+              harga = '7.500';
+            }
+            else {
+              if(quantity.value <= 500) {
+                harga = '5.000';
+              }
+              else {
+                harga = '2.500';
+              }
+            }
+          }
+          else {
+            harga = '10.000';
+          }
         }
         else {
           tipeHarga = 'Customization Price';
+          if(quantity.value > 50) {
+            if(quantity.value <= 100) {
+              harga = '7.500';
+            }
+            else {
+              if(quantity.value <= 500) {
+                harga = '5.000';
+              }
+              else {
+                harga = '2.500';
+              }
+            }
+          }
+          else {
+            harga = '10.000';
+          }
         }
         break;
       case 'FOOD WRAP':
         judul = 'Food Wrap';
         if(custom == 0){
           tipeHarga = 'Plain Price';
+          if(quantity.value > 50) {
+            harga = '500';
+          }
+          else {
+            harga = '800';
+          }
         }
         else {
           tipeHarga = 'Customization Price';
+          if(quantity.value > 50) {
+            if(quantity.value <= 100) {
+              harga = '2.650';
+            }
+            else {
+              if(quantity.value <= 500) {
+                harga = '1.550';
+              }
+              else {
+                harga = '950';
+              }
+            }
+          }
+          else {
+            harga = '3.200';
+          }
         }
         break;
       case 'CARD BOARD':
         judul = 'Card Board';
         if(custom == 0){
           tipeHarga = 'Plain Price';
+          if(quantity.value > 50) {
+            harga = '26.000';
+          }
+          else {
+            harga = '34.000';
+          }
         }
         else {
           tipeHarga = 'Customization Price';
+          if(combination.value == "print") {
+            if(quantity.value > 50) {
+              if(quantity.value <= 100) {
+                harga = '34.000';
+              }
+              else {
+                if(quantity.value <= 500) {
+                  harga = '27.000';
+                }
+                else {
+                  harga = '20.000';
+                }
+              }
+            }
+            else {
+              harga = '40.000';
+            }
+          }
+          else {
+            if(quantity.value > 50) {
+              harga = '35.000';
+            }
+            else {
+              harga = '50.000';
+            }
+          }
         }
         break;
     }
