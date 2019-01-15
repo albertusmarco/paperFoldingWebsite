@@ -251,7 +251,7 @@ function process3D(){
   }
   else {
     tipeHarga = 'Customization Price';
-    if(combination.value == "screenprinting") {
+    if(combination.value == "sablon") {
       if(quantity.value > 50) {
         harga = '1.000';
       }

@@ -199,7 +199,7 @@ include "menu.php";
             </select> <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Combination :
             <select id="combination">
-              <option value="screenprinting">Screen Printing</option>
+              <option value="sablon">Sablon</option>
               <option value="stickervinyl">Sticker Vinyl</option>
               <option value="stickerbontax">Sticker Bontax</option>
               <option value="silversticker">Silver Sticker</option>
