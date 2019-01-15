@@ -200,7 +200,7 @@ include "menu.php";
               <option value="kraftandfoil">Kraft and Foil</option>
             </select> <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Combination :
-            <select id="comination">
+            <select id="combination">
               <option value="sablon">Sablon</option>
               <option value="stickervinyl">Sticker Vinyl</option>
               <option value="stickerbontax">Sticker Bontax</option>
