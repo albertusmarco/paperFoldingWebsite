@@ -62,7 +62,7 @@ include "menu.php";
     <section style="background-color:#F5F5F5;">
       <br/><br/><br/><br/>
       <span style="float:center;">
-        <h1>Object Detail</h1>
+        <h1>Order Detail</h1>
       </span>
 
         <span id = "custom" style="float:center;">
@@ -78,8 +78,9 @@ include "menu.php";
           <a class="navbar-caption text-black display-5" style="margin-left:10px;margin-right:10px;margin-top:10px;">INFORMATION DETAIL</a><br/>
           <?php
             $orderID = $_GET['orderID'];
-            $designID = $_GET['designID'];
-            $sql = "SELECT `product`.`name`, `material`.`name`, `order_detail`.`qty` FROM `product`, `material`, `order`, `order_detail`, `cust_shelf` WHERE `order`.`id_order` = '$orderID' AND `order_detail`.`id_design` ='$designID' AND `order_detail`.`id_design` = `cust_shelf`.`id_design` AND `cust_shelf`.`id_product` = `product`.`id_product` AND `cust_shelf`.`id_material` = `material`.`id_material`;";
+            echo $orderID;
+            // $sql = "SELECT `product`.`name`, `material`.`name`, `order_detail`.`qty` FROM `product`, `material`, `order`, `order_detail`, `cust_shelf` WHERE `order`.`id_order` = '$orderID' AND `order_detail`.`id_design` ='$designID' AND `order_detail`.`id_design` = `cust_shelf`.`id_design` AND `cust_shelf`.`id_product` = `product`.`id_product` AND `cust_shelf`.`id_material` = `material`.`id_material`;";
+            $sql = "SELECT `product`.`name`, `cust_shelf`.`material`, `cust_shelf`.`combination`, `cust_shelf`.`lamination`, `cust_shelf`.`size1`, `cust_shelf`.`size2`, `cust_shelf`.`size3`, `order_detail`.`qty`, `order_detail`.`price_qty`, `design_detail`.`id_design` FROM `product`, `cust_shelf`, `order_detail`, `design_detail` WHERE `order`.`id_order`=='O1', `order`.`id_order`=`order_detail`.`id_order`, `order_detail`.`id_design`=`cust_shelf`.`id_design`;";
             $data = viewData($sql);
             while ($row = mysqli_fetch_row($data)){
               echo ("<label style='margin-left:10px;margin-right:10px;'>
@@ -91,55 +92,47 @@ include "menu.php";
         <span style="clear:both;"></span>
     </section>
 
-    <section once="" class="cid-rblxeb4aPl" id="footer6-r">
-        <div class="container">
-            <div class="media-container-row align-center mbr-white">
-                <div class="col-12">
-                    <p class="mbr-text mb-0 mbr-fonts-style display-7">
-                        Find us on :</p>
-                </div>
+    <!-- footer -->
+  <section once="" class="cid-rblxeb4aPl" id="footer6-r">
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="col-12">
+                <p class="mbr-text mb-0 mbr-fonts-style display-7">
+                    Find us on :</p>
             </div>
         </div>
-    </section>
-    <section once="" class="cid-rbkA1DU2DQ mbr-reveal" id="footer7-f">
-        <div class="container">
-            <div class="media-container-row align-center mbr-white">
-                <div class="row social-row">
-                    <div class="social-list align-right pb-2">
-                    <div class="soc-item">
-                            <a href="https://twitter.com/mobirise" target="_blank">
-                                <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
-                            </a>
-                        </div><div class="soc-item">
-                            <a href="https://twitter.com/mobirise" target="_blank">
-                                <span class="mbr-iconfont mbr-iconfont-social socicon-whatsapp socicon"></span>
-                            </a>
-                        </div><div class="soc-item">
-                            <a href="https://twitter.com/mobirise" target="_blank">
-                                <span class="mbr-iconfont mbr-iconfont-social socicon-mail socicon"></span>
-                            </a>
-                        </div></div>
-                </div>
-                <div class="row row-copirayt">
-                    <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7"></p>
-                </div>
+    </div>
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="row social-row">
+                <div class="social-list align-right pb-2">
+                <div class="soc-item">
+                        <a href="https://instagram.com/sendwish.id" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
+                        </a>
+                         <a href="https://wa.me/6283833002258" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-whatsapp socicon"></span>
+                        </a>
+                         <a href="contactmail.php" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-mail socicon"></span>
+                        </a>
+                    </div></div>
             </div>
+            
         </div>
-    </section>
+    </div>
+</section>
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/dropdown/js/script.min.js"></script>
+  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+  <script src="assets/parallax/jarallax.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/theme/js/script.js"></script>
 
 
-      <script src="assets/web/assets/jquery/jquery.min.js"></script>
-      <script src="assets/popper/popper.min.js"></script>
-      <script src="assets/tether/tether.min.js"></script>
-      <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-      <script src="assets/smoothscroll/smooth-scroll.js"></script>
-      <script src="assets/dropdown/js/script.min.js"></script>
-      <script src="assets/parallax/jarallax.min.js"></script>
-      <script src="assets/mbr-popup-btns/mbr-popup-btns.js"></script>
-      <script src="assets/mbr-flip-card/mbr-flip-card.js"></script>
-      <script src="assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js"></script>
-      <script src="assets/mbr-testimonials-slider/mbr-testimonials-slider.js"></script>
-      <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
-      <script src="assets/theme/js/script.js"></script>
-  </body>
+</body>
 </html>

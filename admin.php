@@ -66,18 +66,19 @@
           <td>Order Date</td>
           <td>Order ID</td>
           <td>Customer ID</td>
-          <td>Packaging</td>
+          <td>ID Invoice</td>
           <td>Progress</td>
           <td>Update</td>
         </tr>
         <?php
           $no = 0;
-          $sql = "SELECT `order`.order_time, `order`.id_order, `order`.id_customer, `order_detail`.id_design, `order`.status FROM `order`, `order_detail` WHERE `order`.id_order = `order_detail`.id_order AND `order`.status != 'Cancel';";
+          $sql = "SELECT `order`.order_time, `order`.id_order, `order`.id_customer, `order`.id_invoice, `order`.status FROM `order` WHERE `order`.status != 'Cancel';";
           $data = viewData($sql);
           while ($row = mysqli_fetch_row($data))
           {
             echo ("<tr align='center'><td>". ++$no .".</td><td>$row[0]</td><td>");
-            echo '<input class="button button2" type="submit" name="btnOrderID" id="btnOrderID" value="'.$row[1].'" formaction="detail.php?orderID='.$row[1].'&designID='.$row[3].'"/>';
+            // echo '<input class="button button2" type="submit" name="btnOrderID" id="btnOrderID" value="'.$row[1].'" formaction="detail.php?orderID='.$row[1].'&designID='.$row[3].'"/>';
+            echo '<input class="button button2" type="submit" name="btnOrderID" id="btnOrderID" value="'.$row[1].'" formaction="detail.php?orderID='.$row[1].'"/>';
             echo ("</td><td>");
             echo '<input class="button button2" type="submit" name="btnCustID" id="btnCustID" value="'.$row[2].'" formaction="customer.php?custID='.$row[2].'"/>';
             echo("</td><td>$row[3]</td><td>");

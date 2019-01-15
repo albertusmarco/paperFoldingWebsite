@@ -320,9 +320,135 @@ function process3D(){
       judul = 'Paper Pouch';
       if(custom == 0){
         tipeHarga = 'Plain Price';
+        if(boxWidth == 9){
+          if (quantity.value>100) {
+            harga = '750';
+          }else{
+            harga = '900';
+          }
+        }else if(boxWidth == 13){
+          if (quantity.value>100) {
+            harga = '1.350';
+          }else{
+            harga = '1.550';
+          }
+        }else if(boxWidth == 14){
+          if (quantity.value>100) {
+            harga = '1.450';
+          }else{
+            harga = '1.600';
+          }
+        }else if(boxWidth == 16){
+          if (quantity.value>100) {
+            harga = '2.750';
+          }else{
+            harga = '3.100';
+          }
+        }else if(boxWidth == 18){
+          if (quantity.value>100) {
+            harga = '3.150';
+          }else{
+            harga = '3.500';
+          }
+        }else if(boxWidth == 22.5){
+          if (quantity.value>100) {
+            harga = '4.250';
+          }else{
+            harga = '4.750';
+          }
+        }
       }
       else {
         tipeHarga = 'Customization Price';
+        if (combination.value == 'sablon') {
+          if (boxWidth == 9){
+            if (quantity.value>50) {
+              harga = '950';
+            }else{
+              harga = '1.000';
+            }
+          }else if(boxWidth == 13){
+            if (quantity.value>50) {
+              harga = '1.550';
+            }else{
+              harga = '1.750';
+            }
+          }else if(boxWidth == 14){
+            if (quantity.value>50) {
+              harga = '1.650';
+            }else{
+              harga = '2.000';
+            }
+          }else if(boxWidth == 16){
+            if (quantity.value>50) {
+              harga = '2.950';
+            }else{
+              harga = '3.100';
+            }
+          }else if(boxWidth == 18){
+            if (quantity.value>50) {
+              harga = '3.350';
+            }else{
+              harga = '3.500';
+            }
+          }else if(boxWidth == 22.5){
+            if (quantity.value>50) {
+              harga = '4.550';
+            }else{
+              harga = '4.750';
+            }
+          }
+        }else{
+          if (boxWidth == 9){
+            if (quantity.value>500) {
+              harga = '2.100';
+            }else if (quantity.value>1000) {
+              harga = '1.200';
+            }else{
+              harga = '3.000';
+            }
+          }else if(boxWidth == 13){
+            if (quantity.value>500) {
+              harga = '3.200';
+            }else if (quantity.value>1000) {
+              harga = '2.100';
+            }else{
+              harga = '5.000';
+            }
+          }else if(boxWidth == 14){
+            if (quantity.value>500) {
+              harga = '3.200';
+            }else if (quantity.value>1000) {
+              harga = '2.200';
+            }else{
+              harga = '5.000';
+            }
+          }else if(boxWidth == 16){
+            if (quantity.value>500) {
+              harga = '4.500';
+            }else if (quantity.value>1000) {
+              harga = '3.500';
+            }else{
+              harga = '6.500';
+            }
+          }else if(boxWidth == 18){
+            if (quantity.value>500) {
+              harga = '5.750';
+            }else if (quantity.value>1000) {
+              harga = '4.200';
+            }else{
+              harga = '7.000';
+            }
+          }else if(boxWidth == 22.5){
+            if (quantity.value>500) {
+              harga = '6.000';
+            }else if (quantity.value>1000) {
+              harga = '5.400';
+            }else{
+              harga = '7.500';
+            }
+          }
+        }
       }
       break;
   }
