@@ -198,7 +198,8 @@ include "menu.php";
               <option value="polylethylene">Polylethylene Water Proof</option>
             </select> <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Combination :
-            <select id="comination">
+            <select id="combination">
+              <option value="screenprinting">Screen Printing</option>
               <option value="stickervinyl">Sticker Vinyl</option>
               <option value="stickerbontax">Sticker Bontax</option>
               <option value="silversticker">Silver Sticker</option>

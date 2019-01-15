@@ -242,9 +242,31 @@ function process3D(){
   judul = 'Paper Cup';
   if(custom == 0){
     tipeHarga = 'Plain Price';
+    if(quantity.value > 100) {
+      harga = '700';
+    }
+    else {
+      harga = '900';
+    }
   }
   else {
     tipeHarga = 'Customization Price';
+    if(combination.value == "screenprinting") {
+      if(quantity.value > 50) {
+        harga = '1.000';
+      }
+      else {
+        harga = '1.500';
+      }
+    }
+    else {
+      if(quantity.value > 50) {
+        harga = '1.200';
+      }
+      else {
+        harga = '1.800';
+      }
+    }
   }
 
   // Get the modal
