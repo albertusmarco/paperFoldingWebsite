@@ -93,11 +93,26 @@
     scene.add(cube);
   }
 
+  var custom = 0;
+  var clicked = 0;
+
   function processColor() {
     var side = document.getElementById("side");
     var sideValue = side.options[side.selectedIndex].value;
     var color = document.getElementById("color").value;
     // console.log(color);
+    if (clicked == 0) {
+      if(color == '#ffffff') {
+        custom = 0;
+      }
+      else {
+        custom = 1;
+        clicked = 1;
+      }
+    }
+    else {
+      custom = 1;
+    }
 
     switch(sideValue) {
       case 'front':
@@ -172,6 +187,7 @@
   })
 
   function processImage() {
+    custom = 1;
     var side = document.getElementById("side");
     var sideValue = side.options[side.selectedIndex].value;
     // console.log(img);
@@ -251,7 +267,121 @@
   GameLoop();
 
   function process3D(){
-    // export object 3D to JSON
-    var json = scene.toJSON();
-    console.log(json);
+    var packagingType = document.getElementById("jenis").innerHTML;
+    var material = document.getElementById("material");
+    var combination = document.getElementById("combination");
+    var lamination = document.getElementById("lamination");
+    var quantity = document.getElementById("quantity");
+    var judul;
+    var tipeHarga;
+    var harga = 0;
+
+    if(quantity.value == null) {
+      quantity.value = 50;
+    }
+    else if (quantity.value < 50) {
+      quantity.value = 50;
+    }
+
+    switch (packagingType) {
+      case 'SOFT BOX':
+        judul = 'Soft Box';
+        if(custom == 0){
+          tipeHarga = 'Plain Price';
+          if(quantity.value > 50) {
+            harga = '12.500';
+          }
+          else {
+            harga = '17.200';
+          }
+        }
+        else {
+          tipeHarga = 'Customization Price';
+          if(quantity.value > 50) {
+            if(quantity.value < 101) {
+              harga = '24.500';
+            }
+            else if(quantity.value < 501) {
+              harga = '17.200';
+            }
+            else {
+              harga = '9.500';
+            }
+          }
+          else {
+            harga = '30.000';
+          }
+        }
+        break;
+      case 'PAPER BAG':
+        judul = 'Paper Bag';
+        if(custom == 0){
+          tipeHarga = 'Plain Price';
+        }
+        else {
+          tipeHarga = 'Customization Price';
+        }
+        break;
+      case 'PACK LABEL':
+        judul = 'Pack Label';
+        if(custom == 0){
+          tipeHarga = 'Plain Price';
+        }
+        else {
+          tipeHarga = 'Customization Price';
+        }
+        break;
+      case 'FOOD WRAP':
+        judul = 'Food Wrap';
+        if(custom == 0){
+          tipeHarga = 'Plain Price';
+        }
+        else {
+          tipeHarga = 'Customization Price';
+        }
+        break;
+      case 'CARD BOARD':
+        judul = 'Card Board';
+        if(custom == 0){
+          tipeHarga = 'Plain Price';
+        }
+        else {
+          tipeHarga = 'Customization Price';
+        }
+        break;
+    }
+
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    // Display the modal
+    document.getElementById("judul").innerHTML = judul;
+    document.getElementById("tipeHarga").innerHTML = tipeHarga;
+    document.getElementById("harga").innerHTML = harga;
+    modal.style.display = "block";
+
+    document.getElementById("okBtn").onclick = function() {
+      // export object 3D to JSON
+      var json = scene.toJSON();
+      // console.log(json);
+    }
+
+    document.getElementById("cancelBtn").onclick = function() {
+      modal.style.display = "none";
+    }
   }

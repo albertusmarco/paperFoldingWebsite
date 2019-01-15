@@ -110,19 +110,31 @@ function changeSize() {
       break;
   }
 
-  var geometry = new THREE.BoxGeometry(boxWidth,boxHeight,1);
-  var cube = new THREE.Mesh(geometry,material);
+  geometry = new THREE.BoxGeometry(boxWidth,boxHeight,1);
+  cube = new THREE.Mesh(geometry,material);
   scene.add(cube);
 }
 
-var custom=0;
+var custom = 0;
+var clicked = 0;
 
 function processColor() {
-  custom=1;
   var side = document.getElementById("side");
   var sideValue = side.options[side.selectedIndex].value;
   var color = document.getElementById("color").value;
   // console.log(color);
+  if (clicked == 0) {
+    if(color == '#ffffff') {
+      custom = 0;
+    }
+    else {
+      custom = 1;
+      clicked = 1;
+    }
+  }
+  else {
+    custom = 1;
+  }
 
   switch(sideValue) {
     case 'front':
@@ -158,6 +170,7 @@ function processColor() {
     frontSide,//Front Side
     backSide//Back Side
   ];
+
   material = new THREE.MeshFaceMaterial(cubeMaterials);
   cube = new THREE.Mesh(geometry,material);
   scene.add(cube);
@@ -197,7 +210,7 @@ realFileBtn.addEventListener("change", function(){
 })
 
 function processImage() {
-  custom=1;
+  custom = 1;
   var side = document.getElementById("side");
   var sideValue = side.options[side.selectedIndex].value;
   console.log(img);
@@ -276,6 +289,75 @@ var GameLoop = function()
 
 GameLoop();
 
-// export object 3D to JSON
-// var json = scene.toJSON();
-// console.log(json);
+function process3D(){
+  var packagingType = document.getElementById("jenis").innerHTML;
+  var material = document.getElementById("material");
+  var combination = document.getElementById("combination");
+  var lamination = document.getElementById("lamination");
+  var quantity = document.getElementById("quantity");
+  var judul;
+  var tipeHarga;
+  var harga = 0;
+
+  if(quantity.value == null) {
+    quantity.value = 50;
+  }
+  else if (quantity.value < 50) {
+    quantity.value = 50;
+  }
+
+  switch (packagingType) {
+    case 'PLASTIC POUCH':
+      judul = 'Plastic Pouch';
+      if(custom == 0){
+        tipeHarga = 'Plain Price';
+      }
+      else {
+        tipeHarga = 'Customization Price';
+      }
+      break;
+    case 'PAPER POUCH':
+      judul = 'Paper Pouch';
+      if(custom == 0){
+        tipeHarga = 'Plain Price';
+      }
+      else {
+        tipeHarga = 'Customization Price';
+      }
+      break;
+  }
+
+  // Get the modal
+  var modal = document.getElementById('myModal');
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  // Display the modal
+  document.getElementById("judul").innerHTML = judul;
+  document.getElementById("tipeHarga").innerHTML = tipeHarga;
+  document.getElementById("harga").innerHTML = harga;
+  modal.style.display = "block";
+
+  document.getElementById("okBtn").onclick = function() {
+    // export object 3D to JSON
+    var json = scene.toJSON();
+    // console.log(json);
+  }
+
+  document.getElementById("cancelBtn").onclick = function() {
+    modal.style.display = "none";
+  }
+}
