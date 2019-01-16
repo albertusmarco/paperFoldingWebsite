@@ -1,7 +1,7 @@
 -- MySQL Administrator dump 1.4
 --
 -- ------------------------------------------------------
--- Server version	5.6.21
+-- Server version	5.5.54-log
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -15,50 +15,11 @@
 
 
 --
--- Create schema pfw
+-- Create schema faniaa
 --
 
-CREATE DATABASE IF NOT EXISTS pfw;
-USE pfw;
-
---
--- Definition of table `cust_shelf`
---
-
-DROP TABLE IF EXISTS `cust_shelf`;
-CREATE TABLE `cust_shelf` (
-  `id_design` varchar(50) NOT NULL,
-  `id_customer` varchar(50) NOT NULL,
-  `id_product` varchar(50) NOT NULL,
-  `material` varchar(225) DEFAULT NULL,
-  `combination` varchar(225) DEFAULT NULL,
-  `lamination` varchar(225) DEFAULT NULL,
-  `available` varchar(225) DEFAULT NULL,
-  `size1` varchar(50) NOT NULL,
-  `size2` varchar(50) NOT NULL,
-  `size3` varchar(50) NOT NULL,
-  `path_product` varchar(50) NOT NULL,
-  PRIMARY KEY (`id_design`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `cust_shelf`
---
-
-/*!40000 ALTER TABLE `cust_shelf` DISABLE KEYS */;
-INSERT INTO `cust_shelf` (`id_design`,`id_customer`,`id_product`,`material`,`combination`,`lamination`,`available`,`size1`,`size2`,`size3`,`path_product`) VALUES 
- ('D1','C1','P1','Corrugated','Sticker Vinly',NULL,'','','','',''),
- ('D10','C2','P1','Corrugated','Silver Sticker',NULL,'','','','',''),
- ('D2','C1','P1','Corrugated','Gold Sticker',NULL,'','','','',''),
- ('D3','C3','P3','Polylethylene (PE) Water Proof','Sticker Bontax',NULL,'','','','',''),
- ('D4','C1','P2','Art Paper 210 gr','Hot Print','Doff','','','','',''),
- ('D5','C2','P3','Polylethylene (PE) Water Proof','Gold Sticker',NULL,'','','','',''),
- ('D6','C4','P3','Polylethylene (PE) Water Proof','Sticker Vinly',NULL,'','','','',''),
- ('D7','C4','P2','Ivory 230 gr','UV Print','Glossy','','','','',''),
- ('D8','C2','P3','Polylethylene (PE) Water Proof','Silver Sticker',NULL,'','','','',''),
- ('D9','C2','P2','Samson 70 gr','UV Print','Glossy','','','','','');
-/*!40000 ALTER TABLE `cust_shelf` ENABLE KEYS */;
-
+CREATE DATABASE IF NOT EXISTS faniaa;
+USE faniaa;
 
 --
 -- Definition of table `customer`
@@ -84,9 +45,7 @@ INSERT INTO `customer` (`id_customer`,`name`,`email`,`phone`,`address`,`postal_c
  ('C1','Fania Cecillia','fcecillia@student.ciputra.ac.id','087856933365','Wiyung',60228),
  ('C2','Albertus Marco','amarco@student.ciputra.ac.id','088966548595','Pakuwon',60112),
  ('C3','Dewi Salma Salsabila','dsalma@student.ciputra.ac.id','081265996325','Pakuwon',60112),
- ('C4','Dhienalight','dhienalight@student.ciputra.ac.id','081256692145','Sepanjang',61257),
- ('C5','cobaa','jj','8520','huha',522),
- ('C6','bobby','bobby@gmail.com','0819','jalan',91);
+ ('C4','Dhienalight','dhienalight@student.ciputra.ac.id','081256692145','Sepanjang',61257);
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 
 
@@ -96,28 +55,20 @@ INSERT INTO `customer` (`id_customer`,`name`,`email`,`phone`,`address`,`postal_c
 
 DROP TABLE IF EXISTS `design_detail`;
 CREATE TABLE `design_detail` (
-  `id_design` varchar(50) NOT NULL,
+  `id_order` varchar(50) NOT NULL DEFAULT '',
   `path_detail` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `design_detail`
 --
 
 /*!40000 ALTER TABLE `design_detail` DISABLE KEYS */;
-INSERT INTO `design_detail` (`id_design`,`path_detail`) VALUES 
- ('D1','foto logo'),
- ('D4','foto logo'),
- ('D4','foto tambahan'),
- ('D4','foto tambahan'),
- ('D5','foto logo'),
- ('D6','foto logo'),
- ('D6','foto tambahan'),
- ('D7','foto logo'),
- ('D7','foto tambahan'),
- ('D8','foto logo'),
- ('D8','foto tambahan'),
- ('D8','foto tambahan');
+INSERT INTO `design_detail` (`id_order`,`path_detail`) VALUES 
+ ('O1','detail.detail1.png'),
+ ('O3','detail.detail3.png'),
+ ('O5','detail.detail5.png'),
+ ('O5','detail.detail55.png');
 /*!40000 ALTER TABLE `design_detail` ENABLE KEYS */;
 
 
@@ -155,56 +106,39 @@ INSERT INTO `login` (`email`,`password`,`role`) VALUES
 
 DROP TABLE IF EXISTS `order`;
 CREATE TABLE `order` (
-  `id_order` varchar(50) NOT NULL DEFAULT '',
+  `id_order` varchar(50) NOT NULL,
   `id_customer` varchar(50) NOT NULL,
+  `id_product` varchar(50) NOT NULL,
+  `material` varchar(50) DEFAULT NULL,
+  `combination` varchar(50) DEFAULT NULL,
+  `lamination` varchar(50) DEFAULT NULL,
+  `available` varchar(50) DEFAULT NULL,
+  `size1` varchar(45) DEFAULT NULL,
+  `size2` varchar(45) DEFAULT NULL,
+  `size3` varchar(45) DEFAULT NULL,
+  `path_custom` varchar(50) NOT NULL,
   `id_invoice` varchar(50) NOT NULL,
+  `qty` int(10) unsigned NOT NULL,
+  `price` int(10) unsigned NOT NULL,
   `status` varchar(50) NOT NULL,
-  `order_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `order_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `path_dp` varchar(50) NOT NULL,
   `path_paid` varchar(50) NOT NULL,
   PRIMARY KEY (`id_order`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `order`
 --
 
 /*!40000 ALTER TABLE `order` DISABLE KEYS */;
-INSERT INTO `order` (`id_order`,`id_customer`,`id_invoice`,`status`,`order_time`,`path_dp`,`path_paid`) VALUES 
- ('O1','C1','I1-2018','Complete','2018-12-06 16:20:48','foto bukti dp','foto bukti pelunasan'),
- ('O2','C4','I2-2018','In Progress','2018-12-06 16:21:56','foto bukti dp',''),
- ('O3','C3','I3-2018','Cancel','2018-12-06 16:21:41','',''),
- ('O4','C2','I4-2018','-','2018-12-06 18:32:36','','');
+INSERT INTO `order` (`id_order`,`id_customer`,`id_product`,`material`,`combination`,`lamination`,`available`,`size1`,`size2`,`size3`,`path_custom`,`id_invoice`,`qty`,`price`,`status`,`order_time`,`path_dp`,`path_paid`) VALUES 
+ ('O1','C2','P1','Corrugated','Sticker Vinly',NULL,NULL,NULL,NULL,NULL,'custom/custom1.obj','IV160119-1',20,100000,'Complete','2019-01-16 23:01:53','dp/dp1.jpg','paid/paid1.jpg'),
+ ('O2','C2','P3','Polylethylene [PE] Water Proof','Sticker Vinly',NULL,NULL,NULL,NULL,NULL,'custom/custom2.obj','IV160119-3',30,200000,'Complete','2019-01-16 23:13:16','dp/dp2.jpg','paid/paid2.jpg'),
+ ('O3','C3','P2','Art Paper 210 gr','Hot Print','Doff',NULL,NULL,NULL,NULL,'custom/custom3.obj','IV160119-2',35,250000,'In Progress','2019-01-16 23:08:07','dp/dp3.jpg','paid/paid3.jpg'),
+ ('O4','C1','P2','Ivory 230 gr','UV Print','Glossy',NULL,NULL,NULL,NULL,'custom/custom4.obj','IV180119-1',10,100000,'Cancel','2019-01-16 23:08:01','dp/dp4.jpg','paid/paid4.jpg'),
+ ('O5','C4','P2','Samson 70 gr','UV Print','Glossy',NULL,NULL,NULL,NULL,'custom/custom5.obj','IV200119-1',10,100000,'-','2019-01-16 23:07:26','dp/dp5.jpg','paid/paid5.jpg');
 /*!40000 ALTER TABLE `order` ENABLE KEYS */;
-
-
---
--- Definition of table `order_detail`
---
-
-DROP TABLE IF EXISTS `order_detail`;
-CREATE TABLE `order_detail` (
-  `id_order` varchar(50) NOT NULL,
-  `id_design` varchar(50) NOT NULL,
-  `qty` int(10) unsigned NOT NULL,
-  `price_qty` int(10) unsigned NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `order_detail`
---
-
-/*!40000 ALTER TABLE `order_detail` DISABLE KEYS */;
-INSERT INTO `order_detail` (`id_order`,`id_design`,`qty`,`price_qty`) VALUES 
- ('O1','D1',100,20000),
- ('O1','D2',100,15000),
- ('O1','D4',50,30000),
- ('O2','D6',100,20000),
- ('O2','D7',100,30000),
- ('O3','D3',100,20000),
- ('O4','D5',50,20000),
- ('O4','D8',75,25000);
-/*!40000 ALTER TABLE `order_detail` ENABLE KEYS */;
 
 
 --
