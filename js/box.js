@@ -529,6 +529,24 @@
       // export object 3D to JSON
       var json = scene.toJSON();
       // console.log(json);
+
+      var mysql = require('mysql');
+      var con = mysql.createConnection({
+        host: "localhost",
+        user: "root",
+        password: "",
+        database: "pfw"
+      });
+
+      con.connect(function(err) {
+        if (err) throw err;
+        console.log("Connected!");
+        var sql = "INSERT INTO customer (name, email, phone, address, postal_code) VALUES ('Filbert Hartawan', 'filbert@gmail.com', '08123456789', 'Surabaya', '606060')";
+        con.query(sql, function (err, result) {
+          if (err) throw err;
+          console.log("1 record inserted");
+        });
+      });
     }
 
     document.getElementById("cancelBtn").onclick = function() {
