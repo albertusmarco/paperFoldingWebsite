@@ -218,7 +218,7 @@ include "menu.php";
             </select> <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Combination :
             <select id="combination">
-              <option value="print">Print</option>
+              <option value="uvprint">UV Print</option>
               <option value="stickervinyl">Sticker Vinyl</option>
               <option value="stickerbontax">Sticker Bontax</option>
               <option value="silversticker">Silver Sticker</option>

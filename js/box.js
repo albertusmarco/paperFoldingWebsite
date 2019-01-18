@@ -636,9 +636,6 @@
       case 'sablon':
         obj.combination = 'Sablon';
         break;
-      case 'print':
-        obj.combination = 'Print';
-        break;
       default:
         obj.combination = 'none';
     }
