@@ -392,7 +392,6 @@ session_start();
       <script src="assets/mbr-testimonials-slider/mbr-testimonials-slider.js"></script>
       <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
       <script src="assets/theme/js/script.js"></script>
-      <script src="js/main.js"></script>
       <!-- The Modal -->
       <div id="myModal" class="modal">
 
