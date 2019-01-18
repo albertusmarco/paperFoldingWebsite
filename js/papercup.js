@@ -231,6 +231,9 @@ function process3D(){
   var judul;
   var tipeHarga;
   var harga = 0;
+  // export object 3D to JSON
+  var json = scene.toJSON();
+  // console.log(json);
 
   if(quantity.value == null) {
     quantity.value = 50;
@@ -243,28 +246,28 @@ function process3D(){
   if(custom == 0){
     tipeHarga = 'Plain Price';
     if(quantity.value > 100) {
-      harga = '700';
+      harga = 700;
     }
     else {
-      harga = '900';
+      harga = 900;
     }
   }
   else {
     tipeHarga = 'Customization Price';
     if(combination.value == "sablon") {
       if(quantity.value > 50) {
-        harga = '1.000';
+        harga = 1000;
       }
       else {
-        harga = '1.500';
+        harga = 1500;
       }
     }
     else {
       if(quantity.value > 50) {
-        harga = '1.200';
+        harga = 1200;
       }
       else {
-        harga = '1.800';
+        harga = 1800;
       }
     }
   }
@@ -287,16 +290,142 @@ function process3D(){
     }
   }
 
+  function convertToRupiah(angka)
+  {
+     var rupiah = '';
+     var angkarev = angka.toString().split('').reverse().join('');
+     for(var i = 0; i < angkarev.length; i++) if(i%3 == 0) rupiah += angkarev.substr(i,3)+'.';
+     return ''+rupiah.split('',rupiah.length-1).reverse().join('');
+  };
+
+  var hargaFormat = convertToRupiah(harga);
+
   // Display the modal
   document.getElementById("judul").innerHTML = judul;
   document.getElementById("tipeHarga").innerHTML = tipeHarga;
-  document.getElementById("harga").innerHTML = harga;
+  document.getElementById("harga").innerHTML = hargaFormat;
   modal.style.display = "block";
 
+  var obj = {};
+  obj.type = judul;
+  obj.price = harga;
+  obj.json = json;
+
+  switch (material.value) {
+    case 'artpaper150':
+      obj.material = 'Art Paper 150 gr';
+      break;
+    case 'artpaper210':
+      obj.material = 'Art Paper 210 gr';
+      break;
+    case 'artpaper230':
+      obj.material = 'Art Paper 230 gr';
+      break;
+    case 'artpaper260':
+      obj.material = 'Art Paper 260 gr';
+      break;
+    case 'artpaper310':
+      obj.material = 'Art Paper 310 gr';
+      break;
+    case 'ivory210':
+      obj.material = 'Ivory 210 gr';
+      break;
+    case 'ivory230':
+      obj.material = 'Ivory 230 gr';
+      break;
+    case 'ivory250':
+      obj.material = 'Ivory 250 gr';
+      break;
+    case 'ivory310':
+      obj.material = 'Ivory 310 gr';
+      break;
+    case 'duplex230':
+      obj.material = 'Duplex 230 gr';
+      break;
+    case 'duplex250':
+      obj.material = 'Duplex 250 gr';
+      break;
+    case 'duplex270':
+      obj.material = 'Duplex 270 gr';
+      break;
+    case 'duplex300':
+      obj.material = 'Duplex 300 gr';
+      break;
+    case 'bcmanila150':
+      obj.material = 'BC Manila 150 gr';
+      break;
+    case 'samson70':
+      obj.material = 'Samson 70 gr';
+      break;
+    case 'samson80':
+      obj.material = 'Samson 80 gr';
+      break;
+    case 'samson150':
+      obj.material = 'Samson 150 gr';
+      break;
+    case 'corrugated':
+      obj.material = 'Corrugated';
+      break;
+    case 'polylethylene':
+      obj.material = 'Polylethylene Water Proof';
+      break;
+    case 'kraftandfoil':
+      obj.material = 'Kraft and Foil';
+      break;
+    case 'plasticandfoil':
+      obj.material = 'Plastic and Foil';
+      break;
+    case 'foodgradepaper':
+      obj.material = 'Food Grade Paper';
+      break;
+    default:
+      obj.material = 'none';
+  }
+
+  switch (combination.value) {
+    case 'stickervinyl':
+      obj.combination = 'Sticker Vinyl';
+      break;
+    case 'stickerbontax':
+      obj.combination = 'Sticker Bontax';
+      break;
+    case 'silversticker':
+      obj.combination = 'Silver Sticker';
+      break;
+    case 'goldsticker':
+      obj.combination = 'Gold Sticker';
+      break;
+    case 'hotprint':
+      obj.combination = 'Hot Print';
+      break;
+    case 'uvprint':
+      obj.combination = 'UV Print';
+      break;
+    case 'sablon':
+      obj.combination = 'Sablon';
+      break;
+    default:
+      obj.combination = 'none';
+  }
+
+  obj.lamination = 'none';
+  obj.quantity = quantity.value;
+  obj.size1 = radiusTop;
+  obj.size2 = radiusBottom;
+  obj.size3 = height;
+
+  // console.log(obj);
+
   document.getElementById("okBtn").onclick = function() {
-    // export object 3D to JSON
-    var json = scene.toJSON();
-    // console.log(json);
+    $.ajax({
+      url:"insert.php",
+      method:"post",
+      data:{ obj : JSON.stringify(obj) },
+      success: function(res) {
+        console.log(res);
+      }
+    })
+    location.href="index.php";
   }
 
   document.getElementById("cancelBtn").onclick = function() {

@@ -236,7 +236,7 @@ include "menu.php";
               <option value="goldsticker">Gold Sticker</option>
             </select> <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lamination :
-            <select id="material">
+            <select id="lamination">
               <option value="doff">Doff</option>
               <option value="glossy">Glossy</option>
             </select> <br/>

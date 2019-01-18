@@ -292,29 +292,29 @@
         if(custom == 0){
           tipeHarga = 'Plain Price';
           if(quantity.value > 50) {
-            harga = '12.500';
+            harga = 12500;
           }
           else {
-            harga = '17.200';
+            harga = 17200;
           }
         }
         else {
           tipeHarga = 'Customization Price';
           if(quantity.value > 50) {
             if(quantity.value <= 100) {
-              harga = '24.500';
+              harga = 24500;
             }
             else {
               if(quantity.value <= 500) {
-                harga = '17.200';
+                harga = 17200;
               }
               else {
-                harga = '9.500';
+                harga = 9.500;
               }
             }
           }
           else {
-            harga = '30.000';
+            harga = 30000;
           }
         }
         break;
@@ -324,28 +324,28 @@
           tipeHarga = 'Plain Price';
           if(material.value == "samson70" || material.value == "samson80" || material.value == "samson150") {
             if(quantity.value > 100) {
-              harga = '600';
+              harga = 600;
             }
             else {
-              harga = '800';
+              harga = 800;
             }
           }
           else {
             if(quantity.value > 50) {
               if(quantity.value <= 100) {
-                harga = '5.000';
+                harga = 5000;
               }
               else {
                 if(quantity.value <= 200) {
-                  harga = '3.200';
+                  harga = 3200;
                 }
                 else {
-                  harga = '1.750';
+                  harga = 1750;
                 }
               }
             }
             else {
-              harga = '7.000';
+              harga = 7000;
             }
           }
         }
@@ -354,37 +354,37 @@
           if(material.value == "samson70" || material.value == "samson80" || material.value == "samson150") {
             if(quantity.value > 50) {
               if(quantity.value <= 100) {
-                harga = '3.000';
+                harga = 3000;
               }
               else {
                 if(quantity.value <= 500) {
-                  harga = '1.000';
+                  harga = 1000;
                 }
                 else {
-                  harga = '800';
+                  harga = 800;
                 }
               }
             }
             else {
-              harga = '5.000';
+              harga = 5000;
             }
           }
           else {
             if(quantity.value > 50) {
               if(quantity.value <= 100) {
-                harga = '7.000';
+                harga = 7000;
               }
               else {
                 if(quantity.value <= 500) {
-                  harga = '3.800';
+                  harga = 3800;
                 }
                 else {
-                  harga = '1.500';
+                  harga = 1500;
                 }
               }
             }
             else {
-              harga = '12.000';
+              harga = 12000;
             }
           }
         }
@@ -395,38 +395,38 @@
           tipeHarga = 'Plain Price';
           if(quantity.value > 50) {
             if(quantity.value <= 100) {
-              harga = '7.500';
+              harga = 7500;
             }
             else {
               if(quantity.value <= 500) {
-                harga = '5.000';
+                harga = 5000;
               }
               else {
-                harga = '2.500';
+                harga = 2500;
               }
             }
           }
           else {
-            harga = '10.000';
+            harga = 10000;
           }
         }
         else {
           tipeHarga = 'Customization Price';
           if(quantity.value > 50) {
             if(quantity.value <= 100) {
-              harga = '7.500';
+              harga = 7500;
             }
             else {
               if(quantity.value <= 500) {
-                harga = '5.000';
+                harga = 5000;
               }
               else {
-                harga = '2.500';
+                harga = 2500;
               }
             }
           }
           else {
-            harga = '10.000';
+            harga = 10000;
           }
         }
         break;
@@ -435,29 +435,29 @@
         if(custom == 0){
           tipeHarga = 'Plain Price';
           if(quantity.value > 50) {
-            harga = '500';
+            harga = 500;
           }
           else {
-            harga = '800';
+            harga = 800;
           }
         }
         else {
           tipeHarga = 'Customization Price';
           if(quantity.value > 50) {
             if(quantity.value <= 100) {
-              harga = '2.650';
+              harga = 2650;
             }
             else {
               if(quantity.value <= 500) {
-                harga = '1.550';
+                harga = 1550;
               }
               else {
-                harga = '950';
+                harga = 950;
               }
             }
           }
           else {
-            harga = '3.200';
+            harga = 3200;
           }
         }
         break;
@@ -466,10 +466,10 @@
         if(custom == 0){
           tipeHarga = 'Plain Price';
           if(quantity.value > 50) {
-            harga = '26.000';
+            harga = 26000;
           }
           else {
-            harga = '34.000';
+            harga = 34000;
           }
         }
         else {
@@ -477,27 +477,27 @@
           if(combination.value == "print") {
             if(quantity.value > 50) {
               if(quantity.value <= 100) {
-                harga = '34.000';
+                harga = 34000;
               }
               else {
                 if(quantity.value <= 500) {
-                  harga = '27.000';
+                  harga = 27000;
                 }
                 else {
-                  harga = '20.000';
+                  harga = 20000;
                 }
               }
             }
             else {
-              harga = '40.000';
+              harga = 40000;
             }
           }
           else {
             if(quantity.value > 50) {
-              harga = '35.000';
+              harga = 35000;
             }
             else {
-              harga = '50.000';
+              harga = 50000;
             }
           }
         }
@@ -522,19 +522,152 @@
       }
     }
 
+    function convertToRupiah(angka)
+    {
+	     var rupiah = '';
+	     var angkarev = angka.toString().split('').reverse().join('');
+	     for(var i = 0; i < angkarev.length; i++) if(i%3 == 0) rupiah += angkarev.substr(i,3)+'.';
+	     return ''+rupiah.split('',rupiah.length-1).reverse().join('');
+    };
+
+    var hargaFormat = convertToRupiah(harga);
+
     // Display the modal
     document.getElementById("judul").innerHTML = judul;
     document.getElementById("tipeHarga").innerHTML = tipeHarga;
-    document.getElementById("harga").innerHTML = harga;
+    document.getElementById("harga").innerHTML = hargaFormat;
     modal.style.display = "block";
 
+    var obj = {};
+    obj.type = judul;
+    obj.price = harga;
+    obj.json = json;
+
+    switch (material.value) {
+      case 'artpaper150':
+        obj.material = 'Art Paper 150 gr';
+        break;
+      case 'artpaper210':
+        obj.material = 'Art Paper 210 gr';
+        break;
+      case 'artpaper230':
+        obj.material = 'Art Paper 230 gr';
+        break;
+      case 'artpaper260':
+        obj.material = 'Art Paper 260 gr';
+        break;
+      case 'artpaper310':
+        obj.material = 'Art Paper 310 gr';
+        break;
+      case 'ivory210':
+        obj.material = 'Ivory 210 gr';
+        break;
+      case 'ivory230':
+        obj.material = 'Ivory 230 gr';
+        break;
+      case 'ivory250':
+        obj.material = 'Ivory 250 gr';
+        break;
+      case 'ivory310':
+        obj.material = 'Ivory 310 gr';
+        break;
+      case 'duplex230':
+        obj.material = 'Duplex 230 gr';
+        break;
+      case 'duplex250':
+        obj.material = 'Duplex 250 gr';
+        break;
+      case 'duplex270':
+        obj.material = 'Duplex 270 gr';
+        break;
+      case 'duplex300':
+        obj.material = 'Duplex 300 gr';
+        break;
+      case 'bcmanila150':
+        obj.material = 'BC Manila 150 gr';
+        break;
+      case 'samson70':
+        obj.material = 'Samson 70 gr';
+        break;
+      case 'samson80':
+        obj.material = 'Samson 80 gr';
+        break;
+      case 'samson150':
+        obj.material = 'Samson 150 gr';
+        break;
+      case 'corrugated':
+        obj.material = 'Corrugated';
+        break;
+      case 'polylethylene':
+        obj.material = 'Polylethylene Water Proof';
+        break;
+      case 'kraftandfoil':
+        obj.material = 'Kraft and Foil';
+        break;
+      case 'plasticandfoil':
+        obj.material = 'Plastic and Foil';
+        break;
+      case 'foodgradepaper':
+        obj.material = 'Food Grade Paper';
+        break;
+      default:
+        obj.material = 'none';
+    }
+
+    switch (combination.value) {
+      case 'stickervinyl':
+        obj.combination = 'Sticker Vinyl';
+        break;
+      case 'stickerbontax':
+        obj.combination = 'Sticker Bontax';
+        break;
+      case 'silversticker':
+        obj.combination = 'Silver Sticker';
+        break;
+      case 'goldsticker':
+        obj.combination = 'Gold Sticker';
+        break;
+      case 'hotprint':
+        obj.combination = 'Hot Print';
+        break;
+      case 'uvprint':
+        obj.combination = 'UV Print';
+        break;
+      case 'sablon':
+        obj.combination = 'Sablon';
+        break;
+      case 'print':
+        obj.combination = 'Print';
+        break;
+      default:
+        obj.combination = 'none';
+    }
+
+    if(judul == 'Soft Box' || judul == 'Pack Label') {
+      switch (lamination.value) {
+        case 'doff':
+          obj.lamination = 'Doff';
+          break;
+        case 'glossy':
+          obj.lamination = 'Glossy';
+          break;
+        default:
+          obj.lamination = 'none';
+      }
+    }
+
+    else {
+      obj.lamination = 'none';
+    }
+
+    obj.quantity = quantity.value;
+    obj.size1 = boxWidth.value;
+    obj.size2 = boxHeight.value;
+    obj.size3 = boxDepth.value;
+
+    // console.log(obj);
+
     document.getElementById("okBtn").onclick = function() {
-      var obj = {};
-      obj.judul = judul;
-      obj.harga = harga;
-
-      console.log(obj);
-
       $.ajax({
         url:"insert.php",
         method:"post",
@@ -544,23 +677,6 @@
         }
       })
       location.href="index.php";
-      // var mysql = require('mysql');
-      // var con = mysql.createConnection({
-      //   host: "localhost",
-      //   user: "root",
-      //   password: "",
-      //   database: "pfw"
-      // });
-      //
-      // con.connect(function(err) {
-      //   if (err) throw err;
-      //   console.log("Connected!");
-      //   var sql = "INSERT INTO customer (name, email, phone, address, postal_code) VALUES ('Filbert Hartawan', 'filbert@gmail.com', '08123456789', 'Surabaya', '606060')";
-      //   con.query(sql, function (err, result) {
-      //     if (err) throw err;
-      //     console.log("1 record inserted");
-      //   });
-      // });
     }
 
     document.getElementById("cancelBtn").onclick = function() {
