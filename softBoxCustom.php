@@ -171,8 +171,6 @@ session_start();
     <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 
-    </script>
-
     <!-- p5.js library -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
     <script src="js/sketch.js"></script> -->
@@ -183,7 +181,7 @@ session_start();
   </head>
   <body>
     <section style="background-color:#F5F5F5;">
-      <br/><br/><br/><br/>
+      <br/><br/>
         <span style="float:left;margin-left:80px;margin-top:35px;background-color:#FFFFFF;">
           <span id="jenis" value="softbox" hidden="hidden">SOFT BOX</span>
           <br/>

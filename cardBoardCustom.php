@@ -122,6 +122,7 @@ include "menu.php";
     <link rel="stylesheet" href="assets/socicon/css/styles.css">
     <link rel="stylesheet" href="assets/theme/css/style.css">
     <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 
     <!-- p5.js library -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
