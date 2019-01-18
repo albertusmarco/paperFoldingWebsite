@@ -186,8 +186,11 @@
     }
   })
 
+  var imgList = [];
+
   function processImage() {
     custom = 1;
+    imgList.push(img.src);
     var side = document.getElementById("side");
     var sideValue = side.options[side.selectedIndex].value;
     // console.log(img);
@@ -661,6 +664,7 @@
     obj.size1 = boxWidth.value;
     obj.size2 = boxHeight.value;
     obj.size3 = boxDepth.value;
+    obj.img = imgList;
 
     // console.log(obj);
 
@@ -673,7 +677,7 @@
           console.log(res);
         }
       })
-      location.href="index.php";
+      // location.href="index.php";
     }
 
     document.getElementById("cancelBtn").onclick = function() {
