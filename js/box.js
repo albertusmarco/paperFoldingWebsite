@@ -275,6 +275,9 @@
     var judul;
     var tipeHarga;
     var harga = 0;
+    // export object 3D to JSON
+    var json = scene.toJSON();
+    // console.log(json);
 
     if(quantity.value == null) {
       quantity.value = 50;
@@ -526,27 +529,38 @@
     modal.style.display = "block";
 
     document.getElementById("okBtn").onclick = function() {
-      // export object 3D to JSON
-      var json = scene.toJSON();
-      // console.log(json);
+      var obj = {};
+      obj.judul = judul;
+      obj.harga = harga;
 
-      var mysql = require('mysql');
-      var con = mysql.createConnection({
-        host: "localhost",
-        user: "root",
-        password: "",
-        database: "pfw"
-      });
+      console.log(obj);
 
-      con.connect(function(err) {
-        if (err) throw err;
-        console.log("Connected!");
-        var sql = "INSERT INTO customer (name, email, phone, address, postal_code) VALUES ('Filbert Hartawan', 'filbert@gmail.com', '08123456789', 'Surabaya', '606060')";
-        con.query(sql, function (err, result) {
-          if (err) throw err;
-          console.log("1 record inserted");
-        });
-      });
+      $.ajax({
+        url:"insert.php",
+        method:"post",
+        data:{ obj : JSON.stringify(obj) },
+        success: function(res) {
+          console.log(res);
+        }
+      })
+      location.href="index.php";
+      // var mysql = require('mysql');
+      // var con = mysql.createConnection({
+      //   host: "localhost",
+      //   user: "root",
+      //   password: "",
+      //   database: "pfw"
+      // });
+      //
+      // con.connect(function(err) {
+      //   if (err) throw err;
+      //   console.log("Connected!");
+      //   var sql = "INSERT INTO customer (name, email, phone, address, postal_code) VALUES ('Filbert Hartawan', 'filbert@gmail.com', '08123456789', 'Surabaya', '606060')";
+      //   con.query(sql, function (err, result) {
+      //     if (err) throw err;
+      //     console.log("1 record inserted");
+      //   });
+      // });
     }
 
     document.getElementById("cancelBtn").onclick = function() {

@@ -1,6 +1,7 @@
 <?php
 include "menu.php";
-//
+session_start();
+
 // // Turn off error reporting
 // error_reporting(0);
 //
@@ -168,6 +169,9 @@ include "menu.php";
     <link rel="stylesheet" href="assets/socicon/css/styles.css">
     <link rel="stylesheet" href="assets/theme/css/style.css">
     <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+    </script>
 
     <!-- p5.js library -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
@@ -303,7 +307,7 @@ include "menu.php";
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Make sure all order detail already desire
             &nbsp;&nbsp;&nbsp;&nbsp;<br/><br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="btn btn-md btn-primary display-4" onClick="process3D()">SUBMIT</a>
+            <a type="submit" class="btn btn-md btn-primary display-4" onClick="process3D()">SUBMIT</a>
             <br/>
             <br/>
           </span>
@@ -388,6 +392,7 @@ include "menu.php";
       <script src="assets/mbr-testimonials-slider/mbr-testimonials-slider.js"></script>
       <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
       <script src="assets/theme/js/script.js"></script>
+      <script src="js/main.js"></script>
       <!-- The Modal -->
       <div id="myModal" class="modal">
 
@@ -402,8 +407,8 @@ include "menu.php";
         <p>Are you sure?</p>
       </div>
       <div class="modal-footer">
-        <input id="okBtn" type="button" value="OK"/>
-        <input id="cancelBtn" type="button" value="Cancel"/>
+        <input type="button" id="okBtn" name="okBtn" value="OK"/>
+        <input type="button" id="cancelBtn" value="Cancel"/>
       </div>
       </div>
       </div>

@@ -49,6 +49,7 @@ include "menu.php";
     <link rel="stylesheet" href="assets/socicon/css/styles.css">
     <link rel="stylesheet" href="assets/theme/css/style.css">
     <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 
     <!-- p5.js library -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
@@ -59,6 +60,13 @@ include "menu.php";
     <link rel="stylesheet" type="text/css" href="css/color.css">
   </head>
   <body>
+    <?php
+      $tmp = "Marco";
+      $json = json_encode($tmp);
+    ?>
+    <script type="text/javascript">
+      var tmp = <?= $json ?>;
+    </script>
     <section style="background-color:#F5F5F5;">
       <br/><br/><br/><br/>
       <span style="float:center;">
@@ -118,7 +126,7 @@ include "menu.php";
                         </a>
                     </div></div>
             </div>
-            
+
         </div>
     </div>
 </section>

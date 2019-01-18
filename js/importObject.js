@@ -16,6 +16,9 @@ window.addEventListener('resize',function()
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
 });
+
+console.log(tmp);
+
 //import an object file(json)
 // var loader = new THREE.ObjectLoader();
 
