@@ -178,7 +178,6 @@
         document.getElementById("imageSpan").appendChild(img);
       }
       reader.readAsDataURL(realFileBtn.files[0]);
-
       customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
     }
     else {
@@ -186,11 +185,8 @@
     }
   })
 
-  var imgList = [];
-
   function processImage() {
     custom = 1;
-    imgList.push(img.src);
     var side = document.getElementById("side");
     var sideValue = side.options[side.selectedIndex].value;
     // console.log(img);
@@ -664,9 +660,6 @@
     obj.size1 = boxWidth.value;
     obj.size2 = boxHeight.value;
     obj.size3 = boxDepth.value;
-    obj.img = imgList;
-
-    // console.log(obj);
 
     document.getElementById("okBtn").onclick = function() {
       $.ajax({
