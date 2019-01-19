@@ -1,5 +1,6 @@
 <?php
 include "menu.php";
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -28,8 +29,8 @@ include "menu.php";
       cursor: pointer;
     }
     .button2 {
-        background-color: white; 
-        color: black; 
+        background-color: white;
+        color: black;
         border: 2px solid #008CBA;
     }
     .button2:hover {
@@ -53,7 +54,7 @@ include "menu.php";
 <br/>
 <p align="center">Click 'Done' after you have uploaded all of your images. Thank you :)</p>
 <table class="noBorder" align="center" width="50%" border="0">
-  
+
   <tr>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -62,6 +63,7 @@ include "menu.php";
   <tr>
     <td>Upload Here</td>
     <td>:</td>
+  <form action="" method="post" enctype="multipart/form-data">
     <td><input type="file" name="txtFile" id="txtFile" /></td>
   </tr>
   <tr>
@@ -75,7 +77,8 @@ include "menu.php";
     <td>&nbsp;</td>
   </tr>
    <tr>
-    <td colspan="3" align="center"><input class="btn btn-form btn-primary display-4" name="btn_send" id="btn_send" value="Upload" type="button" /></td>
+    <td colspan="3" align="center"><input type = "submit" class="btn btn-form btn-primary display-4" name="btn_send" id="btn_send" value="Upload" type="button" /></td>
+  </form>
   </tr>
    <tr>
     <td>&nbsp;</td>

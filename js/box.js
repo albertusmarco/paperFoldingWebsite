@@ -670,7 +670,7 @@
           console.log(res);
         }
       })
-      // location.href="index.php";
+      location.href="uploadimage.php";
     }
 
     document.getElementById("cancelBtn").onclick = function() {
