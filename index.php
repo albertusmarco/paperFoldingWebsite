@@ -25,11 +25,11 @@ include "menu.php";
             </p>
             <div class="mbr-section-btn align-right"><a class="btn btn-md btn-primary-outline display-4" href="index.php#features18-k">TUTORIAL</a>
                 <a class="btn btn-md btn-primary display-4" href="
-              <?php
+            <?php
                           if(!isset($_SESSION['adasesi'])){
-                            echo('noshop.php');
-                          }else{
                             echo('shop.php');
+                          }else{
+                            echo('noshop.php');
                           }
                           ?>
                 ">GO TO SHOP</a></div>
@@ -324,11 +324,11 @@ include "menu.php";
         <div class="media-container-row title">
             <div class="col-12 col-md-8">
                 <div class="mbr-section-btn align-center"><a class="btn btn-primary display-4" href="
-                  <?php
+               <?php
                           if(!isset($_SESSION['adasesi'])){
-                            echo('noshop.php');
-                          }else{
                             echo('shop.php');
+                          }else{
+                            echo('noshop.php');
                           }
                           ?>">
                     OK, I'm Ready!</a></div>

@@ -52,9 +52,9 @@ session_start();
                         About</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="
                           <?php
                           if(!isset($_SESSION['adasesi'])){
-                            echo('noshop.php');
-                          }else{
                             echo('shop.php');
+                          }else{
+                            echo('noshop.php');
                           }
                           ?>">
                         Shop</a></li>
