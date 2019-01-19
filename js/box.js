@@ -656,6 +656,13 @@
       obj.lamination = 'none';
     }
 
+    if(judul == 'Plastic Pouch' || judul == 'Paper Pouch') {
+      obj.available = 'Zipper';
+    }
+    else {
+      obj.available = 'none';
+    }
+
     obj.quantity = quantity.value;
     obj.size1 = boxWidth.value;
     obj.size2 = boxHeight.value;
