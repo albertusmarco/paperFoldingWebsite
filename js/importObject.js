@@ -17,20 +17,6 @@ window.addEventListener('resize',function()
     camera.updateProjectionMatrix();
 });
 
-console.log(tmp);
-
-//import an object file(json)
-// var loader = new THREE.ObjectLoader();
-
-// loader.load(
-//   'file.json',
-//
-//   function(object)
-//   {
-//     scene.add(object);
-//   }
-// );
-
 //lighting
 var ambientLight = new THREE.AmbientLight(0xFFFFFF,0.5);
 scene.add(ambientLight);
@@ -41,23 +27,37 @@ scene.add(ambientLight2);
 //control orbit
 var controls = new THREE.OrbitControls(camera,renderer.domElement);
 
-var geometry = new THREE.BoxGeometry(15,15,15);
+// console.log(tmp);
 
-//create the shape
-//create the material, color, or image textures
-var cubeMaterials =
-[
-  new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Right Side
-  new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Left Side
-  new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Top Side
-  new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}),//Bottom Side
-  new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}),//Front Side
-  new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}) //Back Side
-];
+//import an object file(json)
+var loader = new THREE.ObjectLoader();
 
-var material = new THREE.MeshFaceMaterial(cubeMaterials);
-var cube = new THREE.Mesh(geometry,material);
-scene.add(cube);
+loader.load(
+  tmp,
+
+  function(object)
+  {
+    scene.add(object);
+  }
+);
+
+// var geometry = new THREE.BoxGeometry(15,15,15);
+
+// //create the shape
+// //create the material, color, or image textures
+// var cubeMaterials =
+// [
+//   new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Right Side
+//   new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Left Side
+//   new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby.jpg'), side : THREE.DoubleSide}),//Top Side
+//   new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}),//Bottom Side
+//   new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}),//Front Side
+//   new THREE.MeshBasicMaterial({map : new THREE.TextureLoader().load('asset/bobby2.jpg'), side : THREE.DoubleSide}) //Back Side
+// ];
+//
+// var material = new THREE.MeshFaceMaterial(cubeMaterials);
+// var cube = new THREE.Mesh(geometry,material);
+// scene.add(cube);
 
 
 camera.position.z=50;

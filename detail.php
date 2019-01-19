@@ -61,7 +61,7 @@ include "menu.php";
   </head>
   <body>
     <?php
-      $tmp = "Marco";
+      $tmp = "custom/teapot-claraio.json";
       $json = json_encode($tmp);
     ?>
     <script type="text/javascript">
