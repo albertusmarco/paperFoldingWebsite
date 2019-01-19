@@ -83,18 +83,19 @@
           <hr>
           <td>No.</td>
           <td>Order Date</td>
-          <td>Order ID</td>
           <td>Packaging</td>
           <td>Progress Status</td>
         </tr>
         <?php
           $no = 0;
-          $sql = "SELECT `order`.order_time, `order`.id_order, `order_detail`.id_design, `order`.status FROM `customer`, `order`, `order_detail` WHERE `customer`.`email` = '$emailcust' AND `order`.id_order = `order_detail`.id_order AND `order`.id_customer = `customer`.id_customer";
+          $sql = "SELECT `order`.order_time, `order`.id_order, `order`.status FROM `customer`, `order` WHERE `customer`.`email` = '$emailcust' AND `order`.id_customer = `customer`.id_customer";
           $data = viewData($sql);
           while ($row = mysqli_fetch_row($data))
           {
-		  echo ("<tr align='center'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>");
-            echo ("<tr align='center'><td>". ++$no .".</td><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td><td>$row[3]</td></tr>");
+		        echo ("<tr align='center'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>");
+            echo ("<tr align='center'><td>". ++$no .".</td><td>$row[0]</td><td>");
+            echo '<input class="button button2" type="submit" name="btnOrderID" id="btnOrderID" value="'.$row[1].'" formaction="detail.php?orderID='.$row[1].'"/>';
+            echo ("</td><td>$row[2]</td></tr>");
           }
         ?>
       </table>
