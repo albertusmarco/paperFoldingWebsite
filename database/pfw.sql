@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 19, 2019 at 07:39 AM
+-- Generation Time: Jan 19, 2019 at 09:20 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -138,7 +138,6 @@ INSERT INTO `order` (`id_order`, `id_customer`, `id_product`, `material`, `combi
 CREATE TABLE IF NOT EXISTS `product` (
   `id_product` varchar(50) NOT NULL DEFAULT '',
   `name` varchar(50) NOT NULL,
-  `path_product` varchar(50) NOT NULL,
   `status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -146,15 +145,15 @@ CREATE TABLE IF NOT EXISTS `product` (
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`id_product`, `name`, `path_product`, `status`) VALUES
-('P1', 'Cardboard Box', 'products/p1.obj', 'active'),
-('P2', 'Paper Bag', 'products/p2.obj', 'active'),
-('P3', 'Paper Cup', 'products/p3.obj', 'active'),
-('P4', 'Plastic Pouch', 'products/p4.obj', 'active'),
-('P5', 'Paper Pouch', 'products/p5.obj', 'active'),
-('P6', 'Pack Label', 'products/p6.obj', 'active'),
-('P7', 'Soft Box', 'products/p7.obj', 'active'),
-('P8', 'Food Wrap', 'products/p8.obj', 'active');
+INSERT INTO `product` (`id_product`, `name`, `status`) VALUES
+('P1', 'Cardboard Box', 'active'),
+('P2', 'Paper Bag', 'active'),
+('P3', 'Paper Cup', 'active'),
+('P4', 'Plastic Pouch', 'active'),
+('P5', 'Paper Pouch', 'active'),
+('P6', 'Pack Label', 'active'),
+('P7', 'Soft Box', 'active'),
+('P8', 'Food Wrap', 'active');
 
 --
 -- Indexes for dumped tables
