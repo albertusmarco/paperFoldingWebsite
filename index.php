@@ -195,69 +195,58 @@ include "menu.php";
     </div>
 </section>
 
-<section class="features17 cid-rbllkHg4zM" id="features17-l">
-    
-    
+<section class="features3 cid-rbltC75YZE" id="features3-q">
 
     
-    <div class="container-fluid">
+    <div class="container">
         <div class="media-container-row">
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
+            <div class="card p-3 col-12 col-md-6 col-lg-4">
                 <div class="card-wrapper">
                     <div class="card-img">
-                        <img src="assets/images/singkatan-hvs-376x289.png" alt="Mobirise" title="">
+                        <img src="assets/images/singkatan-hvs-676x519.png" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
-                        <h4 class="card-title pb-3 mbr-fonts-style display-7">
+                        <h4 class="card-title mbr-fonts-style display-7">
                             Art Paper</h4>
                         <p class="mbr-text mbr-fonts-style display-7">
-                            Available in&nbsp;85 gr, 100 gr, 115 gr, 120 gr, and 150 gr</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
-                <div class="card-wrapper">
-                    <div class="card-img">
-                        <img src="assets/images/used-paper-box-folding-gluing-machine-spare-464x464.jpg" alt="Mobirise" title="">
-                    </div>
-                    <div class="card-box">
-                        <h4 class="card-title pb-3 mbr-fonts-style display-7">
-                            Art Carton</h4>
-                        <p class="mbr-text mbr-fonts-style display-7">Available in 190 gr, 210 gr, 230 gr, 260 gr, 310 gr, 350 gr, and 400 gr
+                            Available in 150 gr, 210 gr, 230 gr, 260 gr, 310 gr
                         </p>
                     </div>
+                    
                 </div>
             </div>
 
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
+            <div class="card p-3 col-12 col-md-6 col-lg-4">
                 <div class="card-wrapper">
                     <div class="card-img">
-                        <img src="assets/images/download-262x192.jpg" alt="Mobirise" title="">
+                       <img src="assets/images/cb160ivory-20-a4-sheets-luxury-ivory-160gsm-paper-v2-2-676x676.jpg" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
-                        <h4 class="card-title pb-3 mbr-fonts-style display-7">
-                            Ivory Texture</h4>
+                        <h4 class="card-title mbr-fonts-style display-7">
+                            Ivory</h4>
                         <p class="mbr-text mbr-fonts-style display-7">
-                            Available in&nbsp;210 gr, 230 gr, 250 gr, 310 gr, and 400 gr</p>
+                            Available in 210 gr, 230 gr, 250 gr, 310 gr
+                        </p>
                     </div>
+                    
                 </div>
             </div>
 
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
+            <div class="card p-3 col-12 col-md-6 col-lg-4">
                 <div class="card-wrapper">
                     <div class="card-img">
-                        <img src="assets/images/kertas-manila-kertas-manila-mudah-didapat-464x343.jpg" alt="Mobirise" title="">
+                        <img src="assets/images/samson-1-676x676.jpg" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
-                        <h4 class="card-title pb-3 mbr-fonts-style display-7">
-                            BC Manila</h4>
+                        <h4 class="card-title mbr-fonts-style display-7">
+                            Samson</h4>
                         <p class="mbr-text mbr-fonts-style display-7">
-                           Available in&nbsp;160 gr, 220 gr, and 250 g</p>
+                            Available in&nbsp;70 gr, 80 gr, 150 gr </p>
                     </div>
+                    
                 </div>
             </div>
-            
+
             
         </div>
     </div>
@@ -265,9 +254,6 @@ include "menu.php";
 
 <section class="features3 cid-rbltC75YZE" id="features3-q">
 
-    
-
-    
     <div class="container">
         <div class="media-container-row">
             <div class="card p-3 col-12 col-md-6 col-lg-4">
@@ -279,7 +265,7 @@ include "menu.php";
                         <h4 class="card-title mbr-fonts-style display-7">
                             Duplex</h4>
                         <p class="mbr-text mbr-fonts-style display-7">
-                            Available in&nbsp; 230gr, 250gr, 270gr 300gr, 350gr, and 400gr</p>
+                            Available in 230 gr, 250 gr, 270 gr, 300 gr </p>
                     </div>
                     
                 </div>
@@ -288,13 +274,13 @@ include "menu.php";
             <div class="card p-3 col-12 col-md-6 col-lg-4">
                 <div class="card-wrapper">
                     <div class="card-img">
-                        <img src="assets/images/samson-paper-bougieblackgirlcom-676x451.jpg" alt="Mobirise" title="">
+                        <img src="assets/images/bc-manilla-1-636x487.jpg" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">
-                            Samson</h4>
+                            BC Manila</h4>
                         <p class="mbr-text mbr-fonts-style display-7">
-                            Available in&nbsp;70 gr 80 gr, 150 gr, and 220 gr</p>
+                            Available in 150 gr </p>
                     </div>
                     
                 </div>
@@ -303,13 +289,12 @@ include "menu.php";
             <div class="card p-3 col-12 col-md-6 col-lg-4">
                 <div class="card-wrapper">
                     <div class="card-img">
-                        <img src="assets/images/61jbjk9bysl.-sx425-425x319.jpg" alt="Mobirise" title="">
+                        <img src="assets/images/corrugated-cardboard-packaging-676x451.jpg" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">
-                            Paper Kraft</h4>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            Available in&nbsp;150 gr, and 250 gr</p>
+                            Corrugated</h4>
+                        <p class="mbr-text mbr-fonts-style display-7"></p>
                     </div>
                     
                 </div>
