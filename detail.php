@@ -86,15 +86,32 @@ include "menu.php";
           <a class="navbar-caption text-black display-5" style="margin-left:10px;margin-right:10px;margin-top:10px;">INFORMATION DETAIL</a><br/>
           <?php
             $orderID = $_GET['orderID'];
-            echo $orderID;
+            // echo $orderID;
             // $sql = "SELECT `product`.`name`, `material`.`name`, `order_detail`.`qty` FROM `product`, `material`, `order`, `order_detail`, `cust_shelf` WHERE `order`.`id_order` = '$orderID' AND `order_detail`.`id_design` ='$designID' AND `order_detail`.`id_design` = `cust_shelf`.`id_design` AND `cust_shelf`.`id_product` = `product`.`id_product` AND `cust_shelf`.`id_material` = `material`.`id_material`;";
-            $sql = "SELECT `product`.`name`, `cust_shelf`.`material`, `cust_shelf`.`combination`, `cust_shelf`.`lamination`, `cust_shelf`.`size1`, `cust_shelf`.`size2`, `cust_shelf`.`size3`, `order_detail`.`qty`, `order_detail`.`price_qty`, `design_detail`.`id_design` FROM `product`, `cust_shelf`, `order_detail`, `design_detail` WHERE `order`.`id_order`=='O1', `order`.`id_order`=`order_detail`.`id_order`, `order_detail`.`id_design`=`cust_shelf`.`id_design`;";
+            $sql = "SELECT `product`.`name`, `order`.`material`, `order`.`combination`, `order`.`lamination`, `order`.`size1`, `order`.`size2`, `order`.`size3`, `order`.`qty`, `order`.`price` FROM `product`, `order` WHERE `order`.`id_order` = 'O1' AND `order`.`id_product` = `product`.`id_product`;";
             $data = viewData($sql);
             while ($row = mysqli_fetch_row($data)){
               echo ("<label style='margin-left:10px;margin-right:10px;'>
                 Packaging Type : $row[0]<br/>
                 Material : $row[1]<br/>
-                Quantity : $row[2]<br/></label>");            }
+                Combination : $row[2]<br/>
+                Lamination : $row[3]<br/>");
+
+              if ($row[0] == "Paper Pouch" || $row[0] == "Plastic Pouch") {
+                echo ("Width : $row[4]<br/>
+                  Height : $row[5]<br/>");
+              }elseif ($row[0] == "Paper Cup") {
+                echo ("Top diameter : $row[4]<br/>
+                  Base diameter : $row[5]<br/>
+                  Height : $row[6]<br/>");
+              }else{
+                echo ("Width : $row[4]<br/>
+                  Height : $row[5]<br/>
+                  Depth : $row[6]<br/>");
+              }
+
+               echo ("Quantity : $row[7]<br/>
+                Price : $row[8]<br/></label>");            }
           ?>
         </span>
         <span style="clear:both;"></span>
