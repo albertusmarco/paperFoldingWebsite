@@ -1,8 +1,8 @@
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(45,500 / 500,1,1000);
 
-var renderer = new THREE.WebGLRenderer({canvas: document.getElementById('myCanvas'),antialias: true});
-renderer.setClearColor(0x55B4D4);
+var renderer = new THREE.WebGLRenderer({canvas: document.getElementById('myCanvas'),antialias: true,alpha: true});
+renderer.setClearColor(0xFFFFFF,0);
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(500,500);
 document.getElementById("custom").appendChild(renderer.domElement);
@@ -60,7 +60,7 @@ loader.load(
 // scene.add(cube);
 
 
-camera.position.z=50;
+camera.position.z=200;
 
 //game logic
 var update = function()

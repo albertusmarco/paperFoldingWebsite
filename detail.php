@@ -15,9 +15,9 @@ include "menu.php";
     canvas
     {
       border: 1px solid black;
-      background: grey;
-      /* width:1000px;
-      height:1000px; */
+      /* background: grey;
+      width:1000px;
+      height:1000px;  */
     }
     /* canvas {
     padding: 10;
