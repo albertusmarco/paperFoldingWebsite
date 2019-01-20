@@ -90,11 +90,23 @@
               }
           ?>
         </td><td>
+          <h4>PATH DETAILS</h4>
+          <p>Path: 
+          <?php
+            $orderID = $_GET['orderID'];
+            $sql = "SELECT `design_detail`.`path_detail` FROM `order`, `design_detail` WHERE `order`.`id_order` = '$orderID' AND `order`.`id_order` = `design_detail`.`id_order`;";
+              $data = viewData($sql);
+              while ($row = mysqli_fetch_row($data)){
+                echo '<p>'.$row[0].'</p>';
+              }  
+          ?></p>
           <h4>New Price</h4>
           <label style='margin-left:10px;margin-right:10px;'>
-            <input type="text" name="newPrice" id="newPrice"><br>
-            <input class="button button2" type="submit" name="PriceChange" id="PriceChange" value="Change Price"/><br>
+            <input type="text" name="newPrice" id="newPrice">
           </label>
+          <br>
+            <input class="button button2" type="submit" name="PriceChange" id="PriceChange" value="Change Price"/>
+            <input class="button button2" type="submit" name="Back" id="Back" value="Back" formaction="admin.php" /><br>
         </td></tr>
       </table>
       <?php

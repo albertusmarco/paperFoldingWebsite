@@ -58,7 +58,8 @@
     <form id="formAdmin" name="form1" method="post" action="">
       <p>&nbsp;</p>
       <h2 class="mbr-section-title pb-3 align-center mbr-fonts-style display-2">Customers' Orders List</h2>
-      <p align="center"><i>*Notes: Progress indication "-" means dp has not been paid yet.</i></p>
+      <p align="center"><i>*Notes: Progress indication "-" means dp has not been paid yet.<br>
+      **Note: Price also contains path details for each order.</i></p>
       <table class="noBorder" align="center" width="80%">
         <tr align="center">
           <hr>
@@ -68,7 +69,7 @@
           <td>Customer ID</td>
           <td>ID Invoice</td>
           <td>Price</td>
-          <td>Progress</td>
+          <td>Progress*</td>
           <td>Update</td>
         </tr>
         <?php
@@ -103,7 +104,7 @@
               echo '<option value="Cancel">Cancel</option>';
             }
             echo ("</td><td>");
-            echo '<input class="button button2" type="submit" name="Update1" id="Update1" value="Price" formaction="price.php?orderID='.$row[1].'"/>';
+            echo '<input class="button button2" type="submit" name="Update1" id="Update1" value="Price**" formaction="price.php?orderID='.$row[1].'"/>';
             echo '<input class="button button2" type="submit" name="Update" id="Update" value="Status" formaction="admin.php?stats='.$stat.'&orderID='.$row[1].'"/>';
             echo "</td></tr>";
           }
