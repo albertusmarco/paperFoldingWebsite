@@ -88,7 +88,7 @@ include "menu.php";
             $orderID = $_GET['orderID'];
             // echo $orderID;
             // $sql = "SELECT `product`.`name`, `material`.`name`, `order_detail`.`qty` FROM `product`, `material`, `order`, `order_detail`, `cust_shelf` WHERE `order`.`id_order` = '$orderID' AND `order_detail`.`id_design` ='$designID' AND `order_detail`.`id_design` = `cust_shelf`.`id_design` AND `cust_shelf`.`id_product` = `product`.`id_product` AND `cust_shelf`.`id_material` = `material`.`id_material`;";
-            $sql = "SELECT `product`.`name`, `order`.`material`, `order`.`combination`, `order`.`lamination`, `order`.`size1`, `order`.`size2`, `order`.`size3`, `order`.`qty`, `order`.`price` FROM `product`, `order` WHERE `order`.`id_order` = 'O1' AND `order`.`id_product` = `product`.`id_product`;";
+            $sql = "SELECT `product`.`name`, `order`.`material`, `order`.`combination`, `order`.`lamination`, `order`.`size1`, `order`.`size2`, `order`.`size3`, `order`.`qty`, `order`.`price` FROM `product`, `order` WHERE `order`.`id_order` = '$orderID' AND `order`.`id_product` = `product`.`id_product`;";
             $data = viewData($sql);
             while ($row = mysqli_fetch_row($data)){
               echo ("<label style='margin-left:10px;margin-right:10px;'>
