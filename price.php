@@ -30,7 +30,7 @@
       background-color: #4CAF50; /* Green */
       border: none;
       color: white;
-      padding: 16px 32px;
+      padding: 10px 20px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
@@ -41,13 +41,13 @@
       cursor: pointer;
     }
     .button2 {
-        background-color: white; 
-        color: black; 
+        background-color: #008CBA; 
+        color: white; 
         border: 2px solid #008CBA;
     }
     .button2:hover {
-        background-color: #008CBA;
-        color: white;
+        background-color: white;
+        color: black;
     }
     .noBorder{
       border: 0;
@@ -57,80 +57,62 @@
   <section class="features18 popup-btn-cards cid-rbljldAFZH" id="features18-k">
     <form id="formAdmin" name="form1" method="post" action="">
       <p>&nbsp;</p>
-      <h2 class="mbr-section-title pb-3 align-center mbr-fonts-style display-2">Customers' Orders List</h2>
-      <p align="center"><i>*Notes: Progress indication "-" means dp has not been paid yet.</i></p>
-      <table class="noBorder" align="center" width="80%">
-        <tr align="center">
-          <hr>
-          <td height="10">No.</td>
-          <td>Order Date</td>
-          <td>Order ID</td>
-          <td>Customer ID</td>
-          <td>ID Invoice</td>
-          <td>Price</td>
-          <td>Progress</td>
-          <td>Update</td>
-        </tr>
-        <?php
-          $no = 0;
-          $sql = "SELECT `order`.order_time, `order`.id_order, `order`.id_customer, `order`.id_invoice, `order`.price, `order`.status FROM `order` WHERE `order`.status != 'Cancel';";
-          $data = viewData($sql);
-          while ($row = mysqli_fetch_row($data))
-          {
-            echo ("<tr align='center'><td>". ++$no .".</td><td>$row[0]</td><td>");
-            // echo '<input class="button button2" type="submit" name="btnOrderID" id="btnOrderID" value="'.$row[1].'" formaction="detail.php?orderID='.$row[1].'&designID='.$row[3].'"/>';
-            echo '<input class="button button2" type="submit" name="btnOrderID" id="btnOrderID" value="'.$row[1].'" formaction="detail.php?orderID='.$row[1].'"/>';
-            echo ("</td><td>");
-            echo '<input class="button button2" type="submit" name="btnCustID" id="btnCustID" value="'.$row[2].'" formaction="customer.php?custID='.$row[2].'"/>';
-            echo("</td><td>$row[3]</td><td>$row[4]</td><td>");
-            $stat = $no;
-            $stat .= 'textStat';
-            echo '<select name="'.$stat.'" id="'.$stat.'">';
-            if($row[5]=="-"){
-              echo '<option value="-" selected="selected">-</option>';
-              echo '<option value="In Progress">In Progress</option>';
-              echo '<option value="Complete">Complete</option>';
-              echo '<option value="Cancel">Cancel</option>';
-            }else if($row[5]=="In Progress"){
-              echo '<option value="-">-</option>';
-              echo '<option value="In Progress" selected="selected">In Progress</option>';
-              echo '<option value="Complete">Complete</option>';
-              echo '<option value="Cancel">Cancel</option>';
-            }else if($row[5]=="Complete"){
-              echo '<option value="-">-</option>';
-              echo '<option value="In Progress">In Progress</option>';
-              echo '<option value="Complete" selected="selected">Complete</option>';
-              echo '<option value="Cancel">Cancel</option>';
-            }
-            echo ("</td><td>");
-            echo '<input class="button button2" type="submit" name="Update1" id="Update1" value="Price" formaction="price.php?orderID='.$row[1].'"/>';
-            echo '<input class="button button2" type="submit" name="Update" id="Update" value="Status" formaction="admin.php?stats='.$stat.'&orderID='.$row[1].'"/>';
-            echo "</td></tr>";
-          }
-        ?>
-      </table>
+      <h2 class="mbr-section-title pb-3 align-center mbr-fonts-style display-2">Price Change Details</h2>
+      <!-- <p align="center"><i>*Notes: Progress indication "-" means dp has not been paid yet.</i></p> -->
       <p>&nbsp;</p>
-      <p align="center">
-        <input class="btn btn-form btn-primary display-4" type="submit" name="signout" id="signout" value="Sign Out" />
-        <?php
-          if(isset($_POST["signout"]))
-          {$_SESSION['adasesi'] = "0";
-          echo'<meta http-equiv="refresh" content="1; URL=index.php" />';}
-        ?>
-      </p>
-    </form>
-    <?php
-      if (isset($_POST['Update'])) {
-        $stats = $_GET['stats'];
-        $statusP = $_POST[$stats];
+      <table width="80%" align="center">
+        <tr><td colspan="2" width="15%"></td><td>
+          <h4>PRODUCT INFORMATION</h4>
+          <?php
+            $orderID = $_GET['orderID'];
+            $sql = "SELECT `product`.`name`, `order`.`material`, `order`.`combination`, `order`.`lamination`, `order`.`size1`, `order`.`size2`, `order`.`size3`, `order`.`qty`, `order`.`price` FROM `product`, `order` WHERE `order`.`id_order` = '$orderID' AND `order`.`id_product` = `product`.`id_product`;";
+              $data = viewData($sql);
+              while ($row = mysqli_fetch_row($data)){
+                echo ("<label style='margin-left:10px;margin-right:10px;'>
+                  Packaging Type : $row[0]<br/>
+                  Material : $row[1]<br/>
+                  Combination : $row[2]<br/>
+                  Lamination : $row[3]<br/>");
+                if ($row[0] == "Paper Pouch" || $row[0] == "Plastic Pouch") {
+                  echo ("Width : $row[4]<br/>
+                    Height : $row[5]<br/>");
+                }elseif ($row[0] == "Paper Cup") {
+                  echo ("Top diameter : $row[4]<br/>
+                    Base diameter : $row[5]<br/>
+                    Height : $row[6]<br/>");
+                }else{
+                  echo ("Width : $row[4]<br/>
+                    Height : $row[5]<br/>
+                    Depth : $row[6]<br/>");
+                }
+                echo ("Quantity : $row[7]<br/>
+                  <h4>OLD PRICE : $row[8]</h4><br/></label>");  
+              }
+          ?>
+        </td><td>
+          <h4>New Price</h4>
+          <label style='margin-left:10px;margin-right:10px;'>
+            <input type="text" name="newPrice" id="newPrice"><br>
+            <input class="button button2" type="submit" name="PriceChange" id="PriceChange" value="Change Price"/><br>
+          </label>
+        </td></tr>
+      </table>
+      <?php
+      if (isset($_POST['PriceChange'])) {
         $orderID = $_GET['orderID'];
-        $sql2 = "UPDATE `order` SET `status`='$statusP' WHERE `id_order`='$orderID';";
+        $priceNew = $_POST["newPrice"];
+        $sql2 = "UPDATE `order` SET `price`='$priceNew' WHERE `id_order`='$orderID';";
         $a=insertData($sql2);
         if($a > 0){
           echo '<meta http-equiv="refresh" content="1; URL=admin.php" />';
         }
       }
-    ?>
+      ?>
+
+
+
+      
+    </form>
   </section>
 
 
