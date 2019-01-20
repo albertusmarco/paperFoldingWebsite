@@ -27,7 +27,7 @@ scene.add(ambientLight2);
 //control orbit
 var controls = new THREE.OrbitControls(camera,renderer.domElement);
 
-// console.log(tmp);
+console.log(tmp);
 
 //import an object file(json)
 var loader = new THREE.ObjectLoader();

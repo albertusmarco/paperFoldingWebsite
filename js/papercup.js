@@ -408,6 +408,13 @@ function process3D(){
       obj.combination = 'none';
   }
 
+  if(judul == 'Plastic Pouch' || judul == 'Paper Pouch') {
+    obj.available = 'Zipper';
+  }
+  else {
+    obj.available = 'none';
+  }
+
   obj.lamination = 'none';
   obj.quantity = quantity.value;
   obj.size1 = radiusTop;
@@ -425,7 +432,7 @@ function process3D(){
         console.log(res);
       }
     })
-    location.href="index.php";
+    location.href="uploadimage.php";
   }
 
   document.getElementById("cancelBtn").onclick = function() {

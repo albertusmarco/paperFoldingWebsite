@@ -61,8 +61,10 @@ include "menu.php";
   </head>
   <body>
     <?php
-      $tmp = "custom/teapot-claraio.json";
-      $json = json_encode($tmp);
+      $idOrder = $_GET['orderID'];
+      $sqlPath = "SELECT path_custom FROM `order` WHERE id_order = '$idOrder';";
+      $tmp = mysqli_fetch_row(viewData($sqlPath));
+      $json = json_encode($tmp[0]);
     ?>
     <script type="text/javascript">
       var tmp = <?= $json ?>;
