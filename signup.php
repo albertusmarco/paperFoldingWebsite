@@ -141,6 +141,11 @@ if(isset($_POST["signup"]))
 		$session = mysqli_fetch_row($hasil);
 			$_SESSION['namauser'] = "$session[0]";
 			$_SESSION['adasesi'] = 1;
+			$_SESSION['email'] = "$email";
+			$sql = "select id_customer from customer where email = '$email';";
+			$hasil = viewData($sql);
+			$idcust = mysqli_fetch_row($hasil);
+			$_SESSION['idcust'] = "$idcust[0]";
 		echo '<meta http-equiv="refresh" content="1; URL=index.php" />';}
 	}
 }
