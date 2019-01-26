@@ -145,6 +145,11 @@ if ($uploadOk == 0) {
   </tr>
    <tr>
     <td colspan="3" align="center"><input class="btn btn-form btn-primary display-4" name="btn_send" id="btn_send" value="Done" type="button" /></td>
+    <script type="text/javascript">
+      document.getElementById("btn_send").onclick = function() {
+        location.href="index.php";
+      };
+    </script>
   </tr>
 </table>
 
