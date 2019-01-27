@@ -22,12 +22,12 @@ include "menu.php";
   <link rel="stylesheet" href="assets/dropdown/css/style.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-  
+
 </head>
 <body>
 
 <style>
-  /*[type=radio] { 
+  /*[type=radio] {
     position: absolute;
     opacity: 0;
     width: 0;
@@ -58,9 +58,13 @@ include "menu.php";
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="cardBox">
         <a href="
         <?php
-          if($_SESSION['adasesi'] == "1"){
+          if(!isset($_SESSION['adasesi'])){
+            echo('nonCardBoardCustom.php');
+          }
+          elseif($_SESSION['adasesi'] == "1"){
             echo('cardBoardCustom.php');
-          }else{
+          }
+          else{
             echo('nonCardBoardCustom.php');
           }
         ?>">
@@ -71,9 +75,13 @@ include "menu.php";
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="paperCup">
         <a href="
         <?php
-          if($_SESSION['adasesi'] == "1"){
+          if(!isset($_SESSION['adasesi'])){
+            echo('nonPaperCupCustom.php');
+          }
+          elseif($_SESSION['adasesi'] == "1"){
             echo('papercupCustom.php');
-          }else{
+          }
+          else{
             echo('nonPaperCupCustom.php');
           }
         ?>">
@@ -83,9 +91,13 @@ include "menu.php";
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="paperPouch">
         <a href="
         <?php
-          if($_SESSION['adasesi'] == "1"){
+          if(!isset($_SESSION['adasesi'])){
+            echo('nonPaperPouchCustom.php');
+          }
+          elseif($_SESSION['adasesi'] == "1"){
             echo('paperPouchCustom.php');
-          }else{
+          }
+          else{
             echo('nonPaperPouchCustom.php');
           }
         ?>">
@@ -95,9 +107,13 @@ include "menu.php";
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="foodWrap">
         <a href="
         <?php
-          if($_SESSION['adasesi'] == "1"){
+          if(!isset($_SESSION['adasesi'])){
+            echo('nonFoodWrapCustom.php');
+          }
+          elseif($_SESSION['adasesi'] == "1"){
             echo('foodWrapCustom.php');
-          }else{
+          }
+          else{
             echo('nonFoodWrapCustom.php');
           }
         ?>">
@@ -108,9 +124,13 @@ include "menu.php";
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="paperBag">
         <a href="
         <?php
-          if($_SESSION['adasesi'] == "1"){
+          if(!isset($_SESSION['adasesi'])){
+            echo('nonPaperBagCustom.php');
+          }
+          elseif($_SESSION['adasesi'] == "1"){
             echo('paperBagCustom.php');
-          }else{
+          }
+          else{
             echo('nonPaperBagCustom.php');
           }
         ?>">
@@ -120,9 +140,13 @@ include "menu.php";
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="packLabel">
         <a href="
         <?php
-          if($_SESSION['adasesi'] == "1"){
+          if(!isset($_SESSION['adasesi'])){
+            echo('nonPackLabelCustom.php');
+          }
+          elseif($_SESSION['adasesi'] == "1"){
             echo('packLabelCustom.php');
-          }else{
+          }
+          else{
             echo('nonPackLabelCustom.php');
           }
         ?>">
@@ -132,9 +156,13 @@ include "menu.php";
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="softBox">
         <a href="
         <?php
-          if($_SESSION['adasesi'] == "1"){
+          if(!isset($_SESSION['adasesi'])){
+            echo('nonSoftBoxCustom.php');
+          }
+          elseif($_SESSION['adasesi'] == "1"){
             echo('softBoxCustom.php');
-          }else{
+          }
+          else{
             echo('nonSoftBoxCustom.php');
           }
         ?>">
@@ -144,9 +172,13 @@ include "menu.php";
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="plasticPouch">
         <a href="
         <?php
-          if($_SESSION['adasesi'] == "1"){
+          if(!isset($_SESSION['adasesi'])){
+            echo('nonPlasticPouchCustom.php');
+          }
+          elseif($_SESSION['adasesi'] == "1"){
             echo('plasticPouchCustom.php');
-          }else{
+          }          
+          else{
             echo('nonPlasticPouchCustom.php');
           }
         ?>">
@@ -166,8 +198,8 @@ include "menu.php";
       <!-- </p> -->
      <!--  <p align="right"><button onclick="myFunction()">Specs List</button></p>
       <input type="text" id="selectSpecs">
-      
-      
+
+
     </form>
 
     <script>
@@ -190,7 +222,7 @@ include "menu.php";
 
   <!-- <section class="header10 cid-rbkq4YRq2S mbr-fullscreen mbr-parallax-background" id="header10-3">
   <section class="features18 popup-btn-cards cid-rbljldAFZH" id="features18-k">
-    
+
     <div class="container">
         <h3 class="mbr-section-subtitle display-5 align-center mbr-fonts-style mbr-light">Choose your packaging type</h3>
         <div class="media-container-row pt-5 ">
@@ -210,7 +242,7 @@ include "menu.php";
                 <img src="assets/images/paper-cup-300x300.png" alt="Mobirise" title="">
               </div>
               <div class="card-box">
-                <h4 class="card-title mbr-fonts-style display-7">Paper Cup</h4>  
+                <h4 class="card-title mbr-fonts-style display-7">Paper Cup</h4>
               </div>
             </div>
           </div>
@@ -310,7 +342,7 @@ include "menu.php";
                         </a>
                     </div></div>
             </div>
-            
+
         </div>
     </div>
 </section>
@@ -325,7 +357,7 @@ include "menu.php";
   <script src="assets/parallax/jarallax.min.js"></script>
   <script src="assets/smoothscroll/smooth-scroll.js"></script>
   <script src="assets/theme/js/script.js"></script>
-  
-  
+
+
 </body>
 </html>
