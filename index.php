@@ -32,6 +32,9 @@ include "menu.php";
                   elseif($_SESSION['adasesi']==1){
                     echo('shop.php');
                   }
+                  else {
+                    echo('noshop.php');
+                  }
                 ?>
                 ">GO TO SHOP</a></div>
         </div>
@@ -331,6 +334,9 @@ include "menu.php";
                     }
                     elseif($_SESSION['adasesi']==1){
                       echo('shop.php');
+                    }
+                    else {
+                      echo('noshop.php');
                     }
                   ?>
               ">OK, I'm Ready!</a></div>

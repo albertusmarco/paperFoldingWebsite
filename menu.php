@@ -12,7 +12,7 @@ session_start();
   <meta name="generator" content="Mobirise v4.8.4, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <!-- <link rel="shortcut icon" href="assets/images/logo2.png" type="image/x-icon"> -->
- 
+
   <meta name="description" content="">
   <title>sendwish</title>
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
@@ -39,7 +39,7 @@ session_start();
         </button>
         <div class="menu-logo">
             <div class="navbar-brand">
-                
+
                 <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-5" href="index.php">SENDWISH</a></span>
             </div>
         </div>
@@ -51,10 +51,15 @@ session_start();
                         Portfolio</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="index.php#testimonials-slider1-b">
                         About</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="
                           <?php
-						  if(!isset($_SESSION['adasesi']))
-						  {echo('noshop.php');}
-						  elseif($_SESSION['adasesi']==1){
-                            echo('shop.php');}
+                            if(!isset($_SESSION['adasesi'])){
+                              echo('noshop.php');
+                            }
+                            elseif($_SESSION['adasesi']==1){
+                              echo('shop.php');
+                            }
+                            else {
+                              echo('noshop.php');
+                            }
                           ?>">
                         Shop</a></li>
                 <li class="nav-item">
@@ -71,8 +76,8 @@ session_start();
                         }
 						else
 						{echo("login.php");}}
-					
-					?>">  
+
+					?>">
 					<?php
 					if(!isset($_SESSION['adasesi']))
 					{echo("Sign In");}
@@ -83,12 +88,12 @@ session_start();
 						{echo("Sign In");}}
 					?></a>
                 </li></ul>
-            
+
         </div>
     </nav>
 </section>
- 
-  
-  
+
+
+
 </body>
 </html>
