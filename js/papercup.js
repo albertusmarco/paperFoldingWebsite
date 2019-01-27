@@ -298,7 +298,8 @@ function process3D(){
      return ''+rupiah.split('',rupiah.length-1).reverse().join('');
   };
 
-  var hargaFormat = convertToRupiah(harga);
+  var hargaBaru = harga*quantity.value;
+  var hargaFormat = convertToRupiah(hargaBaru);
 
   // Display the modal
   document.getElementById("judul").innerHTML = judul;
@@ -308,7 +309,7 @@ function process3D(){
 
   var obj = {};
   obj.type = judul;
-  obj.price = harga;
+  obj.price = hargaBaru;
   obj.json = json;
 
   switch (material.value) {

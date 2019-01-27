@@ -87,6 +87,9 @@ include "menu.php";
           <!-- silahkan code disini DHIENA!! -->
           <a class="navbar-caption text-black display-5" style="margin-left:10px;margin-right:10px;margin-top:10px;">INFORMATION DETAIL</a><br/>
           <?php
+            function convert_to_rupiah($angka) {
+              return 'Rp '.strrev(implode('.',str_split(strrev(strval($angka)),3)));
+            };
             $orderID = $_GET['orderID'];
             // echo $orderID;
             // $sql = "SELECT `product`.`name`, `material`.`name`, `order_detail`.`qty` FROM `product`, `material`, `order`, `order_detail`, `cust_shelf` WHERE `order`.`id_order` = '$orderID' AND `order_detail`.`id_design` ='$designID' AND `order_detail`.`id_design` = `cust_shelf`.`id_design` AND `cust_shelf`.`id_product` = `product`.`id_product` AND `cust_shelf`.`id_material` = `material`.`id_material`;";
@@ -111,9 +114,10 @@ include "menu.php";
                   Height : $row[5]<br/>
                   Depth : $row[6]<br/>");
               }
-
-               echo ("Quantity : $row[7]<br/>
-                Price : $row[8]<br/></label>");            }
+              $convertPrice = convert_to_rupiah($row[8]);
+              echo ("Quantity : $row[7]<br/>
+                    Price : $convertPrice,00<br/></label>");
+            }
           ?>
         </span>
         <span style="clear:both;"></span>
