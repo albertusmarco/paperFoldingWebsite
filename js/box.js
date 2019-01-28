@@ -461,7 +461,7 @@
         }
         break;
       case 'CARD BOARD':
-        judul = 'Card Board';
+        judul = 'Cardboard Box';
         if(custom == 0){
           tipeHarga = 'Plain Price';
           if(quantity.value > 50) {
