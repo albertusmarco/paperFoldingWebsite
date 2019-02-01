@@ -7,7 +7,16 @@ $target_dir = "asset/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-$id_order = $_SESSION['idorder'];
+if(!isset($_GET['orderID'])) {
+  $order_id = $_SESSION['idorder'];
+  $idOrder = 'O';
+  $idOrder .= $order_id;
+}
+else {
+  $id_order = $_GET['orderID'];
+};
+
+
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
@@ -41,7 +50,7 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-      $sql = "INSERT INTO design_detail VALUES( 'O$id_order' , '$target_file' );";
+      $sql = "INSERT INTO design_detail VALUES( '$id_order' , '$target_file' );";
       insertData($sql);
       echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
     }
@@ -147,7 +156,7 @@ if ($uploadOk == 0) {
     <td colspan="3" align="center"><input class="btn btn-form btn-primary display-4" name="btn_send" id="btn_send" value="Done" type="button" /></td>
     <script type="text/javascript">
       document.getElementById("btn_send").onclick = function() {
-        location.href="index.php";
+        location.href="profile.php";
       };
     </script>
   </tr>
