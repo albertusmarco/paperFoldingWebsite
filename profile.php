@@ -101,7 +101,9 @@
             echo '<input class="button button2" type="submit" name="btnOrderID" id="btnOrderID" value="'.$row[1].'" formaction="detail.php?orderID='.$row[1].'"/>';
             echo ("</td><td>$row[2]</td>");
             echo '<td><input class="button button2" type="submit" name="btnUpImages" id="btnUpImages" value="Upload" formaction="upimages.php"/></td>';
-            echo '<td><input class="button button2" type="submit" name="btnUpReceipt" id="btnUpReceipt" value="Upload" formaction=""/></td>';
+            echo '<td><input class="button button2" type="submit" name="btnUpReceipt" id="btnUpReceipt" value="Upload" formaction="upreceipt.php"/></td>';
+            echo '<td><input class="button button2" type="submit" name="btnViewDP" id="btnViewDP" value="View" formaction=""/></td>';
+             echo '<td><input class="button button2" type="submit" name="btnViewRepayment" id="btnViewRepayment" value="View" formaction=""/></td>';
           }
         ?>
       </tr>
