@@ -74,7 +74,7 @@
         </tr>
         <?php
           $no = 0;
-          $sql = "SELECT `order`.order_time, `order`.id_order, `order`.id_customer, `order`.id_invoice, `order`.price, `order`.status FROM `order` WHERE `order`.status != 'Cancel' ORDER BY `order`.order_time ASC;";
+          $sql = "SELECT `order`.order_time, `order`.id_order, `order`.id_customer, `order`.price, `order`.status FROM `order` WHERE `order`.status != 'Cancel' ORDER BY `order`.order_time ASC;";
           $data = viewData($sql);
           while ($row = mysqli_fetch_row($data))
           {
@@ -83,21 +83,21 @@
             echo '<input class="button button2" type="submit" name="btnOrderID" id="btnOrderID" value="'.$row[1].'" formaction="detail.php?orderID='.$row[1].'"/>';
             echo ("</td><td>");
             echo '<input class="button button2" type="submit" name="btnCustID" id="btnCustID" value="'.$row[2].'" formaction="customer.php?custID='.$row[2].'"/>';
-            echo("</td><td>$row[3]</td><td>$row[4]</td><td>");
+            echo("</td><td>$row[3]</td><td>");
             $stat = $no;
             $stat .= 'textStat';
             echo '<select name="'.$stat.'" id="'.$stat.'">';
-            if($row[5]=="-"){
+            if($row[4]=="-"){
               echo '<option value="-" selected="selected">-</option>';
               echo '<option value="In Progress">In Progress</option>';
               echo '<option value="Complete">Complete</option>';
               echo '<option value="Cancel">Cancel</option>';
-            }else if($row[5]=="In Progress"){
+            }else if($row[4]=="In Progress"){
               echo '<option value="-">-</option>';
               echo '<option value="In Progress" selected="selected">In Progress</option>';
               echo '<option value="Complete">Complete</option>';
               echo '<option value="Cancel">Cancel</option>';
-            }else if($row[5]=="Complete"){
+            }else if($row[4]=="Complete"){
               echo '<option value="-">-</option>';
               echo '<option value="In Progress">In Progress</option>';
               echo '<option value="Complete" selected="selected">Complete</option>';
