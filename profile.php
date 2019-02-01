@@ -100,10 +100,10 @@
             echo ("<tr align='center'><td>". ++$no .".</td><td>$row[0]</td><td>");
             echo '<input class="button button2" type="submit" name="btnOrderID" id="btnOrderID" value="'.$row[1].'" formaction="detail.php?orderID='.$row[1].'"/>';
             echo ("</td><td>$row[2]</td>");
+            echo '<td><input class="button button2" type="submit" name="btnUpImages" id="btnUpImages" value="Upload" formaction="upimages.php"/></td>';
+            echo '<td><input class="button button2" type="submit" name="btnUpReceipt" id="btnUpReceipt" value="Upload" formaction=""/></td>';
           }
         ?>
-        <td><input class="button button2" type="submit" name="btnUpImages" id="btnUpImages" value="Upload" formaction="upimages.php"/></td>
-        <td><input class="button button2" type="submit" name="btnUpReceipt" id="btnUpReceipt" value="Upload" formaction=""/></td>
       </tr>
       </table>
       <p>&nbsp;</p>
