@@ -85,6 +85,10 @@
           <td>Order Date</td>
           <td>Packaging</td>
           <td>Progress Status</td>
+          <td>Images</td>
+          <td>Upload Receipt</td>
+          <td>Down Payment</td>
+          <td>Repayment</td>
         </tr>
         <?php
           $no = 0;
@@ -95,9 +99,12 @@
 		        echo ("<tr align='center'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>");
             echo ("<tr align='center'><td>". ++$no .".</td><td>$row[0]</td><td>");
             echo '<input class="button button2" type="submit" name="btnOrderID" id="btnOrderID" value="'.$row[1].'" formaction="detail.php?orderID='.$row[1].'"/>';
-            echo ("</td><td>$row[2]</td></tr>");
+            echo ("</td><td>$row[2]</td>");
           }
         ?>
+        <td><input class="button button2" type="submit" name="btnUpImages" id="btnUpImages" value="Upload" formaction="upimages.php"/></td>
+        <td><input class="button button2" type="submit" name="btnUpReceipt" id="btnUpReceipt" value="Upload" formaction=""/></td>
+      </tr>
       </table>
       <p>&nbsp;</p>
       <p align="center">
