@@ -74,7 +74,7 @@
         </tr>
         <?php
           $no = 0;
-          $sql = "SELECT `order`.order_time, `order`.id_order, `order`.id_customer, `order`.id_invoice, `order`.price, `order`.status FROM `order` WHERE `order`.status != 'Cancel';";
+          $sql = "SELECT `order`.order_time, `order`.id_order, `order`.id_customer, `order`.id_invoice, `order`.price, `order`.status FROM `order` WHERE `order`.status != 'Cancel' ORDER BY `order`.order_time ASC;";
           $data = viewData($sql);
           while ($row = mysqli_fetch_row($data))
           {

@@ -43,8 +43,8 @@
       cursor: pointer;
     }
     .button2 {
-        background-color: white; 
-        color: black; 
+        background-color: white;
+        color: black;
         border: 2px solid #008CBA;
     }
     .button2:hover {
@@ -88,7 +88,7 @@
         </tr>
         <?php
           $no = 0;
-          $sql = "SELECT `order`.order_time, `order`.id_order, `order`.status FROM `customer`, `order` WHERE `customer`.`email` = '$emailcust' AND `order`.id_customer = `customer`.id_customer";
+          $sql = "SELECT `order`.order_time, `order`.id_order, `order`.status FROM `customer`, `order` WHERE `customer`.`email` = '$emailcust' AND `order`.id_customer = `customer`.id_customer ORDER BY `order`.order_time ASC";
           $data = viewData($sql);
           while ($row = mysqli_fetch_row($data))
           {
@@ -117,7 +117,7 @@
 
 
   <!-- footer -->
- 
+
  <section once="" class="cid-rblxeb4aPl" id="footer6-r">
     <div class="container">
         <div class="media-container-row align-center mbr-white">
@@ -143,7 +143,7 @@
                         </a>
                     </div></div>
             </div>
-            
+
         </div>
     </div>
 </section>
