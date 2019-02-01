@@ -92,7 +92,7 @@
         </tr>
         <?php
           $no = 0;
-          $sql = "SELECT `order`.order_time, `order`.id_order, `order`.status FROM `customer`, `order` WHERE `customer`.`email` = '$emailcust' AND `order`.id_customer = `customer`.id_customer ORDER BY `order`.order_time ASC";
+          $sql = "SELECT `order`.order_time, `order`.id_order, `order`.status, `order`.path_dp, `order`.path_paid FROM `customer`, `order` WHERE `customer`.`email` = '$emailcust' AND `order`.id_customer = `customer`.id_customer ORDER BY `order`.order_time ASC";
           $data = viewData($sql);
           while ($row = mysqli_fetch_row($data))
           {
@@ -100,10 +100,10 @@
             echo ("<tr align='center'><td>". ++$no .".</td><td>$row[0]</td><td>");
             echo '<input class="button button2" type="submit" name="btnOrderID" id="btnOrderID" value="'.$row[1].'" formaction="detail.php?orderID='.$row[1].'"/>';
             echo ("</td><td>$row[2]</td>");
-            echo '<td><input class="button button2" type="submit" name="btnUpImages" id="btnUpImages" value="Upload" formaction="upimages.php"/></td>';
-            echo '<td><input class="button button2" type="submit" name="btnUpReceipt" id="btnUpReceipt" value="Upload" formaction="upreceipt.php"/></td>';
-            echo '<td><input class="button button2" type="submit" name="btnViewDP" id="btnViewDP" value="View" formaction=""/></td>';
-             echo '<td><input class="button button2" type="submit" name="btnViewRepayment" id="btnViewRepayment" value="View" formaction=""/></td>';
+            echo '<td><input class="button button2" type="submit" name="btnUpImages" id="btnUpImages" value="Upload" formaction="upimages.php?orderID='.$row[1].'"/></td>';
+            echo '<td><input class="button button2" type="submit" name="btnUpReceipt" id="btnUpReceipt" value="Upload" formaction="upreceipt.php?orderID='.$row[1].'"/></td>';
+            echo '<td><input class="button button2" type="submit" name="btnViewDP" id="btnViewDP" value="View" formaction="'.$row[3].'"/></td>';
+             echo '<td><input class="button button2" type="submit" name="btnViewRepayment" id="btnViewRepayment" value="View" formaction="'.$row[4].'"/></td>'; // /GitHub/paperFoldingWebsite/assets/images/01.jpg
           }
         ?>
       </tr>
