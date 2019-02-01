@@ -70,10 +70,12 @@
           <td>Price</td>
           <td>Progress*</td>
           <td>Update</td>
+          <td>Down Payment</td>
+          <td>Repayment</td>
         </tr>
         <?php
           $no = 0;
-          $sql = "SELECT `order`.order_time, `order`.id_order, `order`.id_customer, `order`.price, `order`.status FROM `order` WHERE `order`.status != 'Cancel' ORDER BY `order`.order_time ASC;";
+          $sql = "SELECT `order`.order_time, `order`.id_order, `order`.id_customer, `order`.price, `order`.status, `order`.path_dp, `order`.path_paid FROM `order` WHERE `order`.status != 'Cancel' ORDER BY `order`.order_time ASC;";
           $data = viewData($sql);
           while ($row = mysqli_fetch_row($data))
           {
@@ -103,8 +105,10 @@
               echo '<option value="Cancel">Cancel</option>';
             }
             echo ("</td><td>");
-            echo '<input class="button button2" type="submit" name="Update1" id="Update1" value="Information**" formaction="price.php?orderID='.$row[1].'"/>';
-            echo '<input class="button button2" type="submit" name="Update" id="Update" value="Status" formaction="admin.php?stats='.$stat.'&orderID='.$row[1].'"/>';
+            echo '<input class="button button2" type="submit" name="Update1" id="Update1" value="Price**" formaction="price.php?orderID='.$row[1].'"/>';
+            echo '<input class="button button2" type="submit" name="Update" id="Update" value="Status" formaction="admin.php?stats='.$stat.'&orderID='.$row[1].'"/></td>';
+            echo '<td><input class="button button2" type="submit" name="btnViewDP" id="btnViewDP" value="View" formaction="'.$row[5].'"/></td>';
+             echo '<td><input class="button button2" type="submit" name="btnViewRepayment" id="btnViewRepayment" value="View" formaction="'.$row[6].'"/>';
             echo "</td></tr>";
           }
         ?>

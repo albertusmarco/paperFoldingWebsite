@@ -103,7 +103,7 @@
             echo '<td><input class="button button2" type="submit" name="btnUpImages" id="btnUpImages" value="Upload" formaction="upimages.php?orderID='.$row[1].'"/></td>';
             echo '<td><input class="button button2" type="submit" name="btnUpReceipt" id="btnUpReceipt" value="Upload" formaction="upreceipt.php?orderID='.$row[1].'"/></td>';
             echo '<td><input class="button button2" type="submit" name="btnViewDP" id="btnViewDP" value="View" formaction="'.$row[3].'"/></td>';
-             echo '<td><input class="button button2" type="submit" name="btnViewRepayment" id="btnViewRepayment" value="View" formaction="'.$row[4].'"/></td>'; // /GitHub/paperFoldingWebsite/assets/images/01.jpg
+            echo '<td><input class="button button2" type="submit" name="btnViewRepayment" id="btnViewRepayment" value="View" formaction="'.$row[4].'"/></td>'; // /GitHub/paperFoldingWebsite/assets/images/01.jpg
           }
         ?>
       </tr>
