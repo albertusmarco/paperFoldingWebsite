@@ -1,5 +1,5 @@
 <?php
-  include "menu.php";
+  include "menu2.php";
   session_start();
 ?>
 <!DOCTYPE html>
@@ -43,8 +43,8 @@
       cursor: pointer;
     }
     .button2 {
-        background-color: white; 
-        color: black; 
+        background-color: white;
+        color: black;
         border: 2px solid #008CBA;
     }
     .button2:hover {
@@ -137,7 +137,7 @@
         ?>
       </p>
     </form>
-    
+
   </section>
 
 
@@ -171,7 +171,7 @@
                         </a>
                     </div></div>
             </div>
-            
+
         </div>
     </div>
 </section>

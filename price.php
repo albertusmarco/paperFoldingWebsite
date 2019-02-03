@@ -1,5 +1,5 @@
 <?php
-  include "menu.php";
+  include "menu2.php";
   session_start();
 ?>
 <!DOCTYPE html>
@@ -41,8 +41,8 @@
       cursor: pointer;
     }
     .button2 {
-        background-color: #008CBA; 
-        color: white; 
+        background-color: #008CBA;
+        color: white;
         border: 2px solid #008CBA;
     }
     .button2:hover {
@@ -86,19 +86,19 @@
                     Depth : $row[6]<br/>");
                 }
                 echo ("Quantity : $row[7]<br/>
-                  <h4>OLD PRICE : $row[8]</h4><br/></label>");  
+                  <h4>OLD PRICE : $row[8]</h4><br/></label>");
               }
           ?>
         </td><td>
           <h4>PATH DETAILS</h4>
-          <p>Path: 
+          <p>Path:
           <?php
             $orderID = $_GET['orderID'];
             $sql = "SELECT `design_detail`.`path_detail` FROM `order`, `design_detail` WHERE `order`.`id_order` = '$orderID' AND `order`.`id_order` = `design_detail`.`id_order`;";
               $data = viewData($sql);
               while ($row = mysqli_fetch_row($data)){
                 echo '<p>'.$row[0].'</p>';
-              }  
+              }
           ?></p>
           <h4>New Price</h4>
           <label style='margin-left:10px;margin-right:10px;'>
@@ -123,7 +123,7 @@
 
 
 
-      
+
     </form>
   </section>
 
@@ -158,7 +158,7 @@
                         </a>
                     </div></div>
             </div>
-            
+
         </div>
     </div>
 </section>

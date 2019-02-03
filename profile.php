@@ -86,9 +86,8 @@
           <td>Packaging</td>
           <td>Progress Status</td>
           <td>Images</td>
-          <td>Upload Receipt</td>
-          <td>Down Payment</td>
-          <td>Repayment</td>
+          <td>Down Payment(DP)</td>
+          <td>Repayment(Pelunasan)</td>
         </tr>
         <?php
           $no = 0;
@@ -101,9 +100,10 @@
             echo '<input class="button button2" type="submit" name="btnOrderID" id="btnOrderID" value="'.$row[1].'" formaction="detail.php?orderID='.$row[1].'"/>';
             echo ("</td><td>$row[2]</td>");
             echo '<td><input class="button button2" type="submit" name="btnUpImages" id="btnUpImages" value="Upload" formaction="upimages.php?orderID='.$row[1].'"/></td>';
-            echo '<td><input class="button button2" type="submit" name="btnUpReceipt" id="btnUpReceipt" value="Upload" formaction="upreceipt.php?orderID='.$row[1].'"/></td>';
-            echo '<td><input class="button button2" type="submit" name="btnViewDP" id="btnViewDP" value="View" formaction="'.$row[3].'"/></td>';
-            echo '<td><input class="button button2" type="submit" name="btnViewRepayment" id="btnViewRepayment" value="View" formaction="'.$row[4].'"/></td>'; // /GitHub/paperFoldingWebsite/assets/images/01.jpg
+            echo '<td><input class="button button2" type="submit" name="btnUpReceiptDP" id="btnUpReceiptDP" value="Upload" formaction="upreceiptDP.php?orderID='.$row[1].'"/>';
+            echo '<input class="button button2" type="submit" name="btnViewDP" id="btnViewDP" value="View" formaction="'.$row[3].'"/></td>';
+            echo '<td><input class="button button2" type="submit" name="btnUpReceiptRP" id="btnUpReceiptRP" value="Upload" formaction="upreceiptRP.php?orderID='.$row[1].'"/>';
+            echo '<input class="button button2" type="submit" name="btnViewRepayment" id="btnViewRepayment" value="View" formaction="'.$row[4].'"/></td>'; // /GitHub/paperFoldingWebsite/assets/images/01.jpg
           }
         ?>
       </tr>

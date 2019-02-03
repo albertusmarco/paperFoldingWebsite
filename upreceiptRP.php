@@ -3,20 +3,11 @@ include "menu.php";
 
 // Turn off error reporting
 error_reporting(0);
-$target_dir = "asset/";
+$target_dir = "receipt/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-if(!isset($_GET['orderID'])) {
-  $order_id = $_SESSION['idorder'];
-  $id_order = 'O';
-  $id_order .= $order_id;
-}
-else {
-  $id_order = $_GET['orderID'];
-};
-
-
+$id_order = $_GET['orderID'];
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
@@ -50,7 +41,7 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-      $sql = "INSERT INTO design_detail VALUES( '$id_order' , '$target_file' );";
+      $sql = "UPDATE `order` SET path_paid = '$target_file' WHERE id_order='$id_order';";
       insertData($sql);
       echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
     }
@@ -107,10 +98,10 @@ if ($uploadOk == 0) {
 <br/>
 <br/>
 <br/>
-<h2 align="center">Please upload your images one by one for better quality printed images</h2>
+<h2 align="center">Upload Repayment(Pelunasan) Receipt</h2>
 <br/>
-<p align="center">Click 'Upload' to upload your image.</p>
-<p align="center">Click 'Done' after you have uploaded all of your images. Thank you :)</p>
+<p align="center">Click 'Upload' to upload your receipt.</p>
+<p align="center">Click 'Done' after you have uploaded all of your receipt. Thank you :)</p>
 <table class="noBorder" align="center" width="50%" border="0">
 
   <tr>
