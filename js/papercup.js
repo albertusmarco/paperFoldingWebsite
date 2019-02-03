@@ -33,6 +33,9 @@ var e = document.getElementById("paperSize");
 var radiusTop = 6;
 var radiusBottom = 5;
 var height = 5;
+var fakeradiusTop = 5.3;
+var fakeradiusBottom = 3.6;
+var fakeheight = 9;
 
 //create the shape
 //create the material, color, or image textures
@@ -46,7 +49,7 @@ var paperMaterials =
   topSide,//Top Side
   bottomSide//Bottom Side
 ];
-var geometry = new THREE.CylinderGeometry(radiusTop,radiusBottom,height,50);
+var geometry = new THREE.CylinderGeometry(fakeradiusTop,fakeradiusBottom,fakeheight,50);
 var material = new THREE.MeshFaceMaterial( paperMaterials );
 var papercup = new THREE.Mesh(geometry,material);
 scene.add(papercup);
@@ -64,20 +67,29 @@ function changeSize() {
       radiusTop = 6;
       radiusBottom = 5;
       height = 5;
+      fakeradiusTop = 5.3;
+      fakeradiusBottom = 3.6;
+      fakeheight = 9;
       break;
     case '2':
       radiusTop = 8.5;
       radiusBottom = 5.8;
       height = 10.5;
+      fakeradiusTop = 5.3;
+      fakeradiusBottom = 3.2;
+      fakeheight = 12;
       break;
     case '3':
       radiusTop = 8.5;
       radiusBottom = 5.8;
       height = 12.5;
+      fakeradiusTop = 5.3;
+      fakeradiusBottom = 3.2;
+      fakeheight = 14;
       break;
   }
 
-  geometry = new THREE.CylinderGeometry(radiusTop,radiusBottom,height,50);
+  geometry = new THREE.CylinderGeometry(fakeradiusTop,fakeradiusBottom,fakeheight,50);
   papercup = new THREE.Mesh(geometry,material);
   scene.add(papercup);
 }
