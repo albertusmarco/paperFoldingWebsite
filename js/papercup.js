@@ -120,22 +120,6 @@ function processText() {
       // frontSide = new THREE.MeshBasicMaterial({map : text, side : THREE.DoubleSide});
       console.log('Front : '+text);
       break;
-    case 'back':
-      // backSide = new THREE.MeshBasicMaterial({map : text, side : THREE.DoubleSide});
-      console.log('Back : '+text);
-      break;
-    case 'left':
-      // leftSide = new THREE.MeshBasicMaterial({map : text, side : THREE.DoubleSide});
-      console.log('Left : '+text);
-      break;
-    case 'right':
-      // rightSide = new THREE.MeshBasicMaterial({map : text, side : THREE.DoubleSide});
-      console.log('Right : '+text);
-      break;
-    case 'top':
-      // topSide = new THREE.MeshBasicMaterial({map : text, side : THREE.DoubleSide});
-      console.log('Top : '+text);
-      break;
     case 'down':
       // bottomSide = new THREE.MeshBasicMaterial({map : text, side : THREE.DoubleSide});
       console.log('Down : '+text);
@@ -146,18 +130,15 @@ function processText() {
     scene.remove(scene.children[0]);
   }
 
-  cubeMaterials =
+  var paperMaterials =
   [
-    rightSide,//Right Side
-    leftSide,//Left Side
-    topSide,//Top Side
-    bottomSide,//Bottom Side
     frontSide,//Front Side
-    backSide//Back Side
+    topSide,//Top Side
+    bottomSide//Bottom Side
   ];
-  material = new THREE.MeshFaceMaterial(cubeMaterials);
-  cube = new THREE.Mesh(geometry,material);
-  scene.add(cube);
+  material = new THREE.MeshFaceMaterial(paperMaterials);
+  papercup = new THREE.Mesh(geometry,material);
+  scene.add(papercup);
 }
 
 function processColor() {
