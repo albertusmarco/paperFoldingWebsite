@@ -60,6 +60,16 @@ include "menu.php";
             </select>&nbsp;&nbsp;&nbsp;
             <br/><br/>
 
+            <a class="navbar-caption text-black display-5" style="margin:0.8cm;">TEXT</a>
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Create : <input type="text" id="text" style="width:150px;height:25px;"/>
+            <br/>
+            <br/>
+            <input id="applyButton" type="button" onclick="processText()" value="Apply" style="margin-left:225px"/>
+            <br/>
+            <br/>
+
             <a class="navbar-caption text-black display-5" style="margin:0.8cm;">COLOR</a>
             <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
