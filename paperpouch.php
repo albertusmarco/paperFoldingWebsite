@@ -21,27 +21,27 @@ include "menu.php";
   <link rel="stylesheet" href="assets/socicon/css/styles.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-  
-  
-  
+
+
+
 </head>
 <body>
 <section class="engine"><a href="https://mobirise.info/d">free web maker</a></section><section class="features12 cid-reLPIHtKmq" id="features12-2h">
     <div class="container">
         <h2 class="mbr-section-title pb-2 mbr-fonts-style display-2">
             Paper Pouch</h2>
-        
+
 
         <div class="media-container-row pt-5">
             <div class="block-content align-right">
                 <div class="card pl-3 pr-3 pb-5">
                     <div class="mbr-card-img-title">
-                        
+
                         <div class="mbr-crt-title">
                             <h4 class="card-title py-2 mbr-crt-title mbr-fonts-style display-7">
                                 Size :</h4>
                         </div>
-                    </div>                
+                    </div>
 
                     <div class="card-box">
                         <p class="mbr-text mbr-section-text mbr-fonts-style display-7">Customization</p>
@@ -50,7 +50,7 @@ include "menu.php";
 
                 <div class="card pl-3 pr-3 pb-5">
                     <div class="mbr-card-img-title">
-                        
+
                         <div class="mbr-crt-title">
                             <h4 class="card-title py-2 mbr-crt-title mbr-fonts-style display-7">Material :</h4>
                         </div>
@@ -62,18 +62,18 @@ include "menu.php";
             </div>
 
             <div class="mbr-figure" style="width: 38%;">
-                <img src="assets/images/paper-pouch-fix-716x716.png" alt="Mobirise" title="">
+                <img src="assets/images/paperpouch.png" alt="Mobirise" title="">
             </div>
 
             <div class="block-content align-left  ">
                 <div class="card pl-3 pr-3 pb-5">
                     <div class="mbr-card-img-title">
-                        
+
                         <div class="mbr-crt-title">
                             <h4 class="card-title py-2 mbr-crt-title mbr-fonts-style display-7">
                                 Available</h4>
                         </div>
-                    </div>                
+                    </div>
 
                     <div class="card-box">
                         <p class="mbr-text mbr-section-text mbr-fonts-style display-7">Zipper</p>
@@ -82,7 +82,7 @@ include "menu.php";
 
                 <div class="card pl-3 pr-3 pb-5">
                     <div class="mbr-card-img-title">
-                        
+
                         <div class="mbr-crt-title">
                             <h4 class="card-title py-2 mbr-crt-title mbr-fonts-style display-7">Combination</h4>
                         </div>
@@ -122,7 +122,7 @@ include "menu.php";
                         </a>
                     </div></div>
             </div>
-            
+
         </div>
     </div>
 </section>
@@ -138,7 +138,7 @@ include "menu.php";
   <script src="assets/dropdown/js/script.min.js"></script>
   <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
   <script src="assets/theme/js/script.js"></script>
-  
-  
+
+
 </body>
 </html>

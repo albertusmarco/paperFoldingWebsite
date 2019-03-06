@@ -57,7 +57,7 @@ include "menu.php";
             <div class="card p-3 col-12 col-md-6 col-lg-3">
 
                     <div class="card-img">
-                        <img src="assets/images/cardboard-fix-492x492.png" alt="Mobirise" title="">
+                        <img src="assets/images/cardboard.png" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">
@@ -73,7 +73,7 @@ include "menu.php";
             <div class="card p-3 col-12 col-md-6 col-lg-3">
 
                     <div class="card-img">
-                        <img src="assets/images/paper-cup-fix-2-492x492.png" alt="Mobirise" title="">
+                        <img src="assets/images/papercup.png" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">
@@ -89,7 +89,7 @@ include "menu.php";
             <div class="card p-3 col-12 col-md-6 col-lg-3">
 
                     <div class="card-img">
-                        <img src="assets/images/paper-pouch-fix-492x492.png" alt="Mobirise" title="">
+                        <img src="assets/images/paperpouch.png" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">
@@ -105,7 +105,7 @@ include "menu.php";
             <div class="card p-3 col-12 col-md-6 col-lg-3">
 
                     <div class="card-img">
-                        <img src="assets/images/food-wrap-fix-492x492.png" alt="Mobirise" title="">
+                        <img src="assets/images/foodwrap.png" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">
@@ -123,7 +123,7 @@ include "menu.php";
             <div class="card p-3 col-12 col-md-6 col-lg-3">
 
                     <div class="card-img">
-                        <img src="assets/images/paper-bag-fix-492x492.png" alt="Mobirise" title="">
+                        <img src="assets/images/paperbag.png" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">
@@ -138,7 +138,7 @@ include "menu.php";
             <div class="card p-3 col-12 col-md-6 col-lg-3">
 
                     <div class="card-img">
-                        <img src="assets/images/pack-label-492x492.png" alt="Mobirise" title="">
+                        <img src="assets/images/packlabel.png" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">
@@ -153,7 +153,7 @@ include "menu.php";
             <div class="card p-3 col-12 col-md-6 col-lg-3">
 
                     <div class="card-img">
-                        <img src="assets/images/soft-box-super-fix-492x492.png" alt="Mobirise" title="">
+                        <img src="assets/images/softbox.png" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">
@@ -168,7 +168,7 @@ include "menu.php";
             <div class="card p-3 col-12 col-md-6 col-lg-3">
 
                     <div class="card-img">
-                        <img src="assets/images/plastic-pouch-fix-492x492.png" alt="Mobirise" title="">
+                        <img src="assets/images/plasticpouch.png" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">

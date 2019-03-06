@@ -4,19 +4,19 @@ include "menu.php";
 
 <!DOCTYPE html>
 <html >
-<head> 
-  
-  
+<head>
+
+
 </head>
 <body>
 
 
 
 <section class="features12 cid-rblRmm98RR" id="features12-v">
-    
-    
 
-    
+
+
+
 
     <div class="container">
         <h2 class="mbr-section-title pb-2 mbr-fonts-style display-2">
@@ -27,12 +27,12 @@ include "menu.php";
             <div class="block-content align-right">
                 <div class="card pl-3 pr-3 pb-5">
                     <div class="mbr-card-img-title">
-                        
+
                         <div class="mbr-crt-title">
                             <h4 class="card-title py-2 mbr-crt-title mbr-fonts-style display-7">
                                 Material : Single Wall</h4>
                         </div>
-                    </div>                
+                    </div>
 
                     <div class="card-box">
                         <p class="mbr-text mbr-section-text mbr-fonts-style display-7">
@@ -41,7 +41,7 @@ include "menu.php";
                     </div>
                 </div>
 
-                
+
             </div>
 
             <div class="mbr-figure" style="width: 24%;">
@@ -51,11 +51,11 @@ include "menu.php";
             <div class="block-content align-left  ">
                 <div class="card pl-3 pr-3 pb-5">
                     <div class="mbr-card-img-title">
-                        
+
                         <div class="mbr-crt-title">
                             <h4 class="card-title py-2 mbr-crt-title mbr-fonts-style display-7">Material : Single wall dengan handle</h4>
                         </div>
-                    </div>                
+                    </div>
 
                     <div class="card-box">
                         <p class="mbr-text mbr-section-text mbr-fonts-style display-7">
@@ -64,31 +64,31 @@ include "menu.php";
                     </div>
                 </div>
 
-                
+
             </div>
         </div>
     </div>
 </section>
 
 <section class="features12 cid-rbqKP746zY" id="features12-y">
-    
-    
 
-    
+
+
+
 
     <div class="container">
         <h2 class="mbr-section-title pb-2 mbr-fonts-style display-4"></h2>
-        
+
 
         <div class="media-container-row pt-5">
             <div class="block-content align-right">
                 <div class="card pl-3 pr-3 pb-5">
                     <div class="mbr-card-img-title">
-                        
+
                         <div class="mbr-crt-title">
                             <h4 class="card-title py-2 mbr-crt-title mbr-fonts-style display-7">Material : Flat wrap</h4>
                         </div>
-                    </div>                
+                    </div>
 
                     <div class="card-box">
                         <p class="mbr-text mbr-section-text mbr-fonts-style display-7">
@@ -97,21 +97,21 @@ include "menu.php";
                     </div>
                 </div>
 
-                
+
             </div>
 
             <div class="mbr-figure" style="width: 24%;">
-                <img src="assets/images/paper-cup-300x300.png" alt="Mobirise" title="">
+                <img src="assets/images/papercup.png" alt="Mobirise" title="">
             </div>
 
             <div class="block-content align-left  ">
                 <div class="card pl-3 pr-3 pb-5">
                     <div class="mbr-card-img-title">
-                        
+
                         <div class="mbr-crt-title">
                             <h4 class="card-title py-2 mbr-crt-title mbr-fonts-style display-7">Material : Ice cream cup</h4>
                         </div>
-                    </div>                
+                    </div>
 
                     <div class="card-box">
                         <p class="mbr-text mbr-section-text mbr-fonts-style display-7">
@@ -120,17 +120,17 @@ include "menu.php";
                     </div>
                 </div>
 
-                
+
             </div>
         </div>
     </div>
 </section>
 
 <section class="features4 cid-rbrpEje08H" id="features4-11">
-    
-         
 
-    
+
+
+
     <div class="container">
         <div class="media-container-row">
             <div class="card p-3 col-12 col-md-6 col-lg-4">
@@ -165,16 +165,16 @@ include "menu.php";
                 </div>
             </div>
 
-            
+
         </div>
     </div>
 </section>
 
 <section class="features12 cid-rbrrxQgUNy" id="features12-14">
-    
-    
 
-    
+
+
+
 
     <div class="container">
         <h2 class="mbr-section-title pb-2 mbr-fonts-style display-4"></h2>
@@ -184,12 +184,12 @@ include "menu.php";
             <div class="block-content align-right">
                 <div class="card pl-3 pr-3 pb-5">
                     <div class="mbr-card-img-title">
-                        
+
                         <div class="mbr-crt-title">
                             <h4 class="card-title py-2 mbr-crt-title mbr-fonts-style display-7">
                                 Coating : Hot cup</h4>
                         </div>
-                    </div>                
+                    </div>
 
                     <div class="card-box">
                         <p class="mbr-text mbr-section-text mbr-fonts-style display-7">untuk makanan dan minuman panas
@@ -197,7 +197,7 @@ include "menu.php";
                     </div>
                 </div>
 
-                
+
             </div>
 
             <div class="mbr-figure" style="width: 25%;">
@@ -207,12 +207,12 @@ include "menu.php";
             <div class="block-content align-left  ">
                 <div class="card pl-3 pr-3 pb-5">
                     <div class="mbr-card-img-title">
-                        
+
                         <div class="mbr-crt-title">
                             <h4 class="card-title py-2 mbr-crt-title mbr-fonts-style display-7">
                                 Coating : Cold cup</h4>
                         </div>
-                    </div>                
+                    </div>
 
                     <div class="card-box">
                         <p class="mbr-text mbr-section-text mbr-fonts-style display-7">untuk makanan dan minuman dingin
@@ -220,7 +220,7 @@ include "menu.php";
                     </div>
                 </div>
 
-                
+
             </div>
         </div>
     </div>
@@ -228,9 +228,9 @@ include "menu.php";
 
 <section class="engine"><a href="https://mobirise.info/g">how to build a website</a></section><section once="" class="cid-rblxeb4aPl" id="footer6-t">
 
-    
 
-    
+
+
 
     <div class="container">
         <div class="media-container-row align-center mbr-white">
@@ -244,21 +244,21 @@ include "menu.php";
 
 <section once="" class="cid-rbkA1DU2DQ mbr-reveal" id="footer7-u">
 
-    
 
-    
+
+
 
     <div class="container">
         <div class="media-container-row align-center mbr-white">
-            
+
             <div class="row social-row">
                 <div class="social-list align-right pb-2">
-                    
-                    
-                    
-                    
-                    
-                    
+
+
+
+
+
+
                 <div class="soc-item">
                         <a href="https://twitter.com/mobirise" target="_blank">
                             <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
@@ -289,8 +289,8 @@ include "menu.php";
   <script src="assets/dropdown/js/script.min.js"></script>
   <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
   <script src="assets/theme/js/script.js"></script>
-  
-  
+
+
 </body>
 
 </html>

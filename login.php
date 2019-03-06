@@ -52,6 +52,8 @@ session_start();
              <div align="center">
               <br/>
              </div>
+             <br/>
+             <br/>
              <div data-for="email">
                  <div class="form-group">
                      <div align="center">

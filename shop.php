@@ -69,7 +69,7 @@ include "menu.php";
           }
         ?>">
 
-        <img src="assets/images/cardboard-fix-492x492.png" alt="CardBox" title="" width="200" height="200"></a>
+        <img src="assets/images/cardboard.png" alt="CardBox" title="" width="200" height="200"></a>
       </label>
       <label>
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="paperCup">
@@ -85,7 +85,7 @@ include "menu.php";
             echo('nonPaperCupCustom.php');
           }
         ?>">
-        <img src="assets/images/paper-cup-fix-2-492x492.png" alt="PaperCup" title="" width="200" height="200"></a>
+        <img src="assets/images/papercup.png" alt="PaperCup" title="" width="200" height="200"></a>
       </label>
       <label>
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="paperPouch">
@@ -101,7 +101,7 @@ include "menu.php";
             echo('nonPaperPouchCustom.php');
           }
         ?>">
-        <img src="assets/images/paper-pouch-fix-492x492.png" alt="PaperPouch" title="" width="200" height="200"></a>
+        <img src="assets/images/paperpouch.png" alt="PaperPouch" title="" width="200" height="200"></a>
       </label>
       <label>
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="foodWrap">
@@ -117,7 +117,7 @@ include "menu.php";
             echo('nonFoodWrapCustom.php');
           }
         ?>">
-        <img src="assets/images/food-wrap-fix-492x492.png" alt="FoodWrap" title="" width="200" height="200"></a>
+        <img src="assets/images/foodwrap.png" alt="FoodWrap" title="" width="200" height="200"></a>
       </label>
       <br>
       <label>
@@ -134,7 +134,7 @@ include "menu.php";
             echo('nonPaperBagCustom.php');
           }
         ?>">
-        <img src="assets/images/paper-bag-fix-492x492.png" alt="PaperBag" title="" width="200" height="200"></a>
+        <img src="assets/images/paperbag.png" alt="PaperBag" title="" width="200" height="200"></a>
       </label>
       <label>
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="packLabel">
@@ -150,7 +150,7 @@ include "menu.php";
             echo('nonPackLabelCustom.php');
           }
         ?>">
-        <img src="assets/images/pack-label-492x492.png" alt="Mobirise" title="PackLabel" width="200" height="200"></a>
+        <img src="assets/images/packlabel.png" alt="Mobirise" title="PackLabel" width="200" height="200"></a>
       </label>
       <label>
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="softBox">
@@ -166,7 +166,7 @@ include "menu.php";
             echo('nonSoftBoxCustom.php');
           }
         ?>">
-        <img src="assets/images/soft-box-super-fix-492x492.png" alt="SoftBox" title="" width="200" height="200"></a>
+        <img src="assets/images/softbox.png" alt="SoftBox" title="" width="200" height="200"></a>
       </label>
       <label>
         <input type="radio" name="packType" style="position: absolute; opacity: 0; width: 0; height: 0;" value="plasticPouch">
@@ -182,7 +182,7 @@ include "menu.php";
             echo('nonPlasticPouchCustom.php');
           }
         ?>">
-        <img src="assets/images/plastic-pouch-fix-492x492.png" alt="PlasticPouch" title="" width="200" height="200"></a>
+        <img src="assets/images/plasticpouch.png" alt="PlasticPouch" title="" width="200" height="200"></a>
       </label>
     </h3>
     <!-- <h3 class="mbr-text align-right pb-3 mbr-fonts-style display-5">Select Meterial Type:</h3> -->
