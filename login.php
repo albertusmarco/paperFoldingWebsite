@@ -50,7 +50,6 @@ session_start();
 
 <form class="mbr-form" action="" method="post" data-form-title="Mobirise Form">
              <div align="center">
-              <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style">SENDWISH</h1>
               <br/>
              </div>
              <div data-for="email">
