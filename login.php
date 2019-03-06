@@ -28,7 +28,8 @@ session_start();
 
 </head>
 <body>
-<section class="engine"><a href="https://mobirise.info/w">free html5 templates</a></section><section class="header10 cid-rbkq4YRq2S mbr-fullscreen mbr-parallax-background" id="header10-3">
+<section class="engine"><a href="https://mobirise.info/w">free html5 templates</a></section>
+<section class="header10 cid-rbkq4YRq2S mbr-fullscreen mbr-parallax-background" id="header10-3" style="background-image:url('asset/signin-background.png');">
 
     <div class="mbr-overlay" style="opacity: 0; background-color: rgb(225, 225, 225);"></div>
 
@@ -86,7 +87,7 @@ if(isset($_POST["signin"]))
 {
 		$email = $_POST["temail"];
 		$pass = $_POST["tpassword"];
-		
+
 
 		$sql = "select email from login where email = '$email';";
 		$hasil = viewData($sql);
@@ -107,7 +108,7 @@ if(isset($_POST["signin"]))
 				$_SESSION['email'] = "Admin";
 				$_SESSION['namauser'] = "Admin";
 				$_SESSION['adasesi'] = "1";
-				
+
 				echo'<meta http-equiv="refresh" content="1; URL=admin.php" />';
 				}
 		else {
@@ -184,7 +185,7 @@ echo '<a href="signup.php">Sign Up</a>';
                         </a>
                     </div></div>
             </div>
-            
+
         </div>
     </div>
 </section>

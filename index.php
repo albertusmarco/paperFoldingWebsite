@@ -14,14 +14,14 @@ include "menu.php";
 
 <section class="engine"><a href="https://mobirise.info/u">bootstrap html templates</a></section>
 
-<section class="header10 cid-rbkq4YRq2S mbr-fullscreen mbr-parallax-background" id="header10-3" style="background-image:url('asset/index-background.png');background-size:300px 100px;">
+<section class="header10 cid-rbkq4YRq2S mbr-fullscreen mbr-parallax-background" id="header10-3" style="background-image:url('asset/index-background.png');">
 
 
     <div class="container">
         <div class="media-container-column mbr-white col-lg-8 col-md-10 ml-auto">
+          </br></br></br></br></br></br>
             <div class="mbr-section-btn align-right">
-
-              <a class="btn btn-md btn-primary-outline display-4" href="index.php#features18-k">TUTORIAL</a>
+              <a class="btn btn-md btn-primary display-4" href="index.php#features18-k">TUTORIAL</a>
                 <a class="btn btn-md btn-primary display-4" href="
                 <?php
                   if(!isset($_SESSION['adasesi'])){

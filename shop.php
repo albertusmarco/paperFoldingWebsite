@@ -45,7 +45,7 @@ include "menu.php";
   }
 </style>
 
-  <section class="header10 cid-rbkq4YRq2S mbr-fullscreen mbr-parallax-background">
+  <section class="header10 cid-rbkq4YRq2S mbr-fullscreen mbr-parallax-background" style="background-image:url('asset/shop-background.png');">
     <div class="container">
       <br>
       &nbsp;
@@ -177,7 +177,7 @@ include "menu.php";
           }
           elseif($_SESSION['adasesi'] == "1"){
             echo('plasticPouchCustom.php');
-          }          
+          }
           else{
             echo('nonPlasticPouchCustom.php');
           }
