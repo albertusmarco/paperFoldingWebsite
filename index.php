@@ -12,18 +12,16 @@ include "menu.php";
 <body>
 
 
-<section class="engine"><a href="https://mobirise.info/u">bootstrap html templates</a></section><section class="header10 cid-rbkq4YRq2S mbr-fullscreen mbr-parallax-background" id="header10-3">
+<section class="engine"><a href="https://mobirise.info/u">bootstrap html templates</a></section>
+
+<section class="header10 cid-rbkq4YRq2S mbr-fullscreen mbr-parallax-background" id="header10-3" style="background-image:url('asset/index-background.png');background-size:300px 100px;">
 
 
     <div class="container">
         <div class="media-container-column mbr-white col-lg-8 col-md-10 ml-auto">
+            <div class="mbr-section-btn align-right">
 
-            <h3 class="mbr-section-subtitle align-right mbr-light pb-3 mbr-fonts-style display-2"><em>Easier Way to Make
-</em><div><em>Packaging!</em></div></h3>
-            <p class="mbr-text align-right pb-3 mbr-fonts-style display-5">
-               We are a group of passionate designers and developers who really love creating awesome food and beverage packaging
-            </p>
-            <div class="mbr-section-btn align-right"><a class="btn btn-md btn-primary-outline display-4" href="index.php#features18-k">TUTORIAL</a>
+              <a class="btn btn-md btn-primary-outline display-4" href="index.php#features18-k">TUTORIAL</a>
                 <a class="btn btn-md btn-primary display-4" href="
                 <?php
                   if(!isset($_SESSION['adasesi'])){
