@@ -76,7 +76,7 @@ include "menu.php";
         <a href="
         <?php
           if(!isset($_SESSION['adasesi'])){
-            echo('nonPaperCupCustom.php');
+            echo('nonPapercupCustom.php');
           }
           elseif($_SESSION['adasesi'] == "1"){
             echo('paperCupCustom.php');
