@@ -79,10 +79,10 @@ include "menu.php";
             echo('nonPaperCupCustom.php');
           }
           elseif($_SESSION['adasesi'] == "1"){
-            echo('papercupCustom.php');
+            echo('paperCupCustom.php');
           }
           else{
-            echo('nonPaperCupCustom.php');
+            echo('nonPapercupCustom.php');
           }
         ?>">
         <img src="assets/images/papercup.png" alt="PaperCup" title="" width="200" height="200"></a>
