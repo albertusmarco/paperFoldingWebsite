@@ -40,7 +40,7 @@ session_start();
         <div class="menu-logo">
             <div class="navbar-brand">
 
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-5" href="index.php"><img src="assets/images/ayo-fix-poo-30.png" width='150px' height='30px'/></a></span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-5" href="index.php"><img src="assets/images/logo-sendwish.png" width='150px' height='30px'/></a></span>
             </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
