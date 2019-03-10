@@ -2,6 +2,9 @@
   // scene.background = new THREE.Color(0F2126);
   var camera = new THREE.PerspectiveCamera(45,500 / 600,1,1000);
 
+  var canvas = document.getElementById('canvasText'),
+      ctx = canvas.getContext('2d');
+
   var renderer = new THREE.WebGLRenderer({canvas: document.getElementById('myCanvas'),antialias: true,alpha: true});
   renderer.setClearColor(0xFFFFFF,0);
   renderer.setPixelRatio(window.devicePixelRatio);
@@ -101,43 +104,51 @@
     var sideValue = side.options[side.selectedIndex].value;
     var text = document.getElementById("text").value;
     // console.log(text);
-    if (clicked == 0) {
-      if(color == '#ffffff') {
+    
+    if(clicked == 0) {
+      if (text == '') {
         custom = 0;
+        clicked = 1;
       }
       else {
         custom = 1;
-        clicked = 1;
       }
     }
     else {
       custom = 1;
     }
 
+    ctx.font = '20pt Arial';
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = 'white';
+    ctx.fillRect(10, 10, canvas.width - 20, canvas.height - 20);
+    ctx.fillStyle = 'black';
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+
+    var tulisan = new THREE.Texture(canvas);
+    tulisan.needsUpdate = true;
+
     switch(sideValue) {
       case 'front':
-        // frontSide = new THREE.MeshBasicMaterial({map : text, side : THREE.DoubleSide});
-        console.log('Front : '+text);
+        frontSide = new THREE.MeshBasicMaterial({map : tulisan, side : THREE.DoubleSide});
         break;
       case 'back':
-        // backSide = new THREE.MeshBasicMaterial({map : text, side : THREE.DoubleSide});
-        console.log('Back : '+text);
+        backSide = new THREE.MeshBasicMaterial({map : tulisan, side : THREE.DoubleSide});
         break;
       case 'left':
-        // leftSide = new THREE.MeshBasicMaterial({map : text, side : THREE.DoubleSide});
-        console.log('Left : '+text);
+        leftSide = new THREE.MeshBasicMaterial({map : tulisan, side : THREE.DoubleSide});
         break;
       case 'right':
-        // rightSide = new THREE.MeshBasicMaterial({map : text, side : THREE.DoubleSide});
-        console.log('Right : '+text);
+        rightSide = new THREE.MeshBasicMaterial({map : tulisan, side : THREE.DoubleSide});
         break;
       case 'top':
-        // topSide = new THREE.MeshBasicMaterial({map : text, side : THREE.DoubleSide});
-        console.log('Top : '+text);
+        topSide = new THREE.MeshBasicMaterial({map : tulisan, side : THREE.DoubleSide});
         break;
       case 'down':
-        // bottomSide = new THREE.MeshBasicMaterial({map : text, side : THREE.DoubleSide});
-        console.log('Down : '+text);
+        bottomSide = new THREE.MeshBasicMaterial({map : tulisan, side : THREE.DoubleSide});
         break;
     }
 

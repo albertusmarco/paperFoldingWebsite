@@ -213,6 +213,7 @@ include "menu.php";
           </select>
           <br/>
           &nbsp;&nbsp;
+          <canvas id="canvasText" hidden="hidden"></canvas>
           <canvas id="myCanvas"></canvas>
           <!-- three.js library -->
           <script src = "js/three.js"></script>
