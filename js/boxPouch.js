@@ -121,7 +121,78 @@ function changeSize() {
 var custom = 0;
 var clicked = 0;
 
-function processText() {
+function processTextLeft() {
+  var side = document.getElementById("side");
+  var sideValue = side.options[side.selectedIndex].value;
+  var text = document.getElementById("text").value;
+  // console.log(text);
+
+  if(clicked == 0) {
+    if (text == '') {
+      custom = 0;
+      clicked = 1;
+    }
+    else {
+      custom = 1;
+    }
+  }
+  else {
+    custom = 1;
+  }
+
+  ctx.font = '20pt Arial';
+  ctx.fillStyle = 'white';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = 'white';
+  ctx.fillRect(10, 10, canvas.width - 20, canvas.height - 20);
+  ctx.fillStyle = 'black';
+  ctx.textAlign = "right";
+  ctx.textBaseline = "middle";
+  ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+
+  var tulisan = new THREE.Texture(canvas);
+  tulisan.needsUpdate = true;
+
+  switch(sideValue) {
+    case 'front':
+      frontSide = new THREE.MeshBasicMaterial({map : tulisan, side : THREE.DoubleSide});
+      break;
+    case 'back':
+      backSide = new THREE.MeshBasicMaterial({map : tulisan, side : THREE.DoubleSide});
+      break;
+    case 'left':
+      leftSide = new THREE.MeshBasicMaterial({map : tulisan, side : THREE.DoubleSide});
+      break;
+    case 'right':
+      rightSide = new THREE.MeshBasicMaterial({map : tulisan, side : THREE.DoubleSide});
+      break;
+    case 'top':
+      topSide = new THREE.MeshBasicMaterial({map : tulisan, side : THREE.DoubleSide});
+      break;
+    case 'down':
+      bottomSide = new THREE.MeshBasicMaterial({map : tulisan, side : THREE.DoubleSide});
+      break;
+  }
+
+  while(scene.children.length > 0){
+    scene.remove(scene.children[0]);
+  }
+
+  cubeMaterials =
+  [
+    rightSide,//Right Side
+    leftSide,//Left Side
+    topSide,//Top Side
+    bottomSide,//Bottom Side
+    frontSide,//Front Side
+    backSide//Back Side
+  ];
+  material = new THREE.MeshFaceMaterial(cubeMaterials);
+  cube = new THREE.Mesh(geometry,material);
+  scene.add(cube);
+}
+
+function processTextCenter() {
   var side = document.getElementById("side");
   var sideValue = side.options[side.selectedIndex].value;
   var text = document.getElementById("text").value;
@@ -147,6 +218,77 @@ function processText() {
   ctx.fillRect(10, 10, canvas.width - 20, canvas.height - 20);
   ctx.fillStyle = 'black';
   ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+
+  var tulisan = new THREE.Texture(canvas);
+  tulisan.needsUpdate = true;
+
+  switch(sideValue) {
+    case 'front':
+      frontSide = new THREE.MeshBasicMaterial({map : tulisan, side : THREE.DoubleSide});
+      break;
+    case 'back':
+      backSide = new THREE.MeshBasicMaterial({map : tulisan, side : THREE.DoubleSide});
+      break;
+    case 'left':
+      leftSide = new THREE.MeshBasicMaterial({map : tulisan, side : THREE.DoubleSide});
+      break;
+    case 'right':
+      rightSide = new THREE.MeshBasicMaterial({map : tulisan, side : THREE.DoubleSide});
+      break;
+    case 'top':
+      topSide = new THREE.MeshBasicMaterial({map : tulisan, side : THREE.DoubleSide});
+      break;
+    case 'down':
+      bottomSide = new THREE.MeshBasicMaterial({map : tulisan, side : THREE.DoubleSide});
+      break;
+  }
+
+  while(scene.children.length > 0){
+    scene.remove(scene.children[0]);
+  }
+
+  cubeMaterials =
+  [
+    rightSide,//Right Side
+    leftSide,//Left Side
+    topSide,//Top Side
+    bottomSide,//Bottom Side
+    frontSide,//Front Side
+    backSide//Back Side
+  ];
+  material = new THREE.MeshFaceMaterial(cubeMaterials);
+  cube = new THREE.Mesh(geometry,material);
+  scene.add(cube);
+}
+
+function processTextRight() {
+  var side = document.getElementById("side");
+  var sideValue = side.options[side.selectedIndex].value;
+  var text = document.getElementById("text").value;
+  // console.log(text);
+
+  if(clicked == 0) {
+    if (text == '') {
+      custom = 0;
+      clicked = 1;
+    }
+    else {
+      custom = 1;
+    }
+  }
+  else {
+    custom = 1;
+  }
+
+  ctx.font = '20pt Arial';
+  ctx.fillStyle = 'white';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = 'white';
+  ctx.fillRect(10, 10, canvas.width - 20, canvas.height - 20);
+  ctx.fillStyle = 'black';
+  ctx.textAlign = "left";
   ctx.textBaseline = "middle";
   ctx.fillText(text, canvas.width / 2, canvas.height / 2);
 

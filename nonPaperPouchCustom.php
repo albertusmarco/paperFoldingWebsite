@@ -68,7 +68,11 @@ include "menu.php";
             Create : <input type="text" id="text" style="width:150px;height:25px;"/>
             <br/>
             <br/>
-            <input id="applyButton" type="button" onclick="processText()" value="Apply" style="margin-left:225px"/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Align :
+            <input id="applyButton" type="button" onclick="processTextLeft()" value="Left" />
+            <input id="applyButton" type="button" onclick="processTextCenter()" value="Center" />
+            <input id="applyButton" type="button" onclick="processTextRight()" value="Right" />
             <br/>
             <br/>
 
